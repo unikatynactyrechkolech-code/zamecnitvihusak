@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zámečnictví Husák Praha NONSTOP - Otevírání zámků, aut, dveří i trezorů. Zámečnická pohotovost 24/7. Dojezd 20-40 minut.">
+    <meta name="keywords" content="zámečnictví, Praha, nonstop, otevírání zámků, otevírání aut, zámečnická pohotovost, výměna zámků">
+    <title>Zámečnictví Husák Praha NONSTOP | Zámečnická pohotovost 24/7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Floating Call Button -->
+    <a href="tel:+420606588222" class="floating-call" aria-label="Zavolat">
+        <i class="fas fa-phone-alt"></i>
+        <span class="pulse-ring"></span>
+    </a>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-info">
+                    <span><i class="fas fa-clock"></i> NONSTOP 24/7</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Praha a Středočeský kraj</span>
+                    <span><i class="fas fa-truck"></i> Dojezd 20-40 minut</span>
+                </div>
+                <div class="top-contact">
+                    <a href="tel:+420606588222"><i class="fas fa-phone-alt"></i> 606 588 222</a>
+                    <a href="tel:+420776447729"><i class="fas fa-phone"></i> 776 44 77 29</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">ZÁMEČNICTVÍ</span>
+                        <span class="logo-subtitle">HUSÁK</span>
+                    </div>
+                </a>
+                
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Úvod</a></li>
+                    <li><a href="sluzby.html">Služby</a></li>
+                    <li><a href="cenik.html">Ceník</a></li>
+                    <li><a href="o-nas.html">O nás</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li class="nav-cta">
+                        <a href="tel:+420606588222" class="btn btn-primary">
+                            <i class="fas fa-phone-alt"></i> Zavolat
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge animate-fade-in">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Zámečnická pohotovost</span>
+                </div>
+                <h1 class="hero-title animate-slide-up">
+                    <span class="highlight">Nouzové</span> zámečnické<br>
+                    služby <span class="highlight">24/7</span>
+                </h1>
+                <p class="hero-description animate-slide-up delay-1">
+                    Nabízíme komplexní zámečnické služby pro průmyslový, 
+                    rezidenční i automobilový sektor. Jsme u vás do 20-40 minut.
+                </p>
+                <div class="hero-cta animate-slide-up delay-2">
+                    <a href="tel:+420606588222" class="btn btn-primary btn-lg">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>606 588 222</span>
+                    </a>
+                    <a href="sluzby.html" class="btn btn-outline btn-lg">
+                        Naše služby
+                    </a>
+                </div>
+                <div class="hero-features animate-fade-in delay-3">
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Garance práce</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Bez poškození</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Diskrétnost</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image animate-fade-in delay-2">
+                <div class="hero-image-wrapper">
+                    <div class="experience-badge">
+                        <span class="number">15+</span>
+                        <span class="text">Let zkušeností</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle animate-fade-in">Naše služby</span>
+                <h2 class="section-title animate-slide-up">Nejoblíbenější zámečnické služby</h2>
+                <p class="section-description animate-fade-in">
+                    Specializujeme se na kompletní zámečnické služby s důrazem na kvalitu a rychlost
+                </p>
+            </div>
+            
+            <div class="services-grid services-image-grid">
+                <a href="sluzby.html#otevirani-bytu" class="service-card-image animate-fade-in">
+                    <div class="service-image">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_194492244_xl-2015-282x187-15b.jpg" alt="Otevírání zámků bytů a domů">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Otevírání bytů a domů</h3>
+                    </div>
+                </a>
+                
+                <a href="sluzby.html#otevirani-trezoru" class="service-card-image animate-fade-in delay-1">
+                    <div class="service-image">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_146918061_xl-2015-282x187-1ba.jpg" alt="Otevírání trezorů">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Otevírání trezorů</h3>
+                    </div>
+                </a>
+                
+                <a href="sluzby.html#otevirani-aut" class="service-card-image animate-fade-in delay-2">
+                    <div class="service-image">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_182951358_xl-2015-282x187-1ba.jpg" alt="Otevírání aut">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Otevírání aut</h3>
+                    </div>
+                </a>
+                
+                <a href="sluzby.html#vymena-zamku" class="service-card-image animate-fade-in delay-3">
+                    <div class="service-image">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_133877912_xl-2015-282x187-1ba.jpg" alt="Výměna zámků">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Výměna zámků</h3>
+                    </div>
+                </a>
+                
+                <a href="sluzby.html#pohotovost" class="service-card-image animate-fade-in delay-4">
+                    <div class="service-image">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_243549340_xl-2015-282x187-1ba.jpg" alt="Zámečnická pohotovost">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Zámečnická pohotovost</h3>
+                    </div>
+                </a>
+                
+                <a href="sluzby.html#servis" class="service-card-image animate-fade-in delay-5">
+                    <div class="service-image">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/dreamstime_156295539_max-282x187-1ba.jpg" alt="Zámečnický servis">
+                        <div class="service-image-overlay"></div>
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Zámečnický servis</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section bg-light">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-subtitle animate-fade-in">O nás</span>
+                    <h2 class="section-title animate-slide-up">Rychlá reakce nás dělá spolehlivými</h2>
+                    <p class="animate-fade-in">
+                        Jsme specializované zámečnictví a zámkařství s dlouholetou zkušeností a praxí. 
+                        Právě proto víme, jak otevřít jakýkoliv zámek. Ať už jste si zabouchli dveře 
+                        a nemůžete se dostat domů nebo potřebujete otevřít dveře od auta, otevírání zámků 
+                        je naší specializací.
+                    </p>
+                    <p class="animate-fade-in">
+                        Jsme držitelé koncesované živnosti "Poskytování mechanických služeb k ochraně 
+                        majetku a osob" a vlastníme profesní kvalifikaci "Zámkař".
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature animate-fade-in">
+                            <i class="fas fa-check"></i>
+                            <span>Záruka na montážní práce</span>
+                        </div>
+                        <div class="about-feature animate-fade-in">
+                            <i class="fas fa-check"></i>
+                            <span>Maximální diskrétnost</span>
+                        </div>
+                        <div class="about-feature animate-fade-in">
+                            <i class="fas fa-check"></i>
+                            <span>Profesionální přístup</span>
+                        </div>
+                        <div class="about-feature animate-fade-in">
+                            <i class="fas fa-check"></i>
+                            <span>Expresní dojezd</span>
+                        </div>
+                    </div>
+                    <a href="o-nas.html" class="btn btn-primary animate-slide-up">
+                        Více o nás <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card animate-fade-in">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-number" data-count="15">15+</div>
+                        <div class="stat-label">Let zkušeností</div>
+                    </div>
+                    <div class="stat-card animate-fade-in delay-1">
+                        <div class="stat-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="stat-number" data-count="2000">2000+</div>
+                        <div class="stat-label">Objednávek ročně</div>
+                    </div>
+                    <div class="stat-card animate-fade-in delay-2">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-number">30</div>
+                        <div class="stat-label">Minut průměrný dojezd</div>
+                    </div>
+                    <div class="stat-card animate-fade-in delay-3">
+                        <div class="stat-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Spokojených zákazníků</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle animate-fade-in">Proč my</span>
+                <h2 class="section-title animate-slide-up">Naše výhody</h2>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card animate-fade-in">
+                    <div class="advantage-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Zkušení dispečeři</h3>
+                    <p>Dotazy, objednávky a telefonáty zpracovávají zkušení zámečníci.</p>
+                </div>
+                
+                <div class="advantage-card animate-fade-in delay-1">
+                    <div class="advantage-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Garance kvality</h3>
+                    <p>Dáváme záruku na montážní práce a výměny zámků.</p>
+                </div>
+                
+                <div class="advantage-card animate-fade-in delay-2">
+                    <div class="advantage-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Profesionální rozvoj</h3>
+                    <p>Neustále zlepšujeme kvalifikace, pravidelná školení zámečníků.</p>
+                </div>
+                
+                <div class="advantage-card animate-fade-in delay-3">
+                    <div class="advantage-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>NONSTOP 24/7</h3>
+                    <p>Pracujeme nonstop, rychlý příjezd zámečníka v Praze a Středních Čechách.</p>
+                </div>
+                
+                <div class="advantage-card animate-fade-in delay-4">
+                    <div class="advantage-icon">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <h3>Slevy pro stálé zákazníky</h3>
+                    <p>Věrnostní program a speciální nabídky pro naše stálé klienty.</p>
+                </div>
+                
+                <div class="advantage-card animate-fade-in delay-5">
+                    <div class="advantage-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Bohaté zkušenosti</h3>
+                    <p>Přes 2000 objednávek ročně, rozsáhlé zkušenosti v oboru.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview -->
+    <section class="pricing-preview section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle animate-fade-in">Ceník</span>
+                <h2 class="section-title animate-slide-up">Orientační ceny služeb</h2>
+                <p class="section-description animate-fade-in">
+                    Ceny jsou orientační. Přesnou cenu vám sdělíme po telefonu.
+                </p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card animate-fade-in">
+                    <div class="pricing-header">
+                        <h3>Zabouchnuté dveře</h3>
+                        <div class="pricing-price">
+                            <span class="from">od</span>
+                            <span class="amount">800</span>
+                            <span class="currency">Kč</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Klasické dveře</li>
+                        <li><i class="fas fa-check"></i> Bezpečnostní kování</li>
+                        <li><i class="fas fa-check"></i> Bezpečnostní dveře</li>
+                        <li><i class="fas fa-check"></i> Bez poškození</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card featured animate-fade-in delay-1">
+                    <div class="pricing-badge">Nejčastější</div>
+                    <div class="pricing-header">
+                        <h3>Otevírání aut</h3>
+                        <div class="pricing-price">
+                            <span class="from">od</span>
+                            <span class="amount">900</span>
+                            <span class="currency">Kč</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Všechny značky</li>
+                        <li><i class="fas fa-check"></i> Bez poškození</li>
+                        <li><i class="fas fa-check"></i> Moderní technika</li>
+                        <li><i class="fas fa-check"></i> Expresní výjezd</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card animate-fade-in delay-2">
+                    <div class="pricing-header">
+                        <h3>Výměna zámku</h3>
+                        <div class="pricing-price">
+                            <span class="from">od</span>
+                            <span class="amount">500</span>
+                            <span class="currency">Kč</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Výměna vložky</li>
+                        <li><i class="fas fa-check"></i> Zadlabací zámky</li>
+                        <li><i class="fas fa-check"></i> Bezpečnostní dveře</li>
+                        <li><i class="fas fa-check"></i> Montáž kování</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="cenik.html" class="btn btn-primary btn-lg animate-fade-in">
+                    Kompletní ceník <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle animate-fade-in">Jak to funguje</span>
+                <h2 class="section-title animate-slide-up">Postup objednání služby</h2>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step animate-fade-in">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Zavolejte nám</h3>
+                        <p>Nahlaste typ problému - byt, auto, trezor, typ zámku apod.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step animate-fade-in delay-1">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Sdělte adresu</h3>
+                        <p>Ulice, číslo popisné a orientační, město - můžete poslat i SMS.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step animate-fade-in delay-2">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Domluvíme cenu</h3>
+                        <p>Orientační cena je dohodnutá předem podle našeho ceníku.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step animate-fade-in delay-3">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Technik dorazí</h3>
+                        <p>Zámečnická pohotovost nonstop - dojezd 20-40 minut.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step animate-fade-in delay-4">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Kontrola dokladů</h3>
+                        <p>Musíte mít u sebe doklady od bytu či auta.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step animate-fade-in delay-5">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Vyřešení problému</h3>
+                        <p>Otevření zámků bez poškození nebo odvrtání + výměna dle potřeby.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step animate-fade-in delay-6">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Platba</h3>
+                        <p>V hotovosti nebo dle telefonické dohody - akceptujeme i karty.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems-section section bg-dark">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle animate-fade-in">Časté problémy</span>
+                <h2 class="section-title animate-slide-up">S čím vám pomůžeme?</h2>
+            </div>
+            
+            <div class="problems-grid">
+                <div class="problem-item animate-fade-in">
+                    <i class="fas fa-door-closed"></i>
+                    <span>Zabouchlé dveře</span>
+                </div>
+                <div class="problem-item animate-fade-in delay-1">
+                    <i class="fas fa-key"></i>
+                    <span>Klíč z druhé strany zámku</span>
+                </div>
+                <div class="problem-item animate-fade-in delay-2">
+                    <i class="fas fa-search"></i>
+                    <span>Ztracené klíče</span>
+                </div>
+                <div class="problem-item animate-fade-in delay-3">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Klíč nejde otočit</span>
+                </div>
+                <div class="problem-item animate-fade-in delay-4">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Klíč se nevejde do zámku</span>
+                </div>
+                <div class="problem-item animate-fade-in delay-5">
+                    <i class="fas fa-unlink"></i>
+                    <span>Zlomený klíč v zámku</span>
+                </div>
+                <div class="problem-item animate-fade-in delay-6">
+                    <i class="fas fa-ban"></i>
+                    <span>Zaseknutý klíč</span>
+                </div>
+                <div class="problem-item animate-fade-in delay-7">
+                    <i class="fas fa-bug"></i>
+                    <span>Poškozený zámek</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2 class="animate-slide-up">Máte jakékoliv otázky?</h2>
+                    <p class="animate-fade-in">Zavolejte nám a my vám rádi poradíme s vaším problémem.</p>
+                </div>
+                <div class="cta-phone animate-fade-in">
+                    <a href="tel:+420606588222" class="phone-link">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+420 606 588 222</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Area -->
+    <section class="coverage-section section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle animate-fade-in">Působnost</span>
+                <h2 class="section-title animate-slide-up">Kde působíme</h2>
+                <p class="section-description animate-fade-in">
+                    Pokrýváme celou Prahu a Středočeský kraj s expresním dojezdem
+                </p>
+            </div>
+            
+            <div class="coverage-grid">
+                <a href="#" class="coverage-item animate-fade-in">Praha 1</a>
+                <a href="#" class="coverage-item animate-fade-in delay-1">Praha 2</a>
+                <a href="#" class="coverage-item animate-fade-in delay-2">Praha 3</a>
+                <a href="#" class="coverage-item animate-fade-in delay-3">Praha 4</a>
+                <a href="#" class="coverage-item animate-fade-in delay-4">Praha 5</a>
+                <a href="#" class="coverage-item animate-fade-in delay-5">Praha 6</a>
+                <a href="#" class="coverage-item animate-fade-in delay-6">Praha 7</a>
+                <a href="#" class="coverage-item animate-fade-in delay-7">Praha 8</a>
+                <a href="#" class="coverage-item animate-fade-in delay-8">Praha 9</a>
+                <a href="#" class="coverage-item animate-fade-in delay-9">Praha 10</a>
+            </div>
+            
+            <p class="coverage-note text-center animate-fade-in">
+                <i class="fas fa-info-circle"></i>
+                Zajišťujeme služby také ve Středočeském kraji - cena výjezdu dle vzdálenosti
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle animate-fade-in">FAQ</span>
+                <h2 class="section-title animate-slide-up">Často kladené otázky</h2>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item animate-fade-in">
+                    <button class="faq-question">
+                        <span>Nabízíte zámečnické služby na místě nebo v dílně?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Veškeré práce probíhají u zákazníka. Naše technická podpora se vás zeptá na adresu a telefonní kontakt a sdělí předběžný čas příjezdu technika. Tyto informace předá technikovi, který za vámi dorazí dle domluveného času.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in delay-1">
+                    <button class="faq-question">
+                        <span>Jaká je sazba za odvedenou práci?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ceny jsou orientační a uvedeny v našem ceníku. Konečná cena závisí na typu práce, časové náročnosti a použitých materiálech. Cenu vždy odsouhlasíte předem.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in delay-2">
+                    <button class="faq-question">
+                        <span>Je možné zaplatit odvedenou práci na fakturu?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ano, platbu na fakturu je možné domluvit telefonicky. Standardně přijímáme platbu v hotovosti nebo kartou přímo na místě.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in delay-3">
+                    <button class="faq-question">
+                        <span>Jak rychle přijedete?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Při expresním výjezdu je u vás náš technik do 20-40 minut. Přesný čas závisí na aktuální dostupnosti techniků a dopravní situaci.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">ZÁMEČNICTVÍ</span>
+                            <span class="logo-subtitle">HUSÁK</span>
+                        </div>
+                    </a>
+                    <p>Zámečnictví Husák - Ten správný zámek a klíč. Otevírání zámků, aut, dveří i trezorů, výměna či oprava zámků po vloupání.</p>
+                    <div class="footer-social">
+                        <a href="viber://add?number=420606588222" aria-label="Viber"><i class="fab fa-viber"></i></a>
+                        <a href="whatsapp://send?phone=+420606588222" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tg://resolve?domain=locksmithpraha" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Služby</h4>
+                    <ul>
+                        <li><a href="sluzby.html#otevirani-bytu">Otevírání bytů</a></li>
+                        <li><a href="sluzby.html#otevirani-aut">Otevírání aut</a></li>
+                        <li><a href="sluzby.html#otevirani-trezoru">Otevírání trezorů</a></li>
+                        <li><a href="sluzby.html#vymena-zamku">Výměna zámků</a></li>
+                        <li><a href="sluzby.html#pohotovost">Zámečnická pohotovost</a></li>
+                        <li><a href="sluzby.html#servis">Zámečnický servis</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Rychlé odkazy</h4>
+                    <ul>
+                        <li><a href="index.html">Úvod</a></li>
+                        <li><a href="sluzby.html">Služby</a></li>
+                        <li><a href="cenik.html">Ceník</a></li>
+                        <li><a href="o-nas.html">O nás</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <a href="tel:+420606588222">606 588 222</a>
+                                <a href="tel:+420776447729">776 44 77 29</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span>Herbenova 727/38</span>
+                                <span>Praha 10, 102 00</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-id-card"></i>
+                            <span>IČO: 24734691</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zámečnictví Praha NONSTOP. Všechna práva vyhrazena.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Ochrana osobních údajů</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
