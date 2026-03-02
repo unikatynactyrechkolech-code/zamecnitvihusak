@@ -117,11 +117,55 @@
                 </div>
             </div>
             <div class="hero-image animate-fade-in delay-2">
-                <div class="hero-image-wrapper">
-                    <div class="experience-badge">
-                        <span class="number">15+</span>
-                        <span class="text">Let zkušeností</span>
-                    </div>
+                <div class="hero-animation-wrapper">
+                    <!-- Animated Lock and Key SVG -->
+                    <svg class="lock-key-animation" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Glow effect -->
+                        <defs>
+                            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                            <linearGradient id="lockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#e63946"/>
+                                <stop offset="100%" style="stop-color:#ff6b6b"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Outer rotating ring -->
+                        <circle class="ring-outer" cx="100" cy="100" r="90" fill="none" stroke="rgba(230,57,70,0.2)" stroke-width="2" stroke-dasharray="10 5"/>
+                        
+                        <!-- Inner rotating ring -->
+                        <circle class="ring-inner" cx="100" cy="100" r="75" fill="none" stroke="rgba(230,57,70,0.3)" stroke-width="1" stroke-dasharray="5 10"/>
+                        
+                        <!-- Lock body -->
+                        <g class="lock-group" filter="url(#glow)">
+                            <rect class="lock-body" x="70" y="85" width="60" height="50" rx="8" fill="url(#lockGradient)"/>
+                            <!-- Lock shackle -->
+                            <path class="lock-shackle" d="M80 85 L80 65 Q80 50 100 50 Q120 50 120 65 L120 85" fill="none" stroke="url(#lockGradient)" stroke-width="8" stroke-linecap="round"/>
+                            <!-- Keyhole -->
+                            <circle cx="100" cy="105" r="8" fill="#1d3557"/>
+                            <rect x="96" y="105" width="8" height="15" rx="2" fill="#1d3557"/>
+                        </g>
+                        
+                        <!-- Animated Key -->
+                        <g class="key-group" filter="url(#glow)">
+                            <path class="key" d="M30 160 L70 120 L75 125 L80 120 L85 125 L95 115" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="25" cy="165" r="12" fill="none" stroke="#ffffff" stroke-width="4"/>
+                        </g>
+                        
+                        <!-- Sparkle effects -->
+                        <circle class="sparkle sparkle-1" cx="50" cy="50" r="3" fill="#e63946"/>
+                        <circle class="sparkle sparkle-2" cx="150" cy="60" r="2" fill="#ff6b6b"/>
+                        <circle class="sparkle sparkle-3" cx="160" cy="140" r="3" fill="#e63946"/>
+                        <circle class="sparkle sparkle-4" cx="40" cy="130" r="2" fill="#ff6b6b"/>
+                    </svg>
+                    
+                    <!-- Background circle -->
+                    <div class="hero-circle-bg"></div>
                 </div>
             </div>
         </div>
@@ -146,7 +190,7 @@
             <div class="services-grid services-image-grid">
                 <a href="sluzby.html#otevirani-bytu" class="service-card-image animate-fade-in">
                     <div class="service-image">
-                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_194492244_xl-2015-282x187-15b.jpg" alt="Otevírání zámků bytů a domů">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_194492244_xl-2015-600x-f2d.jpg" alt="Otevírání zámků bytů a domů">
                         <div class="service-image-overlay"></div>
                     </div>
                     <div class="service-card-content">
@@ -156,7 +200,7 @@
                 
                 <a href="sluzby.html#otevirani-trezoru" class="service-card-image animate-fade-in delay-1">
                     <div class="service-image">
-                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_146918061_xl-2015-282x187-1ba.jpg" alt="Otevírání trezorů">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_146918061_xl-2015-600x-158.jpg" alt="Otevírání trezorů">
                         <div class="service-image-overlay"></div>
                     </div>
                     <div class="service-card-content">
@@ -166,7 +210,7 @@
                 
                 <a href="sluzby.html#otevirani-aut" class="service-card-image animate-fade-in delay-2">
                     <div class="service-image">
-                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_182951358_xl-2015-282x187-1ba.jpg" alt="Otevírání aut">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_182951358_xl-2015-600x-158.jpg" alt="Otevírání aut">
                         <div class="service-image-overlay"></div>
                     </div>
                     <div class="service-card-content">
@@ -176,7 +220,7 @@
                 
                 <a href="sluzby.html#vymena-zamku" class="service-card-image animate-fade-in delay-3">
                     <div class="service-image">
-                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_133877912_xl-2015-282x187-1ba.jpg" alt="Výměna zámků">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_133877912_xl-2015-600x-158.jpg" alt="Výměna zámků">
                         <div class="service-image-overlay"></div>
                     </div>
                     <div class="service-card-content">
@@ -186,7 +230,7 @@
                 
                 <a href="sluzby.html#pohotovost" class="service-card-image animate-fade-in delay-4">
                     <div class="service-image">
-                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_243549340_xl-2015-282x187-1ba.jpg" alt="Zámečnická pohotovost">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/depositphotos_243549340_xl-2015-600x-158.jpg" alt="Zámečnická pohotovost">
                         <div class="service-image-overlay"></div>
                     </div>
                     <div class="service-card-content">
@@ -196,7 +240,7 @@
                 
                 <a href="sluzby.html#servis" class="service-card-image animate-fade-in delay-5">
                     <div class="service-image">
-                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/dreamstime_156295539_max-282x187-1ba.jpg" alt="Zámečnický servis">
+                        <img src="https://zamecnictvi-husak.cz/assets/cache/images/service/dreamstime_156295539_max-600x-158.jpg" alt="Zámečnický servis">
                         <div class="service-image-overlay"></div>
                     </div>
                     <div class="service-card-content">

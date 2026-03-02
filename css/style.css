@@ -200,25 +200,26 @@ button {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    color: var(--white);
-    box-shadow: var(--shadow-primary);
+    background: #e63946;
+    color: #ffffff;
+    box-shadow: 0 10px 40px -10px rgba(230, 57, 70, 0.5);
 }
 
 .btn-primary:hover {
+    background: #c1121f;
     transform: translateY(-2px);
     box-shadow: 0 15px 45px -10px rgba(230, 57, 70, 0.6);
 }
 
 .btn-outline {
-    border: 2px solid var(--white);
-    color: var(--white);
+    border: 2px solid #ffffff;
+    color: #ffffff;
     background: transparent;
 }
 
 .btn-outline:hover {
-    background: var(--white);
-    color: var(--primary);
+    background: #ffffff;
+    color: #e63946;
 }
 
 .btn-lg {
@@ -398,27 +399,28 @@ button {
     right: 30px;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: #e63946;
     border-radius: var(--radius-full);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
+    color: #ffffff;
     font-size: var(--font-size-2xl);
-    box-shadow: var(--shadow-primary);
+    box-shadow: 0 10px 40px -10px rgba(230, 57, 70, 0.5);
     z-index: 999;
     transition: all var(--transition-base);
 }
 
 .floating-call:hover {
     transform: scale(1.1);
+    background: #c1121f;
 }
 
 .pulse-ring {
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 3px solid var(--primary);
+    border: 3px solid #e63946;
     border-radius: var(--radius-full);
     animation: pulse-ring 1.5s infinite;
 }
@@ -439,7 +441,8 @@ button {
    ========================================== */
 .hero {
     position: relative;
-    background: linear-gradient(135deg, var(--dark) 0%, var(--secondary-dark) 100%);
+    background: #0d1117;
+    background: linear-gradient(135deg, #0d1117 0%, #14213d 100%);
     min-height: calc(100vh - var(--header-height) - 40px);
     display: flex;
     align-items: center;
@@ -480,7 +483,7 @@ button {
     align-items: center;
     gap: var(--spacing-sm);
     background: rgba(230, 57, 70, 0.2);
-    color: var(--primary-light);
+    color: #ff6b6b;
     padding: var(--spacing-sm) var(--spacing-lg);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
@@ -492,18 +495,18 @@ button {
 .hero-title {
     font-size: var(--font-size-6xl);
     font-weight: 800;
-    color: var(--white);
+    color: #ffffff;
     line-height: 1.1;
     margin-bottom: var(--spacing-lg);
 }
 
 .hero-title .highlight {
-    color: var(--primary);
+    color: #e63946;
 }
 
 .hero-description {
     font-size: var(--font-size-xl);
-    color: var(--gray-400);
+    color: #adb5bd;
     margin-bottom: var(--spacing-2xl);
     max-width: 500px;
 }
@@ -525,12 +528,12 @@ button {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    color: var(--gray-300);
+    color: #ced4da;
     font-size: var(--font-size-sm);
 }
 
 .hero-feature i {
-    color: var(--primary);
+    color: #e63946;
 }
 
 .hero-image {
@@ -539,11 +542,124 @@ button {
     align-items: center;
 }
 
+/* Hero Animation Wrapper - Lock & Key Animation */
+.hero-animation-wrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-circle-bg {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: #e63946;
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 0 0 80px rgba(230, 57, 70, 0.4), 0 0 120px rgba(230, 57, 70, 0.2);
+}
+
+.lock-key-animation {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+
+/* Rotating rings */
+.ring-outer {
+    transform-origin: center;
+    animation: rotateClockwise 20s linear infinite;
+}
+
+.ring-inner {
+    transform-origin: center;
+    animation: rotateCounterClockwise 15s linear infinite;
+}
+
+@keyframes rotateClockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rotateCounterClockwise {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+/* Lock animation */
+.lock-group {
+    animation: lockPulse 3s ease-in-out infinite;
+}
+
+@keyframes lockPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Lock shackle bounce */
+.lock-shackle {
+    animation: shackleBounce 2s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes shackleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+/* Key animation */
+.key-group {
+    animation: keyFloat 4s ease-in-out infinite;
+}
+
+@keyframes keyFloat {
+    0%, 100% { 
+        transform: translate(0, 0) rotate(0deg); 
+        opacity: 1;
+    }
+    25% { 
+        transform: translate(5px, -5px) rotate(5deg); 
+    }
+    50% { 
+        transform: translate(10px, 0) rotate(0deg); 
+    }
+    75% { 
+        transform: translate(5px, 5px) rotate(-5deg); 
+    }
+}
+
+/* Sparkle animations */
+.sparkle {
+    opacity: 0;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.sparkle-1 { animation-delay: 0s; }
+.sparkle-2 { animation-delay: 0.5s; }
+.sparkle-3 { animation-delay: 1s; }
+.sparkle-4 { animation-delay: 1.5s; }
+
+@keyframes sparkle {
+    0%, 100% { 
+        opacity: 0; 
+        transform: scale(0.5);
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.2);
+    }
+}
+
+/* Legacy support */
 .hero-image-wrapper {
     position: relative;
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: #e63946;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -567,7 +683,7 @@ button {
 
 .experience-badge {
     text-align: center;
-    color: var(--white);
+    color: #ffffff;
 }
 
 .experience-badge .number {
@@ -1343,6 +1459,21 @@ button {
         width: 350px;
         height: 350px;
     }
+    
+    .hero-animation-wrapper {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .hero-circle-bg {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .lock-key-animation {
+        width: 260px;
+        height: 260px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -1457,6 +1588,21 @@ button {
     .hero-image-wrapper {
         width: 250px;
         height: 250px;
+    }
+    
+    .hero-animation-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .hero-circle-bg {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .lock-key-animation {
+        width: 200px;
+        height: 200px;
     }
     
     .about-grid {
