@@ -81,7 +81,6 @@
 
 .service-detail {
     padding: 100px 0;
-    border-bottom: 1px solid #e5e7eb;
 }
 
 .service-detail:last-child {
@@ -196,6 +195,20 @@
 
 .service-detail-image {
     position: relative;
+}
+
+/* Service Images */
+.service-img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
 }
 
 .service-image-card {
