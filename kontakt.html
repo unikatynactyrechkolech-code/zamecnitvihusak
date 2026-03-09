@@ -15,42 +15,44 @@
     <link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-lock">
+            <svg viewBox="0 -15 100 135" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="loadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#e63946"/>
+                        <stop offset="100%" style="stop-color:#ff6b6b"/>
+                    </linearGradient>
+                </defs>
+                <path class="loading-shackle" d="M30 50 L30 30 Q30 10 50 10 Q70 10 70 30 L70 50" fill="none" stroke="url(#loadGrad)" stroke-width="8" stroke-linecap="round"/>
+                <rect x="20" y="50" width="60" height="45" rx="8" fill="url(#loadGrad)"/>
+                <circle cx="50" cy="68" r="7" fill="#fff"/>
+                <rect x="47" y="68" width="6" height="12" rx="2" fill="#fff"/>
+            </svg>
+        </div>
+    </div>
+
     <!-- Floating Call Button -->
     <a href="tel:+420606588222" class="floating-call" aria-label="Zavolat">
         <i class="fas fa-phone-alt"></i>
         <span class="pulse-ring"></span>
     </a>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="top-info">
-                    <span><i class="fas fa-clock"></i> NONSTOP 24/7</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Praha a Středočeský kraj</span>
-                    <span><i class="fas fa-truck"></i> Dojezd 20-40 minut</span>
-                </div>
-                <div class="top-contact">
-                    <a href="tel:+420606588222"><i class="fas fa-phone-alt"></i> 606 588 222</a>
-                    <a href="tel:+420776447729"><i class="fas fa-phone"></i> 776 44 77 29</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-key"></i>
-                    </div>
                     <div class="logo-text">
                         <span class="logo-title">ZÁMEČNICTVÍ</span>
                         <span class="logo-subtitle">HUSÁK</span>
                     </div>
                 </a>
+
+                <div class="header-contact">
+                    <a href="tel:+420606588222"><i class="fas fa-phone-alt"></i> 606 588 222</a>
+                </div>
                 
                 <button class="nav-toggle" id="navToggle" aria-label="Menu">
                     <span></span>
@@ -64,11 +66,6 @@
                     <li><a href="cenik.html">Ceník</a></li>
                     <li><a href="o-nas.html">O nás</a></li>
                     <li><a href="kontakt.html" class="active">Kontakt</a></li>
-                    <li class="nav-cta">
-                        <a href="tel:+420606588222" class="btn btn-primary">
-                            <i class="fas fa-phone-alt"></i> Zavolat
-                        </a>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -291,44 +288,114 @@
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-subtitle animate-fade-in">Časté dotazy</span>
-                <h2 class="section-title animate-slide-up">Ještě máte otázky?</h2>
+                <h2 class="section-title animate-slide-up">Často kladené otázky</h2>
             </div>
             
             <div class="faq-list">
                 <div class="faq-item animate-fade-in">
                     <button class="faq-question">
-                        <span>Jak rychle přijedete?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <span>Jak rychle přijedete po zavolání?</span>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>V Praze a blízkém okolí jsme u vás obvykle do 20-40 minut od zavolání. Přesný čas příjezdu vám sdělí náš dispečer na základě aktuální dopravní situace a vytíženosti.</p>
+                        <p>Ve většině případů přijíždíme do 20-40 minut od zavolání (Praha a okolí). Přesný čas závisí na aktuální dopravní situaci a vytíženosti techniků.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item animate-fade-in delay-1">
                     <button class="faq-question">
-                        <span>Máte službu i o víkendech a svátcích?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <span>Kolik stojí otevření zabouchnutých dveří?</span>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Ano, naše služby jsou dostupné NONSTOP 24 hodin denně, 7 dní v týdnu, včetně všech víkendů a státních svátků. Jsme tu vždy, když nás potřebujete.</p>
+                        <p>Cena se odvíjí od typu dveří a zabezpečení. Obyčejné zabouchnuté dveře jsou levnější než bezpečnostní dveře s vícebodovým zamykáním. Přesnou cenu vám sdělíme předem po telefonu – bez skrytých poplatků.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item animate-fade-in delay-2">
                     <button class="faq-question">
-                        <span>Jak mohu zaplatit?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <span>Otevíráte dveře bez poškození?</span>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Přijímáme platbu v hotovosti a kartou přímo na místě. Pro firmy nabízíme také možnost fakturace. Vždy dostanete doklad o zaplacení.</p>
+                        <p>Ano, ve většině případů otevíráme dveře bez poškození. Používáme profesionální nástroje a postupy. K poškození dochází jen výjimečně, například u velmi kvalitních bezpečnostních vložek.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item animate-fade-in delay-3">
                     <button class="faq-question">
+                        <span>Fungujete nonstop?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ano, poskytujeme pohotovost 24/7 – včetně víkendů a svátků.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in">
+                    <button class="faq-question">
+                        <span>Vyměníte zámek ihned na místě?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ano, většinu běžných vložek a zámků máme skladem přímo v servisním voze. Výměna probíhá ihned na místě.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in delay-1">
+                    <button class="faq-question">
+                        <span>Co mám dělat, když ztratím klíče?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Doporučujeme okamžitě vyměnit cylindrickou vložku, zejména pokud existuje riziko zneužití. Rádi vám pomůžeme s výběrem bezpečnější varianty.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in delay-2">
+                    <button class="faq-question">
+                        <span>Otevíráte i auta?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ano, otevíráme osobní i užitková vozidla bez poškození (pokud to konstrukce umožňuje). V případě potřeby zajistíme i výrobu náhradního klíče.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in delay-3">
+                    <button class="faq-question">
+                        <span>Montujete bezpečnostní zámky a vložky?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ano, montujeme bezpečnostní vložky, přídavné zámky, bezpečnostní kování i další zabezpečení proti vloupání.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in">
+                    <button class="faq-question">
+                        <span>Jaké oblasti obsluhujete?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Působíme v Praze a okolí. V případě větších zakázek i po celé ČR.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in delay-1">
+                    <button class="faq-question">
+                        <span>Jak probíhá platba?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Platba je možná hotově nebo kartou. O ceně vás vždy informujeme předem po telefonu, nebo před zahájením práce. Pro firmy nabízíme také možnost fakturace.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-fade-in delay-2">
+                    <button class="faq-question">
                         <span>Potřebuji nějaké doklady?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Ano, pro otevření bytu nebo domu potřebujeme prokázání totožnosti a oprávnění k objektu (občanský průkaz s adresou, nájemní smlouva, plná moc od majitele apod.).</p>
@@ -339,14 +406,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="background: #0d1117 !important; background-color: #0d1117 !important;">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
                     <a href="index.html" class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-key"></i>
-                        </div>
                         <div class="logo-text">
                             <span class="logo-title">ZÁMEČNICTVÍ</span>
                             <span class="logo-subtitle">HUSÁK</span>
@@ -409,7 +473,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Zámečnictví Praha NONSTOP. Všechna práva vyhrazena.</p>
+                <p>&copy; 2006–2026 Zámečnictví Praha NONSTOP. Všechna práva vyhrazena.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Ochrana osobních údajů</a>
                 </div>

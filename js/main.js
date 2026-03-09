@@ -3,6 +3,19 @@
    ========================================== */
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Hide loading screen
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (loadingScreen) {
+        // Minimum display time for the animation to play
+        setTimeout(function() {
+            loadingScreen.classList.add('hidden');
+            // Remove from DOM after transition
+            loadingScreen.addEventListener('transitionend', function() {
+                loadingScreen.remove();
+            });
+        }, 1200);
+    }
+    
     // Initialize all features
     initNavigation();
     initScrollAnimations();
