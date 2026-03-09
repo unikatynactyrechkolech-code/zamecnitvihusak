@@ -1806,9 +1806,11 @@ img.review-avatar,
         transform: rotate(-45deg) translate(6px, -6px);
     }
     
+    /* Hero na 992px - stále 2 sloupce ale menší */
     .hero .container {
-        grid-template-columns: 1fr;
-        text-align: center;
+        grid-template-columns: 1fr auto;
+        text-align: left;
+        gap: var(--spacing-xl);
     }
     
     .hero-content {
@@ -1816,15 +1818,15 @@ img.review-avatar,
     }
     
     .hero-description {
-        margin: 0 auto var(--spacing-2xl);
+        margin: 0 0 var(--spacing-xl);
     }
     
     .hero-cta {
-        justify-content: center;
+        justify-content: flex-start;
     }
     
     .hero-features {
-        justify-content: center;
+        justify-content: flex-start;
     }
     
     .hero-image {
@@ -1832,23 +1834,23 @@ img.review-avatar,
     }
     
     .hero-image-wrapper {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
     
     .hero-animation-wrapper {
-        width: 280px;
-        height: 280px;
+        width: 200px;
+        height: 200px;
     }
     
     .hero-circle-bg {
-        width: 220px;
-        height: 220px;
+        width: 160px;
+        height: 160px;
     }
     
     .lock-key-animation {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
     
     .about-grid {
@@ -1885,10 +1887,14 @@ img.review-avatar,
         padding: 30px 0 40px;
     }
     
+    /* Hero - zachovat 2 sloupce na 768px */
     .hero .container {
+        grid-template-columns: 1fr auto;
+        text-align: left;
         padding-top: var(--spacing-lg);
         padding-bottom: var(--spacing-lg);
-        gap: var(--spacing-lg);
+        gap: var(--spacing-md);
+        align-items: center;
     }
     
     .hero-badge {
@@ -1898,36 +1904,38 @@ img.review-avatar,
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
         margin-bottom: var(--spacing-sm);
     }
     
     .hero-description {
-        font-size: 1rem;
-        margin-bottom: var(--spacing-lg);
+        font-size: 0.95rem;
+        margin-bottom: var(--spacing-md);
     }
     
     .hero-cta {
+        justify-content: flex-start;
         margin-bottom: var(--spacing-md);
     }
     
     .hero-features {
+        justify-content: flex-start;
         gap: var(--spacing-md);
     }
     
     .hero-animation-wrapper {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .hero-circle-bg {
         width: 160px;
         height: 160px;
     }
     
+    .hero-circle-bg {
+        width: 130px;
+        height: 130px;
+    }
+    
     .lock-key-animation {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
     
     .services-grid {
@@ -2027,33 +2035,37 @@ img.review-avatar,
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
     
-    /* Hero - 480px - kompaktní */
+    /* Hero - 480px - side by side layout */
     .hero {
-        padding: 20px 0 30px;
+        padding: 15px 0 25px;
     }
     
     .hero .container {
-        padding-top: var(--spacing-md);
-        padding-bottom: var(--spacing-md);
+        grid-template-columns: 1fr auto;
+        text-align: left;
+        padding-top: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
         gap: var(--spacing-sm);
+        align-items: center;
     }
     
     .hero-badge {
-        margin-bottom: 0.5rem;
-        padding: 0.4rem 0.75rem;
-        font-size: 0.7rem;
+        margin-bottom: 0.25rem;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.65rem;
     }
     
     .hero-title {
-        font-size: 1.75rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 0.25rem;
+        line-height: 1.2;
     }
     
     .hero-description {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin-bottom: var(--spacing-sm);
     }
     
@@ -2061,20 +2073,21 @@ img.review-avatar,
     .hero-cta {
         flex-direction: row !important;
         flex-wrap: nowrap !important;
-        gap: 8px;
-        margin-bottom: var(--spacing-sm);
+        justify-content: flex-start !important;
+        gap: 6px;
+        margin-bottom: var(--spacing-xs);
     }
     
     .hero-cta .btn {
-        padding: 10px 14px;
-        font-size: 0.8rem;
-        flex: 1;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        flex: 0 1 auto;
         min-width: 0;
     }
     
     .hero-cta .btn-lg {
-        padding: 10px 14px;
-        font-size: 0.8rem;
+        padding: 8px 12px;
+        font-size: 0.75rem;
         width: auto;
     }
     
@@ -2083,33 +2096,35 @@ img.review-avatar,
     }
     
     .hero-features {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         gap: 0.5rem;
+        display: none; /* Skrýt na malých obrazovkách pro úsporu místa */
     }
     
     .hero-feature {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
     
-    /* Animace zámku výše */
+    /* Animace zámku - menší */
     .hero-image {
-        margin-top: -10px;
+        margin-top: 0;
     }
     
     .hero-animation-wrapper {
-        width: 140px;
-        height: 140px;
+        width: 100px;
+        height: 100px;
     }
     
     .hero-circle-bg {
-        width: 110px;
-        height: 110px;
+        width: 80px;
+        height: 80px;
     }
     
     .lock-key-animation {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
     }
     
     .floating-call {
@@ -2178,3 +2193,80 @@ img.review-avatar,
         min-height: 44px !important;
     }
 }
+
+/* ==========================================================================
+   TEAM SECTION
+   ========================================================================== */
+.team-section {
+    padding: 80px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.team-photo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background: #f3f4f6;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.team-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.team-info h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0d1117;
+    margin-bottom: 0.25rem;
+}
+
+.team-role {
+    display: block;
+    color: #e63946;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.team-info p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+
