@@ -82,15 +82,19 @@ function initNavigation() {
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up, .animate-slide-left, .animate-slide-right, .animate-scale-up');
     
+    // Rychlejší detekce - menší threshold a větší rootMargin pro dřívější reakci
     const observerOptions = {
-        threshold: 0.01,
-        rootMargin: '0px 0px 100px 0px'
+        threshold: 0,
+        rootMargin: '0px 0px 200px 0px'
     };
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                // Okamžitě přidat třídu visible bez zpoždění
+                requestAnimationFrame(() => {
+                    entry.target.classList.add('visible');
+                });
                 observer.unobserve(entry.target);
             }
         });
