@@ -1,0 +1,11 @@
+# Robots.txt for Zámečnictví Husák Praha
+# https://zamecnictvi-husak.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://zamecnictvi-husak.vercel.app/sitemap.xml
+
+# Crawl-delay (optional, be nice to the server)
+Crawl-delay: 1
