@@ -4,8 +4,6 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingCall from '@/components/FloatingCall'
-import LoadingScreen from '@/components/LoadingScreen'
-import ScrollAnimations from '@/components/ScrollAnimations'
 
 const poppins = Poppins({
   subsets: ['latin', 'latin-ext'],
@@ -116,12 +114,10 @@ export default function RootLayout({
         />
       </head>
       <body className={poppins.className}>
-        <LoadingScreen />
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
         <FloatingCall />
-        <ScrollAnimations />
       </body>
     </html>
   )
