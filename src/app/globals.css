@@ -78,6 +78,55 @@ h1, h2, h3, h4, h5, h6 {
 .text-center { text-align: center; }
 
 /* ==========================================================================
+   Loading Screen
+   ========================================================================== */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-lock-wrapper {
+  width: 80px;
+  height: 100px;
+}
+
+.loading-lock-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.loading-shackle {
+  transform-origin: 75px 30px;
+  animation: loading-unlock 0.8s ease-out forwards;
+}
+
+@keyframes loading-unlock {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(-30deg);
+  }
+}
+
+/* ==========================================================================
    Header
    ========================================================================== */
 .header {
@@ -95,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 70px;
 }
 
 .logo {
@@ -103,20 +152,21 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   z-index: 1001;
   line-height: 1;
+  gap: 2px;
 }
 
 .logo-zamecnik {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 600;
   color: var(--color-primary);
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
 .logo-husak {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--color-dark);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .nav-menu {
@@ -2245,7 +2295,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-image {
-    display: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .hero-animation-wrapper {
+    width: 200px;
+    height: 200px;
   }
 
   .services-image-grid,
