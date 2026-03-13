@@ -52,24 +52,50 @@ export default function HomePage() {
             <div className="hero-animation-wrapper">
               <div className="hero-circle-bg"></div>
               <svg className="lock-key-animation" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Gradient definition */}
+                <defs>
+                  <linearGradient id="lockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#e63946" />
+                    <stop offset="100%" stopColor="#ff6b6b" />
+                  </linearGradient>
+                </defs>
+                
+                {/* Rotating rings */}
                 <circle className="ring-outer" cx="100" cy="100" r="95" stroke="rgba(230,57,70,0.15)" strokeWidth="1" fill="none" strokeDasharray="8 6" />
                 <circle className="ring-inner" cx="100" cy="100" r="80" stroke="rgba(230,57,70,0.1)" strokeWidth="1" fill="none" strokeDasharray="4 8" />
+                
+                {/* Lock group - styled like favicon */}
                 <g className="lock-group">
-                  <path className="lock-shackle" d="M80 95 V75 A20 20 0 0 1 120 75 V95" stroke="#e63946" strokeWidth="6" strokeLinecap="round" fill="none" />
-                  <rect x="70" y="95" width="60" height="40" rx="6" fill="#e63946" />
-                  <circle cx="100" cy="112" r="6" fill="#0d1117" />
-                  <rect x="97.5" y="112" width="5" height="10" rx="2" fill="#0d1117" />
+                  {/* Unlocked shackle */}
+                  <path 
+                    className="lock-shackle" 
+                    d="M75 95 L75 70 Q75 50 100 50 Q125 50 125 70 L125 80" 
+                    stroke="url(#lockGradient)" 
+                    strokeWidth="8" 
+                    strokeLinecap="round" 
+                    fill="none" 
+                  />
+                  {/* Lock body */}
+                  <rect x="65" y="95" width="70" height="55" rx="10" fill="url(#lockGradient)" />
+                  {/* Keyhole circle */}
+                  <circle cx="100" cy="118" r="8" fill="#ffffff" />
+                  {/* Keyhole slot */}
+                  <rect x="96" y="118" width="8" height="16" rx="3" fill="#ffffff" />
                 </g>
+                
+                {/* Key group */}
                 <g className="key-group">
-                  <circle cx="145" cy="145" r="10" stroke="#fbbf24" strokeWidth="3" fill="none" />
-                  <line x1="138" y1="152" x2="120" y2="170" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
-                  <line x1="128" y1="162" x2="133" y2="157" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
-                  <line x1="123" y1="167" x2="128" y2="162" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
+                  <circle cx="155" cy="155" r="12" stroke="#fbbf24" strokeWidth="4" fill="none" />
+                  <line x1="146" y1="162" x2="125" y2="183" stroke="#fbbf24" strokeWidth="4" strokeLinecap="round" />
+                  <line x1="134" y1="174" x2="140" y2="168" stroke="#fbbf24" strokeWidth="4" strokeLinecap="round" />
+                  <line x1="128" y1="180" x2="134" y2="174" stroke="#fbbf24" strokeWidth="4" strokeLinecap="round" />
                 </g>
-                <circle className="sparkle sparkle-1" cx="50" cy="50" r="2" fill="#fbbf24" />
-                <circle className="sparkle sparkle-2" cx="160" cy="45" r="2" fill="#e63946" />
-                <circle className="sparkle sparkle-3" cx="40" cy="150" r="2" fill="#fbbf24" />
-                <circle className="sparkle sparkle-4" cx="170" cy="160" r="2" fill="#e63946" />
+                
+                {/* Sparkles */}
+                <circle className="sparkle sparkle-1" cx="45" cy="45" r="3" fill="#fbbf24" />
+                <circle className="sparkle sparkle-2" cx="165" cy="40" r="3" fill="#e63946" />
+                <circle className="sparkle sparkle-3" cx="35" cy="160" r="3" fill="#fbbf24" />
+                <circle className="sparkle sparkle-4" cx="175" cy="170" r="3" fill="#e63946" />
               </svg>
             </div>
           </div>
