@@ -15,25 +15,25 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Zámečník Husák – Nonstop zámečník Praha | Otevírání zámků 24/7',
-    template: '%s | Zámečník Husák',
+    default: 'Zámečník Husak – Nonstop zámečník Praha | Otevírání zámků 24/7',
+    template: '%s | Zámečník Husak',
   },
-  description: 'Zámečník Husák – Nonstop zámečnická pohotovost v Praze. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří. Příjezd do 20 minut. ☎ 606 588 222',
+  description: 'Zámečník Husak – Nonstop zámečnická pohotovost v Praze. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří. Příjezd do 20 minut. ☎ 606 588 222',
   keywords: 'zámečník Praha, zámečnická pohotovost, otevírání zámků, výměna zámků, nonstop zámečník, bezpečnostní dveře Praha',
-  authors: [{ name: 'Zámečník Husák' }],
+  authors: [{ name: 'Zámečník Husak' }],
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
     url: 'https://zamecnitvihusak.vercel.app',
-    siteName: 'Zámečník Husák',
-    title: 'Zámečník Husák – Nonstop zámečník Praha',
+    siteName: 'Zámečník Husak',
+    title: 'Zámečník Husak – Nonstop zámečník Praha',
     description: 'Profesionální zámečnické služby v Praze. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří. Nonstop pohotovost 24/7.',
     images: [
       {
         url: 'https://zamecnitvihusak.vercel.app/favicon.svg',
         width: 100,
         height: 120,
-        alt: 'Zámečník Husák Praha',
+        alt: 'Zámečník Husak Praha',
       },
     ],
   },
@@ -79,7 +79,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Locksmith',
-              name: 'Zámečník Husák',
+              name: 'Zámečník Husak',
               url: 'https://zamecnitvihusak.vercel.app',
               telephone: ['+420606588222', '+420776447729'],
               address: {

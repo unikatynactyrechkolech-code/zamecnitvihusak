@@ -34,7 +34,7 @@ const reviews = [
     name: 'Martin Novák',
     avatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' rx='60' fill='%23e63946'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48' font-family='Arial'%3EMN%3C/text%3E%3C/svg%3E",
     date: 'před 2 týdny',
-    text: 'Zamkl jsem se v noci a pan Husák přijel během 15 minut. Profesionální přístup, zámek otevřel bez poškození.',
+    text: 'Zamkl jsem se v noci a pan Husak přijel během 15 minut. Profesionální přístup, zámek otevřel bez poškození.',
     moreText: 'Navíc mi poradil s výměnou vložky za bezpečnější variantu. Férová cena, rozhodně doporučuji každému, kdo potřebuje rychlou a spolehlivou pomoc.',
   },
   {
@@ -42,13 +42,13 @@ const reviews = [
     avatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' rx='60' fill='%231d3557'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48' font-family='Arial'%3EJP%3C/text%3E%3C/svg%3E",
     date: 'před měsícem',
     text: 'Výborná zkušenost! Potřebovala jsem vyměnit zámky v celém bytě po stěhování.',
-    moreText: 'Pan Husák vše zvládl za jedno odpoledne, poradil s výběrem bezpečnostních vložek a cena odpovídala předem dohodnuté nabídce. Žádné skryté příplatky.',
+    moreText: 'Pan Husak vše zvládl za jedno odpoledne, poradil s výběrem bezpečnostních vložek a cena odpovídala předem dohodnuté nabídce. Žádné skryté příplatky.',
   },
   {
     name: 'Petr Dvořák',
     avatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' rx='60' fill='%23457b9d'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48' font-family='Arial'%3EPD%3C/text%3E%3C/svg%3E",
     date: 'před 3 měsíci',
-    text: 'Montáž bezpečnostních dveří proběhla přesně podle plánu. Pan Husák je opravdový profesionál — přesný, čistá práce a hlavně férové jednání. Doporučuji!',
+    text: 'Montáž bezpečnostních dveří proběhla přesně podle plánu. Pan Husak je opravdový profesionál — přesný, čistá práce a hlavně férové jednání. Doporučuji!',
   },
 ]
 
@@ -92,12 +92,12 @@ export default function HomePage() {
                 <circle className="ring-outer" cx="100" cy="100" r="95" stroke="rgba(230,57,70,0.15)" strokeWidth="1" fill="none" strokeDasharray="8 6" />
                 <circle className="ring-inner" cx="100" cy="100" r="80" stroke="rgba(230,57,70,0.1)" strokeWidth="1" fill="none" strokeDasharray="4 8" />
                 
-                {/* Lock group - styled like favicon */}
+                {/* Lock group */}
                 <g className="lock-group">
-                  {/* Unlocked shackle */}
+                  {/* Shackle - starts fully closed, right side animates up then rotates */}
                   <path 
                     className="lock-shackle" 
-                    d="M75 95 L75 70 Q75 50 100 50 Q125 50 125 70 L125 80" 
+                    d="M75 100 L75 70 Q75 50 100 50 Q125 50 125 70 L125 100" 
                     stroke="url(#lockGradient)" 
                     strokeWidth="8" 
                     strokeLinecap="round" 
@@ -111,12 +111,15 @@ export default function HomePage() {
                   <rect x="96" y="118" width="8" height="16" rx="3" fill="#ffffff" />
                 </g>
                 
-                {/* Key group */}
+                {/* Key group - positioned to insert into keyhole */}
                 <g className="key-group">
-                  <circle cx="155" cy="155" r="12" stroke="#fbbf24" strokeWidth="4" fill="none" />
-                  <line x1="146" y1="162" x2="125" y2="183" stroke="#fbbf24" strokeWidth="4" strokeLinecap="round" />
-                  <line x1="134" y1="174" x2="140" y2="168" stroke="#fbbf24" strokeWidth="4" strokeLinecap="round" />
-                  <line x1="128" y1="180" x2="134" y2="174" stroke="#fbbf24" strokeWidth="4" strokeLinecap="round" />
+                  {/* Key head (circle) */}
+                  <circle cx="160" cy="165" r="10" stroke="#fbbf24" strokeWidth="3" fill="none" />
+                  {/* Key shaft pointing toward keyhole */}
+                  <line x1="152" y1="158" x2="130" y2="136" stroke="#fbbf24" strokeWidth="4" strokeLinecap="round" />
+                  {/* Key teeth */}
+                  <line x1="138" y1="144" x2="143" y2="139" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
+                  <line x1="133" y1="139" x2="138" y2="134" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
                 </g>
                 
                 {/* Sparkles */}
@@ -427,12 +430,12 @@ export default function HomePage() {
               <div className="team-photo">
                 <img
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' rx='150' fill='%230d1117'/%3E%3Ccircle cx='150' cy='115' r='55' fill='%23e63946'/%3E%3Ccircle cx='150' cy='95' r='35' fill='%23f1faee'/%3E%3Cellipse cx='150' cy='250' rx='80' ry='60' fill='%23e63946'/%3E%3Ctext x='50%25' y='40%25' dominant-baseline='middle' text-anchor='middle' fill='%23f1faee' font-size='72' font-family='Arial,sans-serif' font-weight='bold'%3EJH%3C/text%3E%3C/svg%3E"
-                  alt="Jan Husák - hlavní zámečník"
+                  alt="Jan Husak - hlavní zámečník"
                   loading="lazy"
                 />
               </div>
               <div className="team-info">
-                <h3>Jan Husák</h3>
+                <h3>Jan Husak</h3>
                 <span className="team-role">Hlavní zámečník & Majitel</span>
                 <p>Přes 15 let zkušeností v oboru. Certifikovaný specialista na bezpečnostní systémy a moderní zámkové technologie.</p>
               </div>

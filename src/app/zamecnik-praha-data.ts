@@ -24,7 +24,7 @@ export const prahaData: Record<string, PrahaData> = {
     imageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Old_Town_Square_view_from_Astronomical_Clock_tower.jpg?width=800',
     imageAlt: 'Zámečník Praha 1 - Staroměstské náměstí z Orloje',
     imageCaption: 'Praha 1 – Staroměstské náměstí',
-    intro: 'Hledáte spolehlivého zámečníka v Praze 1? Zámečník Husák poskytuje profesionální zámečnické služby v celé Praze 1 – od Starého Města přes Malou Stranu až po Hradčany.',
+    intro: 'Hledáte spolehlivého zámečníka v Praze 1? Zámečník Husak poskytuje profesionální zámečnické služby v celé Praze 1 – od Starého Města přes Malou Stranu až po Hradčany.',
     description: 'Praha 1 je historickým srdcem hlavního města. S množstvím historických budov, bytů i komerčních prostor zde denně řešíme nejrůznější zámečnické situace. Ať už jste se zabouchli v bytě na Starém Městě, potřebujete vyměnit zámek v kanceláři u Václavského náměstí, nebo hledáte zabezpečení pro váš obchod v Josefově – jsme tu pro vás.',
     coverage: 'Pokrýváme kompletně celou Prahu 1 včetně všech přilehlých ulic a lokalit. Díky centrální poloze Prahy 1 a našemu strategickému rozmístění techniků jsme schopni dorazit velmi rychle.',
     services: [

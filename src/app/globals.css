@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GLOBAL CSS - Zámečník Husák
+   GLOBAL CSS - Zámečník Husak
    ========================================================================== */
 
 :root {
@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .loading-shackle {
-  transform-origin: 75px 40px;
+  transform-origin: 25px 30px;
   animation: loading-unlock 1s ease-out forwards;
 }
 
@@ -118,11 +118,11 @@ h1, h2, h3, h4, h5, h6 {
   0% {
     transform: translateY(0) rotate(0deg);
   }
-  40% {
-    transform: translateY(-15px) rotate(0deg);
+  50% {
+    transform: translateY(-20px) rotate(0deg);
   }
   100% {
-    transform: translateY(-15px) rotate(-35deg);
+    transform: translateY(-20px) rotate(35deg);
   }
 }
 
@@ -408,19 +408,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lock-shackle {
-  transform-origin: 125px 70px;
+  transform-origin: 75px 70px;
   animation: shackle-unlock 4s ease-in-out infinite;
 }
 
 @keyframes shackle-unlock {
-  0%, 25% { 
+  0%, 30% { 
     transform: translateY(0) rotate(0deg); 
   }
-  40% { 
-    transform: translateY(-15px) rotate(0deg); 
+  45% { 
+    transform: translateY(-25px) rotate(0deg); 
   }
-  55%, 85% { 
-    transform: translateY(-15px) rotate(-35deg); 
+  60%, 85% { 
+    transform: translateY(-25px) rotate(-40deg); 
   }
   100% { 
     transform: translateY(0) rotate(0deg); 
@@ -434,19 +434,19 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes key-insert {
   0% { 
-    transform: translate(0, 0) rotate(0deg); 
+    transform: translate(0, 0);
   }
-  15% { 
-    transform: translate(-50px, -50px) rotate(-45deg); 
+  20% { 
+    transform: translate(-42px, -42px);
   }
-  25%, 50% { 
-    transform: translate(-55px, -55px) rotate(-45deg); 
+  30%, 55% { 
+    transform: translate(-45px, -45px);
   }
-  65% {
-    transform: translate(-50px, -50px) rotate(-45deg);
+  70% {
+    transform: translate(-42px, -42px);
   }
   100% { 
-    transform: translate(0, 0) rotate(0deg); 
+    transform: translate(0, 0);
   }
 }
 

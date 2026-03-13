@@ -40,10 +40,10 @@ export default function LoadingScreen() {
             </linearGradient>
           </defs>
           
-          {/* Shackle - animates up and rotates */}
+          {/* Shackle - starts fully closed in lock body, right side animates up and rotates */}
           <path 
             className="loading-shackle" 
-            d="M25 50 L25 30 Q25 10 50 10 Q75 10 75 30 L75 40" 
+            d="M25 55 L25 30 Q25 10 50 10 Q75 10 75 30 L75 55" 
             stroke="url(#loadingGradient)" 
             strokeWidth="8" 
             strokeLinecap="round" 

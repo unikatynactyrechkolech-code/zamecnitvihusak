@@ -95,7 +95,7 @@ export default async function LocalityPage({ params }: PageProps) {
           <div className="content-wrapper">
             <h2>🔑 Zámečník {data.name} – Rychlá pomoc 24/7</h2>
             <p className="animate-fade-in">
-              Potřebujete zámečníka v lokalitě {data.name}? Zámečnictví Husák poskytuje 
+              Potřebujete zámečníka v lokalitě {data.name}? Zámečnictví Husak poskytuje 
               profesionální zámečnické služby nonstop – 24 hodin denně, 7 dní v týdnu.
               {data.parentDistrict && ` Působíme v celé oblasti ${data.parentDistrict} a okolí.`}
             </p>

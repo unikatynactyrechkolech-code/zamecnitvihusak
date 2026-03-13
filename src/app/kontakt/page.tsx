@@ -5,7 +5,7 @@ import FaqAccordion from '@/components/FaqAccordion'
 
 export const metadata: Metadata = {
   title: 'Kontakt',
-  description: 'Kontaktujte Zámečníka Husáka – nonstop zámečnická pohotovost Praha. ☎ 606 588 222. Herbenova 727/38, Praha 10.',
+  description: 'Kontaktujte Zámečníka Husaka – nonstop zámečnická pohotovost Praha. ☎ 606 588 222. Herbenova 727/38, Praha 10.',
   alternates: { canonical: 'https://zamecnitvihusak.vercel.app/kontakt' },
 }
 
@@ -160,7 +160,7 @@ export default function KontaktPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Mapa - Zámečník Husák"
+                title="Mapa - Zámečník Husak"
               ></iframe>
             </div>
 

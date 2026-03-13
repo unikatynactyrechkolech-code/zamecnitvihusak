@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'O nás',
-  description: 'Poznejte tým Zámečník Husák – více než 15 let zkušeností, certifikovaní specialisté, pokrytí celé Prahy 24/7.',
+  description: 'Poznejte tým Zámečník Husak – více než 15 let zkušeností, certifikovaní specialisté, pokrytí celé Prahy 24/7.',
   alternates: { canonical: 'https://zamecnitvihusak.vercel.app/o-nas' },
 }
 
@@ -30,8 +30,8 @@ export default function ONasPage() {
               <span className="section-subtitle">Náš příběh</span>
               <h2 className="section-title">Zámečník s tradicí a moderním přístupem</h2>
               <p>
-                Zámečník Husák je rodinná firma s více než 15letou tradicí na pražském trhu.
-                Založil ji Jan Husák, který se zámečnickému řemeslu věnuje od svých učednických let
+                Zámečník Husak je rodinná firma s více než 15letou tradicí na pražském trhu.
+                Založil ji Jan Husak, který se zámečnickému řemeslu věnuje od svých učednických let
                 a postupně vybudoval tým profesionálů, kteří sdílí jeho vášeň pro kvalitní práci.
               </p>
               <p>
@@ -50,7 +50,7 @@ export default function ONasPage() {
                   &ldquo;Každý zámek má svůj příběh a každý zákazník si zaslouží individuální
                   přístup. To je filozofie, která nás provází od samého začátku.&rdquo;
                 </p>
-                <p><strong>— Jan Husák, zakladatel</strong></p>
+                <p><strong>— Jan Husak, zakladatel</strong></p>
               </div>
             </div>
 
@@ -114,7 +114,7 @@ export default function ONasPage() {
       <section className="section">
         <div className="container text-center">
           <span className="section-subtitle animate-fade-in">Výhody</span>
-          <h2 className="section-title animate-fade-in">Proč si vybrat Zámečníka Husáka</h2>
+          <h2 className="section-title animate-fade-in">Proč si vybrat Zámečníka Husaka</h2>
 
           <div className="advantages-grid" style={{ marginTop: '3rem' }}>
             {[
@@ -208,12 +208,12 @@ export default function ONasPage() {
               <div className="team-photo">
                 <img
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' rx='150' fill='%230d1117'/%3E%3Ccircle cx='150' cy='115' r='55' fill='%23e63946'/%3E%3Ccircle cx='150' cy='95' r='35' fill='%23f1faee'/%3E%3Cellipse cx='150' cy='250' rx='80' ry='60' fill='%23e63946'/%3E%3Ctext x='50%25' y='40%25' dominant-baseline='middle' text-anchor='middle' fill='%23f1faee' font-size='72' font-family='Arial,sans-serif' font-weight='bold'%3EJH%3C/text%3E%3C/svg%3E"
-                  alt="Jan Husák"
+                  alt="Jan Husak"
                   loading="lazy"
                 />
               </div>
               <div className="team-info">
-                <h3>Jan Husák</h3>
+                <h3>Jan Husak</h3>
                 <span className="team-role">Hlavní zámečník & Majitel</span>
                 <p>
                   Přes 15 let zkušeností v oboru. Certifikovaný specialista na

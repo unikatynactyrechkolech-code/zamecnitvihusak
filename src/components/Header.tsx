@@ -39,7 +39,7 @@ export default function Header() {
         <nav className="navbar">
           <Link href="/" className="logo">
             <span className="logo-zamecnik">ZÁMEČNÍK</span>
-            <span className="logo-husak">HUSÁK</span>
+            <span className="logo-husak">HUSAK</span>
           </Link>
 
           <ul className={`nav-menu${menuOpen ? ' active' : ''}`}>
