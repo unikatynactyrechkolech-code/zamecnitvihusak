@@ -100,26 +100,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   z-index: 1001;
-}
-
-.logo-text {
-  display: flex;
-  align-items: baseline;
-}
-
-.logo-inline {
-  display: flex;
-  align-items: baseline;
-  gap: 0.35rem;
+  line-height: 1;
 }
 
 .logo-zamecnik {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--color-primary);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .logo-husak {
