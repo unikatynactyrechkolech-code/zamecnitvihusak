@@ -1,0 +1,374 @@
+import Link from 'next/link'
+import ReviewCard from '@/components/ReviewCard'
+
+const reviews = [
+  {
+    name: 'Martin Novák',
+    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLEmqmFCi8EZ_OjP9T_Vr-M1gDGeJpMxbc3MzIFMYfHhBg5IQ=s120-c-rp-mo-br100',
+    date: 'před 2 týdny',
+    text: 'Zamkl jsem se v noci a pan Husák přijel během 15 minut. Profesionální přístup, zámek otevřel bez poškození.',
+    moreText: 'Navíc mi poradil s výměnou vložky za bezpečnější variantu. Férová cena, rozhodně doporučuji každému, kdo potřebuje rychlou a spolehlivou pomoc.',
+  },
+  {
+    name: 'Jana Procházková',
+    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLi0XYvJIE3GBjpOx-M5f_DQCQ3N0bVk2mYvDxJt_r0xJNi7g=s120-c-rp-mo-br100',
+    date: 'před měsícem',
+    text: 'Výborná zkušenost! Potřebovala jsem vyměnit zámky v celém bytě po stěhování.',
+    moreText: 'Pan Husák vše zvládl za jedno odpoledne, poradil s výběrem bezpečnostních vložek a cena odpovídala předem dohodnuté nabídce. Žádné skryté příplatky.',
+  },
+  {
+    name: 'Petr Dvořák',
+    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLIVi6q2giOcTl3PFSFYoNDzoBkK3cNTOISBABF07dBhCVF3A=s120-c-rp-mo-br100',
+    date: 'před 3 měsíci',
+    text: 'Montáž bezpečnostních dveří proběhla přesně podle plánu. Pan Husák je opravdový profesionál — přesný, čistá práce a hlavně férové jednání. Doporučuji!',
+  },
+]
+
+export default function HomePage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="hero">
+        <div className="container">
+          <div className="hero-content">
+            <h1 className="hero-title">
+              Zámečnická <span className="highlight">pohotovost</span> Praha 24/7
+            </h1>
+            <p className="hero-description">
+              Zamkli jste se? Potřebujete vyměnit zámek? Jsme tu pro vás nonstop.
+              Profesionální zámečník u vás do 20 minut.
+            </p>
+            <div className="hero-cta">
+              <a href="tel:+420606588222" className="btn btn-primary btn-lg">
+                <i className="fas fa-phone"></i> Zavolat nyní
+              </a>
+              <Link href="/cenik" className="btn btn-outline btn-lg">
+                <i className="fas fa-list"></i> Ceník služeb
+              </Link>
+            </div>
+          </div>
+
+          <div className="hero-image">
+            <div className="hero-animation-wrapper">
+              <div className="hero-circle-bg"></div>
+              <svg className="lock-key-animation" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle className="ring-outer" cx="100" cy="100" r="95" stroke="rgba(230,57,70,0.15)" strokeWidth="1" fill="none" strokeDasharray="8 6" />
+                <circle className="ring-inner" cx="100" cy="100" r="80" stroke="rgba(230,57,70,0.1)" strokeWidth="1" fill="none" strokeDasharray="4 8" />
+                <g className="lock-group">
+                  <path className="lock-shackle" d="M80 95 V75 A20 20 0 0 1 120 75 V95" stroke="#e63946" strokeWidth="6" strokeLinecap="round" fill="none" />
+                  <rect x="70" y="95" width="60" height="40" rx="6" fill="#e63946" />
+                  <circle cx="100" cy="112" r="6" fill="#0d1117" />
+                  <rect x="97.5" y="112" width="5" height="10" rx="2" fill="#0d1117" />
+                </g>
+                <g className="key-group">
+                  <circle cx="145" cy="145" r="10" stroke="#fbbf24" strokeWidth="3" fill="none" />
+                  <line x1="138" y1="152" x2="120" y2="170" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
+                  <line x1="128" y1="162" x2="133" y2="157" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
+                  <line x1="123" y1="167" x2="128" y2="162" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
+                </g>
+                <circle className="sparkle sparkle-1" cx="50" cy="50" r="2" fill="#fbbf24" />
+                <circle className="sparkle sparkle-2" cx="160" cy="45" r="2" fill="#e63946" />
+                <circle className="sparkle sparkle-3" cx="40" cy="150" r="2" fill="#fbbf24" />
+                <circle className="sparkle sparkle-4" cx="170" cy="160" r="2" fill="#e63946" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div className="hero-wave">
+          <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z" fill="#ffffff" />
+          </svg>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="section">
+        <div className="container text-center">
+          <span className="section-subtitle animate-fade-in">Naše služby</span>
+          <h2 className="section-title animate-fade-in">Co pro vás můžeme udělat?</h2>
+          <p className="section-description animate-fade-in">
+            Nabízíme kompletní zámečnické služby pro domácnosti i firmy v celé Praze.
+          </p>
+
+          <div className="services-image-grid">
+            {[
+              { title: 'Otevírání zámků', img: 'https://zamecnictvi-husak.cz/fotky/otevirani.jpg' },
+              { title: 'Výměna vložek', img: 'https://zamecnictvi-husak.cz/fotky/vymena.jpg' },
+              { title: 'Bezpečnostní dveře', img: 'https://zamecnictvi-husak.cz/fotky/dvere.jpg' },
+              { title: 'Trezory', img: 'https://zamecnictvi-husak.cz/fotky/trezory.jpg' },
+              { title: 'Autoklíče', img: 'https://zamecnictvi-husak.cz/fotky/autoklice.jpg' },
+              { title: 'Bezpečnostní systémy', img: 'https://zamecnictvi-husak.cz/fotky/systemy.jpg' },
+            ].map((service, i) => (
+              <Link href="/sluzby" className={`service-card-image animate-fade-in delay-${i + 1}`} key={service.title}>
+                <div className="service-image">
+                  <img src={service.img} alt={service.title} loading="lazy" />
+                  <div className="service-image-overlay"></div>
+                </div>
+                <div className="service-card-content">
+                  <h3>{service.title}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Advantages */}
+      <section className="section bg-light">
+        <div className="container text-center">
+          <span className="section-subtitle animate-fade-in">Proč my?</span>
+          <h2 className="section-title animate-fade-in">Naše výhody</h2>
+
+          <div className="advantages-grid">
+            {[
+              { icon: 'fa-bolt', title: 'Příjezd do 20 minut', desc: 'Rychlá reakce a příjezd kdekoliv v Praze.' },
+              { icon: 'fa-clock', title: 'Nonstop 24/7', desc: 'Pracujeme nepřetržitě včetně víkendů a svátků.' },
+              { icon: 'fa-shield-halved', title: 'Bez poškození', desc: 'Profesionální techniky šetrné k vašim dveřím.' },
+              { icon: 'fa-tag', title: 'Férové ceny', desc: 'Cenu znáte předem, žádné skryté příplatky.' },
+              { icon: 'fa-certificate', title: '15+ let praxe', desc: 'Zkušený tým certifikovaných zámečníků.' },
+              { icon: 'fa-thumbs-up', title: 'Garance spokojenosti', desc: 'Záruka na veškerou práci a materiál.' },
+            ].map((adv, i) => (
+              <div className={`advantage-card animate-fade-in delay-${i + 1}`} key={adv.title}>
+                <div className="advantage-icon">
+                  <i className={`fas ${adv.icon}`}></i>
+                </div>
+                <h3>{adv.title}</h3>
+                <p>{adv.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Preview */}
+      <section className="section">
+        <div className="container text-center">
+          <span className="section-subtitle animate-fade-in">Ceník</span>
+          <h2 className="section-title animate-fade-in">Transparentní ceny</h2>
+          <p className="section-description animate-fade-in">
+            Cenu vám sdělíme předem po telefonu. Žádné překvapení.
+          </p>
+
+          <div className="pricing-grid">
+            <div className="pricing-card animate-slide-up delay-1">
+              <div className="pricing-header">
+                <h3>Otevření zámku</h3>
+                <div className="pricing-price">
+                  <span className="from">od</span>
+                  <span className="amount">1 200</span>
+                  <span className="currency">Kč</span>
+                </div>
+              </div>
+              <ul className="pricing-features">
+                <li><i className="fas fa-check"></i> Cylindrické zámky</li>
+                <li><i className="fas fa-check"></i> Bez poškození dveří</li>
+                <li><i className="fas fa-check"></i> Příjezd do 20 min</li>
+                <li><i className="fas fa-check"></i> Nonstop dostupnost</li>
+              </ul>
+              <Link href="/cenik" className="btn btn-primary btn-full">Kompletní ceník</Link>
+            </div>
+
+            <div className="pricing-card featured animate-slide-up delay-2">
+              <span className="pricing-badge">Nejčastější</span>
+              <div className="pricing-header">
+                <h3>Výměna vložky</h3>
+                <div className="pricing-price">
+                  <span className="from">od</span>
+                  <span className="amount">1 800</span>
+                  <span className="currency">Kč</span>
+                </div>
+              </div>
+              <ul className="pricing-features">
+                <li><i className="fas fa-check"></i> Včetně nové vložky</li>
+                <li><i className="fas fa-check"></i> Bezpečnostní třída 3+</li>
+                <li><i className="fas fa-check"></i> 3 klíče v ceně</li>
+                <li><i className="fas fa-check"></i> Záruka 24 měsíců</li>
+              </ul>
+              <Link href="/cenik" className="btn btn-primary btn-full">Kompletní ceník</Link>
+            </div>
+
+            <div className="pricing-card animate-slide-up delay-3">
+              <div className="pricing-header">
+                <h3>Bezpečnostní dveře</h3>
+                <div className="pricing-price">
+                  <span className="from">od</span>
+                  <span className="amount">15 000</span>
+                  <span className="currency">Kč</span>
+                </div>
+              </div>
+              <ul className="pricing-features">
+                <li><i className="fas fa-check"></i> Třída odolnosti 3-4</li>
+                <li><i className="fas fa-check"></i> Včetně montáže</li>
+                <li><i className="fas fa-check"></i> Protipožární dveře</li>
+                <li><i className="fas fa-check"></i> Záruka 5 let</li>
+              </ul>
+              <Link href="/cenik" className="btn btn-primary btn-full">Kompletní ceník</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="section bg-light">
+        <div className="container text-center">
+          <span className="section-subtitle animate-fade-in">Jak to funguje</span>
+          <h2 className="section-title animate-fade-in">Jednoduchý proces</h2>
+
+          <div className="process-timeline">
+            {[
+              { num: '1', title: 'Zavolejte nám', desc: 'Kontaktujte nás na čísle 606 588 222. Jsme dostupní 24/7.' },
+              { num: '2', title: 'Sdělíme cenu', desc: 'Po telefonu vám řekneme přesnou cenu a odhadovaný čas příjezdu.' },
+              { num: '3', title: 'Příjezd technika', desc: 'Náš zámečník dorazí k vám do 20 minut kdekoliv v Praze.' },
+              { num: '4', title: 'Vyřešení problému', desc: 'Profesionálně a rychle vyřešíme váš problém se zámkem.' },
+            ].map((step, i) => (
+              <div className={`process-step animate-slide-up delay-${i + 1}`} key={step.num}>
+                <div className="step-number">{step.num}</div>
+                <div className="step-content">
+                  <h3>{step.title}</h3>
+                  <p>{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Problems */}
+      <section className="section bg-dark">
+        <div className="container text-center">
+          <span className="section-subtitle animate-fade-in">Typické situace</span>
+          <h2 className="section-title animate-fade-in">Řešíme tyto problémy</h2>
+
+          <div className="problems-grid">
+            {[
+              { icon: 'fa-door-closed', text: 'Zabouchnuté dveře' },
+              { icon: 'fa-key', text: 'Zlomený klíč v zámku' },
+              { icon: 'fa-lock', text: 'Zaseknutý zámek' },
+              { icon: 'fa-house-crack', text: 'Zabezpečení po vloupání' },
+              { icon: 'fa-car', text: 'Zamknuté auto' },
+              { icon: 'fa-vault', text: 'Otevření trezoru' },
+              { icon: 'fa-building', text: 'Výměna zámků v bytě' },
+              { icon: 'fa-shield-halved', text: 'Bezpečnostní upgrade' },
+            ].map((p, i) => (
+              <div className={`problem-item animate-fade-in delay-${i + 1}`} key={p.text}>
+                <i className={`fas ${p.icon}`}></i>
+                <span>{p.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-content">
+            <div className="cta-text">
+              <h2>Potřebujete zámečníka?</h2>
+              <p>Zavolejte nám a budeme u vás do 20 minut!</p>
+            </div>
+            <a href="tel:+420606588222" className="phone-link">
+              <i className="fas fa-phone"></i>
+              606 588 222
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Coverage */}
+      <section className="section">
+        <div className="container text-center">
+          <span className="section-subtitle animate-fade-in">Pokrytí</span>
+          <h2 className="section-title animate-fade-in">Působíme v celé Praze</h2>
+          <p className="section-description animate-fade-in">
+            Naši zámečníci jsou rozmístěni po celé Praze pro co nejrychlejší příjezd.
+          </p>
+
+          <div className="coverage-grid">
+            {Array.from({ length: 10 }, (_, i) => (
+              <Link
+                href={`/zamecnik-praha-${i + 1}`}
+                className={`coverage-item animate-fade-in delay-${i + 1}`}
+                key={i}
+              >
+                Praha {i + 1}
+              </Link>
+            ))}
+          </div>
+
+          <p className="coverage-note animate-fade-in">
+            <i className="fas fa-info-circle"></i>
+            Pokrýváme i okolí Prahy do 30 km. Zavolejte pro bližší informace.
+          </p>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="section bg-light">
+        <div className="container text-center">
+          <span className="section-subtitle animate-fade-in">Náš tým</span>
+          <h2 className="section-title animate-fade-in">Profesionální zámečníci</h2>
+
+          <div className="team-grid">
+            <div className="team-card animate-slide-up delay-1">
+              <div className="team-photo">
+                <img
+                  src="https://gfmswilkobzgudnofdls.supabase.co/storage/v1/object/public/obrazky//husak-portret.png"
+                  alt="Jan Husák - hlavní zámečník"
+                  loading="lazy"
+                />
+              </div>
+              <div className="team-info">
+                <h3>Jan Husák</h3>
+                <span className="team-role">Hlavní zámečník & Majitel</span>
+                <p>Přes 15 let zkušeností v oboru. Certifikovaný specialista na bezpečnostní systémy a moderní zámkové technologie.</p>
+              </div>
+            </div>
+            <div className="team-card animate-slide-up delay-2">
+              <div className="team-photo">
+                <img
+                  src="https://gfmswilkobzgudnofdls.supabase.co/storage/v1/object/public/obrazky//husak2-portret.png"
+                  alt="Petr Novotný - zámečník technik"
+                  loading="lazy"
+                />
+              </div>
+              <div className="team-info">
+                <h3>Petr Novotný</h3>
+                <span className="team-role">Zámečník - Technik</span>
+                <p>Specialista na autoklíče a elektronické zámkové systémy. 8 let v oboru s důrazem na moderní technologie.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="section">
+        <div className="container text-center">
+          <span className="section-subtitle animate-fade-in">Recenze</span>
+          <h2 className="section-title animate-fade-in">Co říkají naši zákazníci</h2>
+
+          <div className="reviews-grid">
+            {reviews.map((review) => (
+              <ReviewCard key={review.name} review={review} />
+            ))}
+          </div>
+
+          <div className="reviews-bottom animate-fade-in">
+            <a
+              href="https://www.google.com/maps"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-all-reviews"
+            >
+              <i className="fab fa-google"></i>
+              Všechny recenze na Google
+              <i className="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
