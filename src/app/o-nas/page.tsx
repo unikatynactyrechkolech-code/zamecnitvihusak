@@ -207,7 +207,7 @@ export default function ONasPage() {
             <div className="team-card animate-slide-up delay-1">
               <div className="team-photo">
                 <img
-                  src="https://gfmswilkobzgudnofdls.supabase.co/storage/v1/object/public/obrazky//husak-portret.png"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' rx='150' fill='%230d1117'/%3E%3Ccircle cx='150' cy='115' r='55' fill='%23e63946'/%3E%3Ccircle cx='150' cy='95' r='35' fill='%23f1faee'/%3E%3Cellipse cx='150' cy='250' rx='80' ry='60' fill='%23e63946'/%3E%3Ctext x='50%25' y='40%25' dominant-baseline='middle' text-anchor='middle' fill='%23f1faee' font-size='72' font-family='Arial,sans-serif' font-weight='bold'%3EJH%3C/text%3E%3C/svg%3E"
                   alt="Jan Husák"
                   loading="lazy"
                 />
@@ -224,7 +224,7 @@ export default function ONasPage() {
             <div className="team-card animate-slide-up delay-2">
               <div className="team-photo">
                 <img
-                  src="https://gfmswilkobzgudnofdls.supabase.co/storage/v1/object/public/obrazky//husak2-portret.png"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' rx='150' fill='%230d1117'/%3E%3Ccircle cx='150' cy='115' r='55' fill='%231d3557'/%3E%3Ccircle cx='150' cy='95' r='35' fill='%23f1faee'/%3E%3Cellipse cx='150' cy='250' rx='80' ry='60' fill='%231d3557'/%3E%3Ctext x='50%25' y='40%25' dominant-baseline='middle' text-anchor='middle' fill='%23f1faee' font-size='72' font-family='Arial,sans-serif' font-weight='bold'%3EPN%3C/text%3E%3C/svg%3E"
                   alt="Petr Novotný"
                   loading="lazy"
                 />

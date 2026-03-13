@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Test images batch 1",
+			"type": "shell",
+			"command": "export PATH='/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin' && echo '=== ZAMECNICTVI-HUSAK.CZ ===' && /usr/bin/curl -s -o /dev/null -w '%{http_code} otevirani.jpg\n' 'https://zamecnictvi-husak.cz/fotky/otevirani.jpg' && /usr/bin/curl -s -o /dev/null -w '%{http_code} vymena.jpg\n' 'https://zamecnictvi-husak.cz/fotky/vymena.jpg' && /usr/bin/curl -s -o /dev/null -w '%{http_code} dvere.jpg\n' 'https://zamecnictvi-husak.cz/fotky/dvere.jpg' && /usr/bin/curl -s -o /dev/null -w '%{http_code} trezory.jpg\n' 'https://zamecnictvi-husak.cz/fotky/trezory.jpg' && /usr/bin/curl -s -o /dev/null -w '%{http_code} autoklice.jpg\n' 'https://zamecnictvi-husak.cz/fotky/autoklice.jpg' && /usr/bin/curl -s -o /dev/null -w '%{http_code} systemy.jpg\n' 'https://zamecnictvi-husak.cz/fotky/systemy.jpg' && echo '=== SUPABASE ===' && /usr/bin/curl -s -o /dev/null -w '%{http_code} husak-portret\n' 'https://gfmswilkobzgudnofdls.supabase.co/storage/v1/object/public/obrazky//husak-portret.png' && /usr/bin/curl -s -o /dev/null -w '%{http_code} husak2-portret\n' 'https://gfmswilkobzgudnofdls.supabase.co/storage/v1/object/public/obrazky//husak2-portret.png' && echo '=== AVATARS ===' && /usr/bin/curl -s -o /dev/null -w '%{http_code} avatar1\n' 'https://lh3.googleusercontent.com/a/ACg8ocLEmqmFCi8EZ_OjP9T_Vr-M1gDGeJpMxbc3MzIFMYfHhBg5IQ=s120-c-rp-mo-br100' && /usr/bin/curl -s -o /dev/null -w '%{http_code} avatar2\n' 'https://lh3.googleusercontent.com/a/ACg8ocLi0XYvJIE3GBjpOx-M5f_DQCQ3N0bVk2mYvDxJt_r0xJNi7g=s120-c-rp-mo-br100' && /usr/bin/curl -s -o /dev/null -w '%{http_code} avatar3\n' 'https://lh3.googleusercontent.com/a/ACg8ocLIVi6q2giOcTl3PFSFYoNDzoBkK3cNTOISBABF07dBhCVF3A=s120-c-rp-mo-br100'"
+		},
+		{
+			"label": "Build Next.js",
+			"type": "shell",
+			"command": "export PATH='/Users/ondrejbayer/nodejs/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin' && cd '/Users/ondrejbayer/Desktop/husak zamecnictvi' && npx next build"
+		},
+		{
+			"label": "Build and Push",
+			"type": "shell",
+			"command": "export PATH='/Users/ondrejbayer/nodejs/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin' && cd '/Users/ondrejbayer/Desktop/husak zamecnictvi' && npx next build 2>&1 && echo '=== BUILD DONE ===' && git add -A && git commit -m 'fix: replace all broken images with working Unsplash CDN and SVG avatars' && git push origin main && echo '=== PUSHED ==='"
+		},
+		{
+			"label": "next-build",
+			"type": "shell",
+			"command": "PATH='/Users/ondrejbayer/nodejs/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin' npx next build",
+			"group": "build"
+		}
+	]
+}

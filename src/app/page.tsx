@@ -4,21 +4,21 @@ import ReviewCard from '@/components/ReviewCard'
 const reviews = [
   {
     name: 'Martin Novák',
-    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLEmqmFCi8EZ_OjP9T_Vr-M1gDGeJpMxbc3MzIFMYfHhBg5IQ=s120-c-rp-mo-br100',
+    avatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' rx='60' fill='%23e63946'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48' font-family='Arial'%3EMN%3C/text%3E%3C/svg%3E",
     date: 'před 2 týdny',
     text: 'Zamkl jsem se v noci a pan Husák přijel během 15 minut. Profesionální přístup, zámek otevřel bez poškození.',
     moreText: 'Navíc mi poradil s výměnou vložky za bezpečnější variantu. Férová cena, rozhodně doporučuji každému, kdo potřebuje rychlou a spolehlivou pomoc.',
   },
   {
     name: 'Jana Procházková',
-    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLi0XYvJIE3GBjpOx-M5f_DQCQ3N0bVk2mYvDxJt_r0xJNi7g=s120-c-rp-mo-br100',
+    avatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' rx='60' fill='%231d3557'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48' font-family='Arial'%3EJP%3C/text%3E%3C/svg%3E",
     date: 'před měsícem',
     text: 'Výborná zkušenost! Potřebovala jsem vyměnit zámky v celém bytě po stěhování.',
     moreText: 'Pan Husák vše zvládl za jedno odpoledne, poradil s výběrem bezpečnostních vložek a cena odpovídala předem dohodnuté nabídce. Žádné skryté příplatky.',
   },
   {
     name: 'Petr Dvořák',
-    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLIVi6q2giOcTl3PFSFYoNDzoBkK3cNTOISBABF07dBhCVF3A=s120-c-rp-mo-br100',
+    avatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' rx='60' fill='%23457b9d'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48' font-family='Arial'%3EPD%3C/text%3E%3C/svg%3E",
     date: 'před 3 měsíci',
     text: 'Montáž bezpečnostních dveří proběhla přesně podle plánu. Pan Husák je opravdový profesionál — přesný, čistá práce a hlavně férové jednání. Doporučuji!',
   },
@@ -93,12 +93,12 @@ export default function HomePage() {
 
           <div className="services-image-grid">
             {[
-              { title: 'Otevírání zámků', img: 'https://zamecnictvi-husak.cz/fotky/otevirani.jpg' },
-              { title: 'Výměna vložek', img: 'https://zamecnictvi-husak.cz/fotky/vymena.jpg' },
-              { title: 'Bezpečnostní dveře', img: 'https://zamecnictvi-husak.cz/fotky/dvere.jpg' },
-              { title: 'Trezory', img: 'https://zamecnictvi-husak.cz/fotky/trezory.jpg' },
-              { title: 'Autoklíče', img: 'https://zamecnictvi-husak.cz/fotky/autoklice.jpg' },
-              { title: 'Bezpečnostní systémy', img: 'https://zamecnictvi-husak.cz/fotky/systemy.jpg' },
+              { title: 'Otevírání zámků', img: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80&auto=format' },
+              { title: 'Výměna vložek', img: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80&auto=format' },
+              { title: 'Bezpečnostní dveře', img: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&q=80&auto=format' },
+              { title: 'Trezory', img: 'https://images.unsplash.com/photo-1622473590773-f588134b6ce7?w=600&q=80&auto=format' },
+              { title: 'Autoklíče', img: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&q=80&auto=format' },
+              { title: 'Bezpečnostní systémy', img: 'https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format' },
             ].map((service, i) => (
               <Link href="/sluzby" className={`service-card-image animate-fade-in delay-${i + 1}`} key={service.title}>
                 <div className="service-image">
@@ -314,7 +314,7 @@ export default function HomePage() {
             <div className="team-card animate-slide-up delay-1">
               <div className="team-photo">
                 <img
-                  src="https://gfmswilkobzgudnofdls.supabase.co/storage/v1/object/public/obrazky//husak-portret.png"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' rx='150' fill='%230d1117'/%3E%3Ccircle cx='150' cy='115' r='55' fill='%23e63946'/%3E%3Ccircle cx='150' cy='95' r='35' fill='%23f1faee'/%3E%3Cellipse cx='150' cy='250' rx='80' ry='60' fill='%23e63946'/%3E%3Ctext x='50%25' y='40%25' dominant-baseline='middle' text-anchor='middle' fill='%23f1faee' font-size='72' font-family='Arial,sans-serif' font-weight='bold'%3EJH%3C/text%3E%3C/svg%3E"
                   alt="Jan Husák - hlavní zámečník"
                   loading="lazy"
                 />
@@ -328,7 +328,7 @@ export default function HomePage() {
             <div className="team-card animate-slide-up delay-2">
               <div className="team-photo">
                 <img
-                  src="https://gfmswilkobzgudnofdls.supabase.co/storage/v1/object/public/obrazky//husak2-portret.png"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' rx='150' fill='%230d1117'/%3E%3Ccircle cx='150' cy='115' r='55' fill='%231d3557'/%3E%3Ccircle cx='150' cy='95' r='35' fill='%23f1faee'/%3E%3Cellipse cx='150' cy='250' rx='80' ry='60' fill='%231d3557'/%3E%3Ctext x='50%25' y='40%25' dominant-baseline='middle' text-anchor='middle' fill='%23f1faee' font-size='72' font-family='Arial,sans-serif' font-weight='bold'%3EPN%3C/text%3E%3C/svg%3E"
                   alt="Petr Novotný - zámečník technik"
                   loading="lazy"
                 />
