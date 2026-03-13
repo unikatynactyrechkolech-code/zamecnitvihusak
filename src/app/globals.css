@@ -100,24 +100,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   z-index: 1001;
 }
 
-.logo-subtitle {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  letter-spacing: 2px;
-  line-height: 1;
+.logo-text {
+  display: flex;
+  align-items: baseline;
 }
 
-.logo-title {
+.logo-inline {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.logo-zamecnik {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+.logo-husak {
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--color-dark);
-  letter-spacing: 2px;
-  line-height: 1.1;
+  letter-spacing: 1px;
 }
 
 .nav-menu {

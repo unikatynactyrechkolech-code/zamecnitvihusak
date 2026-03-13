@@ -350,7 +350,7 @@ export default function HomePage() {
               {prahaDistricts.map(({ num, neighborhoods }) => (
                 <div key={num} className="coverage-district-block">
                   <Link 
-                    href={num <= 10 ? `/zamecnik-praha-${num}` : `/${num}`} 
+                    href={num <= 10 ? `/zamecnik-praha-${num}` : `/praha-${num}`} 
                     className="coverage-district-main"
                   >
                     Praha {num}

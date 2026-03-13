@@ -12,16 +12,31 @@ interface PageProps {
   params: Promise<{ slug: string }>
 }
 
+// Helper to convert URL slug back to full slug
+function resolveFullSlug(urlSlug: string): string {
+  // Try all possible formats and return the one that exists
+  const possibleSlugs = [
+    `zamecnik-${urlSlug}`,        // e.g. zamecnik-praha-11 or zamecnik-praha-zizkov
+    `zamecnik-praha-${urlSlug}`,  // e.g. zamecnik-praha-hostivice (if urlSlug is just "hostivice")
+  ]
+  return possibleSlugs[0] // We'll check existence in the function
+}
+
 export async function generateStaticParams() {
   const slugs = getAllLocalitySlugs()
   return slugs.map((slug) => ({
-    slug: slug.replace('zamecnik-praha-', '').replace('zamecnik-', ''),
+    // Remove 'zamecnik-' prefix for URL
+    // zamecnik-praha-11 -> praha-11
+    // zamecnik-praha-zizkov -> praha-zizkov  
+    // zamecnik-hostivice -> hostivice
+    slug: slug.replace('zamecnik-', ''),
   }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
-  const fullSlug = slug.includes('praha') ? `zamecnik-${slug}` : `zamecnik-praha-${slug}`
+  // Add 'zamecnik-' prefix back
+  const fullSlug = `zamecnik-${slug}`
   const data = getLocalityBySlug(fullSlug)
   
   if (!data) return {}
@@ -32,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
-    alternates: { canonical: `https://zamecnitvihusak.vercel.app/${data.slug}` },
+    alternates: { canonical: `https://zamecnitvihusak.vercel.app/${slug}` },
     openGraph: {
       title,
       description,
@@ -42,7 +57,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function LocalityPage({ params }: PageProps) {
   const { slug } = await params
-  const fullSlug = slug.includes('praha') ? `zamecnik-${slug}` : `zamecnik-praha-${slug}`
+  // Add 'zamecnik-' prefix back
+  const fullSlug = `zamecnik-${slug}`
   const data = getLocalityBySlug(fullSlug)
 
   if (!data) {

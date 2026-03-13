@@ -39,8 +39,7 @@ export default function Header() {
         <nav className="navbar">
           <Link href="/" className="logo">
             <span className="logo-text">
-              <span className="logo-subtitle">ZÁMEČNÍK</span>
-              <span className="logo-title">HUSÁK</span>
+              <span className="logo-inline"><span className="logo-zamecnik">ZÁMEČNÍK</span> <span className="logo-husak">HUSÁK</span></span>
             </span>
           </Link>
 
