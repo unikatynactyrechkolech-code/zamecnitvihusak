@@ -29,9 +29,10 @@ export default function LoadingScreen() {
       <div className="loading-lock-wrapper">
         <svg 
           className="loading-lock-svg" 
-          viewBox="0 0 100 120" 
+          viewBox="0 0 100 140" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
+          style={{ overflow: 'visible' }}
         >
           <defs>
             <linearGradient id="loadingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -40,18 +41,18 @@ export default function LoadingScreen() {
             </linearGradient>
           </defs>
           
-          {/* Left leg of shackle - FIXED, stays in lock body */}
+          {/* Left leg of shackle - FIXED in lock body */}
           <line 
-            x1="25" y1="55" x2="25" y2="30"
+            x1="25" y1="60" x2="25" y2="35"
             stroke="url(#loadingGradient)" 
             strokeWidth="8" 
             strokeLinecap="round" 
           />
           
-          {/* Right leg + arc - this part moves up and rotates back */}
+          {/* Right part (arc + right leg) - pivots around top of left leg */}
           <path 
             className="loading-shackle" 
-            d="M25 30 Q25 10 50 10 Q75 10 75 30 L75 55" 
+            d="M25 35 Q25 15 50 15 Q75 15 75 35 L75 60" 
             stroke="url(#loadingGradient)" 
             strokeWidth="8" 
             strokeLinecap="round" 
@@ -59,11 +60,11 @@ export default function LoadingScreen() {
           />
           
           {/* Lock body */}
-          <rect x="15" y="50" width="70" height="55" rx="8" fill="url(#loadingGradient)" />
+          <rect x="15" y="55" width="70" height="55" rx="8" fill="url(#loadingGradient)" />
           
           {/* Keyhole */}
-          <circle cx="50" cy="72" r="8" fill="#ffffff" />
-          <rect x="46" y="72" width="8" height="14" rx="3" fill="#ffffff" />
+          <circle cx="50" cy="78" r="7" fill="#ffffff" />
+          <rect x="46" y="78" width="8" height="12" rx="2" fill="#ffffff" />
         </svg>
       </div>
     </div>

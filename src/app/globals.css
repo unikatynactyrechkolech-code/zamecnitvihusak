@@ -100,29 +100,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .loading-lock-wrapper {
-  width: 80px;
-  height: 100px;
+  width: 100px;
+  height: 140px;
 }
 
 .loading-lock-svg {
   width: 100%;
   height: 100%;
+  overflow: visible;
 }
 
 .loading-shackle {
-  transform-origin: 25px 30px;
+  transform-origin: 25px 35px;
   animation: loading-unlock 1s ease-out forwards;
 }
 
 @keyframes loading-unlock {
   0% {
-    transform: translateY(0) rotateY(0deg);
+    transform: translateY(0) rotate(0deg);
   }
-  40% {
-    transform: translateY(-15px) rotateY(0deg);
+  50% {
+    transform: translateY(-20px) rotate(0deg);
   }
   100% {
-    transform: translateY(-15px) rotateY(-120deg);
+    transform: translateY(-20px) rotate(-45deg);
   }
 }
 
@@ -408,26 +409,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lock-shackle {
-  transform-origin: 75px 70px;
+  transform-origin: 75px 72px;
   animation: shackle-unlock 4s ease-in-out infinite;
 }
 
 @keyframes shackle-unlock {
   0%, 30% { 
-    transform: translateY(0) rotateY(0deg); 
+    transform: translateY(0) rotate(0deg); 
   }
   45% { 
-    transform: translateY(-20px) rotateY(0deg); 
+    transform: translateY(-18px) rotate(0deg); 
   }
   60%, 85% { 
-    transform: translateY(-20px) rotateY(-120deg); 
+    transform: translateY(-18px) rotate(-40deg); 
   }
   100% { 
-    transform: translateY(0) rotateY(0deg); 
+    transform: translateY(0) rotate(0deg); 
   }
 }
 
-/* Key animation - inserts into keyhole */
+/* Key animation - moves into keyhole */
 .key-group {
   animation: key-insert 4s ease-in-out infinite;
 }
@@ -437,13 +438,13 @@ h1, h2, h3, h4, h5, h6 {
     transform: translate(0, 0);
   }
   20% { 
-    transform: translate(-42px, -42px);
+    transform: translate(-15px, -15px);
   }
   30%, 55% { 
-    transform: translate(-45px, -45px);
+    transform: translate(-18px, -18px);
   }
   70% {
-    transform: translate(-42px, -42px);
+    transform: translate(-15px, -15px);
   }
   100% { 
     transform: translate(0, 0);

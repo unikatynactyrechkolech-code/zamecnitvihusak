@@ -94,18 +94,18 @@ export default function HomePage() {
                 
                 {/* Lock group */}
                 <g className="lock-group">
-                  {/* Left leg of shackle - FIXED, stays in lock body */}
+                  {/* Left leg of shackle - FIXED in lock body */}
                   <line 
-                    x1="75" y1="100" x2="75" y2="70"
+                    x1="75" y1="100" x2="75" y2="72"
                     stroke="url(#lockGradient)" 
                     strokeWidth="8" 
                     strokeLinecap="round" 
                   />
                   
-                  {/* Right leg + arc - this part moves up and rotates back */}
+                  {/* Right part (arc + right leg) - pivots around connection point */}
                   <path 
                     className="lock-shackle" 
-                    d="M75 70 Q75 50 100 50 Q125 50 125 70 L125 100" 
+                    d="M75 72 Q75 52 100 52 Q125 52 125 72 L125 100" 
                     stroke="url(#lockGradient)" 
                     strokeWidth="8" 
                     strokeLinecap="round" 
@@ -113,21 +113,21 @@ export default function HomePage() {
                   />
                   {/* Lock body */}
                   <rect x="65" y="95" width="70" height="55" rx="10" fill="url(#lockGradient)" />
-                  {/* Keyhole circle */}
-                  <circle cx="100" cy="118" r="8" fill="#ffffff" />
+                  {/* Keyhole circle - center at 100, 120 */}
+                  <circle cx="100" cy="120" r="8" fill="#ffffff" />
                   {/* Keyhole slot */}
-                  <rect x="96" y="118" width="8" height="16" rx="3" fill="#ffffff" />
+                  <rect x="96" y="120" width="8" height="14" rx="2" fill="#ffffff" />
                 </g>
                 
-                {/* Key group - positioned to insert into keyhole */}
+                {/* Key - starts bottom right, moves to keyhole at (100, 120) */}
                 <g className="key-group">
-                  {/* Key head (circle) */}
-                  <circle cx="160" cy="165" r="10" stroke="#fbbf24" strokeWidth="3" fill="none" />
-                  {/* Key shaft pointing toward keyhole */}
-                  <line x1="152" y1="158" x2="130" y2="136" stroke="#fbbf24" strokeWidth="4" strokeLinecap="round" />
+                  {/* Key handle (oval) */}
+                  <ellipse cx="155" cy="175" rx="12" ry="10" stroke="#fbbf24" strokeWidth="3" fill="none" />
+                  {/* Key shaft - goes toward keyhole */}
+                  <line x1="145" y1="168" x2="115" y2="138" stroke="#fbbf24" strokeWidth="4" strokeLinecap="round" />
                   {/* Key teeth */}
-                  <line x1="138" y1="144" x2="143" y2="139" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
-                  <line x1="133" y1="139" x2="138" y2="134" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
+                  <line x1="125" y1="148" x2="130" y2="143" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
+                  <line x1="120" y1="143" x2="125" y2="138" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
                 </g>
                 
                 {/* Sparkles */}
