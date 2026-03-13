@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Služby',
   description: 'Kompletní přehled zámečnických služeb – otevírání zámků, výměna vložek, montáž bezpečnostních dveří, trezory, autoklíče a bezpečnostní systémy.',
-  alternates: { canonical: 'https://zamecnictvi-husak.vercel.app/sluzby' },
+  alternates: { canonical: 'https://zamecnitvihusak.vercel.app/sluzby' },
 }
 
 const services = [

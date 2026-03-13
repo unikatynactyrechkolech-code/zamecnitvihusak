@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'O nás',
   description: 'Poznejte tým Zámečnictví Husák – více než 15 let zkušeností, certifikovaní specialisté, pokrytí celé Prahy 24/7.',
-  alternates: { canonical: 'https://zamecnictvi-husak.vercel.app/o-nas' },
+  alternates: { canonical: 'https://zamecnitvihusak.vercel.app/o-nas' },
 }
 
 export default function ONasPage() {

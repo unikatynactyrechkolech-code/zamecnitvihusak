@@ -9,7 +9,7 @@ export function generatePrahaMetadata(num: string): Metadata {
   return {
     title: data.title,
     description: `Zámečník Praha ${num} – nonstop zámečnická pohotovost v oblasti ${data.areas.join(', ')}. Příjezd do ${data.time}. ☎ 606 588 222`,
-    alternates: { canonical: `https://zamecnictvi-husak.vercel.app/zamecnik-praha-${num}` },
+    alternates: { canonical: `https://zamecnitvihusak.vercel.app/zamecnik-praha-${num}` },
     openGraph: {
       title: `${data.title} – Nonstop zámečnická pohotovost`,
       description: `Profesionální zámečnické služby v Praze ${num}. ${data.areas.join(', ')}. Příjezd do ${data.time}.`,

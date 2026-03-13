@@ -7,8 +7,8 @@ export default function LoadingScreen() {
   const [fadeOut, setFadeOut] = useState(false)
 
   useEffect(() => {
-    const fadeTimer = setTimeout(() => setFadeOut(true), 1200)
-    const hideTimer = setTimeout(() => setHidden(true), 1600)
+    const fadeTimer = setTimeout(() => setFadeOut(true), 400)
+    const hideTimer = setTimeout(() => setHidden(true), 700)
     return () => {
       clearTimeout(fadeTimer)
       clearTimeout(hideTimer)

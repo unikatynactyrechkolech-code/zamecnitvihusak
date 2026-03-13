@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://zamecnictvi-husak.vercel.app/sitemap.xml',
+    sitemap: 'https://zamecnitvihusak.vercel.app/sitemap.xml',
   }
 }

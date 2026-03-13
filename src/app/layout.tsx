@@ -25,15 +25,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
-    url: 'https://zamecnictvi-husak.vercel.app',
+    url: 'https://zamecnitvihusak.vercel.app',
     siteName: 'Zámečnictví Husák',
     title: 'Zámečnictví Husák – Nonstop zámečník Praha',
     description: 'Profesionální zámečnické služby v Praze. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří. Nonstop pohotovost 24/7.',
     images: [
       {
-        url: 'https://zamecnictvi-husak.cz/og-image.jpg',
-        width: 1200,
-        height: 630,
+        url: 'https://zamecnitvihusak.vercel.app/favicon.svg',
+        width: 100,
+        height: 120,
         alt: 'Zámečnictví Husák Praha',
       },
     ],
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://zamecnictvi-husak.vercel.app',
+    canonical: 'https://zamecnitvihusak.vercel.app',
   },
   icons: {
     icon: '/favicon.svg',
@@ -63,6 +63,12 @@ export default function RootLayout({
     <html lang="cs" className={poppins.variable}>
       <head>
         <link
+          rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          as="style"
+          crossOrigin="anonymous"
+        />
+        <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           crossOrigin="anonymous"
@@ -75,7 +81,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Locksmith',
               name: 'Zámečnictví Husák',
-              url: 'https://zamecnictvi-husak.vercel.app',
+              url: 'https://zamecnitvihusak.vercel.app',
               telephone: ['+420606588222', '+420776447729'],
               address: {
                 '@type': 'PostalAddress',
@@ -103,7 +109,7 @@ export default function RootLayout({
                 name: 'Praha',
               },
               priceRange: 'od 1200 Kč',
-              image: 'https://zamecnictvi-husak.cz/og-image.jpg',
+              image: 'https://zamecnitvihusak.vercel.app/favicon.svg',
               description: 'Profesionální zámečnické služby v Praze 24/7. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří.',
             }),
           }}

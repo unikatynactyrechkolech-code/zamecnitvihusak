@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Ceník',
   description: 'Transparentní ceník zámečnických služeb – otevírání zámků od 1200 Kč, výměna vložek od 1800 Kč, bezpečnostní dveře od 15 000 Kč.',
-  alternates: { canonical: 'https://zamecnictvi-husak.vercel.app/cenik' },
+  alternates: { canonical: 'https://zamecnitvihusak.vercel.app/cenik' },
 }
 
 const tables = [

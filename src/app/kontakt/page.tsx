@@ -6,7 +6,7 @@ import FaqAccordion from '@/components/FaqAccordion'
 export const metadata: Metadata = {
   title: 'Kontakt',
   description: 'Kontaktujte Zámečnictví Husák – nonstop zámečnická pohotovost Praha. ☎ 606 588 222. Herbenova 727/38, Praha 10.',
-  alternates: { canonical: 'https://zamecnictvi-husak.vercel.app/kontakt' },
+  alternates: { canonical: 'https://zamecnitvihusak.vercel.app/kontakt' },
 }
 
 const faqItems = [
