@@ -1,5 +1,33 @@
 import Link from 'next/link'
 import ReviewCard from '@/components/ReviewCard'
+import { neighborhoodData, extendedPrahaData } from './locality-data'
+import { prahaZapadData, prahaVychodData } from './outskirts-data'
+
+// Organize localities by parent district
+const prahaDistricts = [
+  { num: 1, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 1') },
+  { num: 2, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 2') },
+  { num: 3, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 3') },
+  { num: 4, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 4') },
+  { num: 5, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 5') },
+  { num: 6, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 6') },
+  { num: 7, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 7') },
+  { num: 8, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 8') },
+  { num: 9, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 9') },
+  { num: 10, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 10') },
+  { num: 11, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 11') },
+  { num: 12, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 12') },
+  { num: 13, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 13') },
+  { num: 14, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 14') },
+  { num: 15, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 15') },
+  { num: 16, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 16') },
+  { num: 17, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 17') },
+  { num: 18, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 18') },
+  { num: 19, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 19') },
+  { num: 20, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 20') },
+  { num: 21, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 21') },
+  { num: 22, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 22') },
+]
 
 const reviews = [
   {
@@ -302,30 +330,88 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Coverage */}
-      <section className="section">
-        <div className="container text-center">
-          <span className="section-subtitle animate-fade-in">Pokrytí</span>
-          <h2 className="section-title animate-fade-in">Působíme v celé Praze</h2>
-          <p className="section-description animate-fade-in">
-            Naši zámečníci jsou rozmístěni po celé Praze pro co nejrychlejší příjezd.
-          </p>
-
-          <div className="coverage-grid">
-            {Array.from({ length: 10 }, (_, i) => (
-              <Link
-                href={`/zamecnik-praha-${i + 1}`}
-                className={`coverage-item animate-fade-in delay-${i + 1}`}
-                key={i}
-              >
-                Praha {i + 1}
-              </Link>
-            ))}
+      {/* Coverage - All Localities */}
+      <section className="section bg-dark">
+        <div className="container">
+          <div className="text-center">
+            <span className="section-subtitle animate-fade-in">Pokrytí</span>
+            <h2 className="section-title animate-fade-in">Působíme v celé Praze a okolí</h2>
+            <p className="section-description animate-fade-in" style={{ color: '#adb5bd' }}>
+              Vyberte svou lokalitu – jsme připraveni přijet kamkoliv v Praze i okolních obcích.
+            </p>
           </div>
 
-          <p className="coverage-note animate-fade-in">
+          {/* Praha 1-22 s městskými částmi */}
+          <div className="coverage-full-section">
+            <h3 className="coverage-region-title">
+              <i className="fas fa-city"></i> Praha
+            </h3>
+            <div className="coverage-districts-grid">
+              {prahaDistricts.map(({ num, neighborhoods }) => (
+                <div key={num} className="coverage-district-block">
+                  <Link 
+                    href={num <= 10 ? `/zamecnik-praha-${num}` : `/${num}`} 
+                    className="coverage-district-main"
+                  >
+                    Praha {num}
+                  </Link>
+                  {neighborhoods.length > 0 && (
+                    <div className="coverage-neighborhoods">
+                      {neighborhoods.map(n => (
+                        <Link 
+                          key={n.slug} 
+                          href={`/${n.slug.replace('zamecnik-praha-', '')}`}
+                          className="coverage-neighborhood-link"
+                        >
+                          {n.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Praha-západ */}
+          <div className="coverage-full-section">
+            <h3 className="coverage-region-title">
+              <i className="fas fa-map-marker-alt"></i> Praha-západ
+            </h3>
+            <div className="coverage-villages-grid">
+              {prahaZapadData.filter(v => v.type === 'village').map(village => (
+                <Link 
+                  key={village.slug} 
+                  href={`/${village.slug.replace('zamecnik-', '')}`}
+                  className="coverage-village-link"
+                >
+                  {village.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Praha-východ */}
+          <div className="coverage-full-section">
+            <h3 className="coverage-region-title">
+              <i className="fas fa-map-marker-alt"></i> Praha-východ
+            </h3>
+            <div className="coverage-villages-grid">
+              {prahaVychodData.filter(v => v.type === 'village').map(village => (
+                <Link 
+                  key={village.slug} 
+                  href={`/${village.slug.replace('zamecnik-', '')}`}
+                  className="coverage-village-link"
+                >
+                  {village.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <p className="coverage-note animate-fade-in" style={{ marginTop: '2rem' }}>
             <i className="fas fa-info-circle"></i>
-            Pokrýváme i okolí Prahy do 30 km. Zavolejte pro bližší informace.
+            Nenašli jste svou obec? Zavolejte nám – pokrýváme i další lokality do 50 km od Prahy.
           </p>
         </div>
       </section>
