@@ -39,8 +39,8 @@ export default function Header() {
         <nav className="navbar">
           <Link href="/" className="logo">
             <span className="logo-text">
-              <span className="logo-title">HUSÁK</span>
               <span className="logo-subtitle">ZÁMEČNÍK</span>
+              <span className="logo-title">HUSÁK</span>
             </span>
           </Link>
 
