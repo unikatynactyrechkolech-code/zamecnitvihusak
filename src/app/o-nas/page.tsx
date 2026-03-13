@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'O nás',
-  description: 'Poznejte tým Zámečnictví Husák – více než 15 let zkušeností, certifikovaní specialisté, pokrytí celé Prahy 24/7.',
+  description: 'Poznejte tým Zámečník Husák – více než 15 let zkušeností, certifikovaní specialisté, pokrytí celé Prahy 24/7.',
   alternates: { canonical: 'https://zamecnitvihusak.vercel.app/o-nas' },
 }
 
@@ -28,9 +28,9 @@ export default function ONasPage() {
           <div className="about-main-grid">
             <div className="about-main-content animate-fade-in">
               <span className="section-subtitle">Náš příběh</span>
-              <h2 className="section-title">Zámečnictví s tradicí a moderním přístupem</h2>
+              <h2 className="section-title">Zámečník s tradicí a moderním přístupem</h2>
               <p>
-                Zámečnictví Husák je rodinná firma s více než 15letou tradicí na pražském trhu.
+                Zámečník Husák je rodinná firma s více než 15letou tradicí na pražském trhu.
                 Založil ji Jan Husák, který se zámečnickému řemeslu věnuje od svých učednických let
                 a postupně vybudoval tým profesionálů, kteří sdílí jeho vášeň pro kvalitní práci.
               </p>
@@ -114,7 +114,7 @@ export default function ONasPage() {
       <section className="section">
         <div className="container text-center">
           <span className="section-subtitle animate-fade-in">Výhody</span>
-          <h2 className="section-title animate-fade-in">Proč si vybrat Zámečnictví Husák</h2>
+          <h2 className="section-title animate-fade-in">Proč si vybrat Zámečníka Husáka</h2>
 
           <div className="advantages-grid" style={{ marginTop: '3rem' }}>
             {[

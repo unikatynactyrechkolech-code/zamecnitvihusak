@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GLOBAL CSS - Zámečnictví Husák
+   GLOBAL CSS - Zámečník Husák
    Modern CSS with CSS Variables
    ========================================================================== */
 
@@ -2474,35 +2474,49 @@ h1, h2, h3, h4, h5, h6 {
   .nav-menu {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 300px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
     height: 100vh;
     background: var(--color-dark);
     flex-direction: column;
-    padding: 100px 2rem 2rem;
-    transition: right var(--transition-normal);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     gap: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
   }
   
   .nav-menu.active {
-    right: 0;
+    opacity: 1;
+    visibility: visible;
   }
   
   .nav-menu li {
     width: 100%;
+    text-align: center;
   }
   
   .nav-menu li a {
     display: block;
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
   }
 
   .nav-menu li a:hover,
   .nav-menu li a.active {
     color: var(--color-primary);
+  }
+
+  .nav-toggle {
+    z-index: 1001;
   }
 
   .nav-toggle.active span {

@@ -40,7 +40,7 @@ export default function Header() {
           <Link href="/" className="logo">
             <span className="logo-text">
               <span className="logo-title">HUSÁK</span>
-              <span className="logo-subtitle">ZÁMEČNICTVÍ</span>
+              <span className="logo-subtitle">ZÁMEČNÍK</span>
             </span>
           </Link>
 

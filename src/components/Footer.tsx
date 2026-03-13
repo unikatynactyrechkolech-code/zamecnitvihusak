@@ -14,7 +14,7 @@ export default function Footer() {
             <Link href="/" className="footer-logo">
               <span className="logo-text">
                 <span className="logo-title">HUSÁK</span>
-                <span className="logo-subtitle">ZÁMEČNICTVÍ</span>
+                <span className="logo-subtitle">ZÁMEČNÍK</span>
               </span>
             </Link>
             <p>
@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Zámečnictví Husák. Všechna práva vyhrazena.</p>
+          <p>&copy; {new Date().getFullYear()} Zámečník Husák. Všechna práva vyhrazena.</p>
           <div className="footer-bottom-links">
             <Link href="/kontakt">Kontaktujte nás</Link>
           </div>
