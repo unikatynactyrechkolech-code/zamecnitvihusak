@@ -94,10 +94,18 @@ export default function HomePage() {
                 
                 {/* Lock group */}
                 <g className="lock-group">
-                  {/* Shackle - starts fully closed, right side animates up then rotates */}
+                  {/* Left leg of shackle - FIXED, stays in lock body */}
+                  <line 
+                    x1="75" y1="100" x2="75" y2="70"
+                    stroke="url(#lockGradient)" 
+                    strokeWidth="8" 
+                    strokeLinecap="round" 
+                  />
+                  
+                  {/* Right leg + arc - this part moves up and rotates back */}
                   <path 
                     className="lock-shackle" 
-                    d="M75 100 L75 70 Q75 50 100 50 Q125 50 125 70 L125 100" 
+                    d="M75 70 Q75 50 100 50 Q125 50 125 70 L125 100" 
                     stroke="url(#lockGradient)" 
                     strokeWidth="8" 
                     strokeLinecap="round" 
