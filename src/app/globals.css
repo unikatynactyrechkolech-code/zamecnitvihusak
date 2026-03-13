@@ -110,19 +110,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .loading-shackle {
-  transform-origin: 75px 30px;
-  animation: loading-unlock 0.8s ease-out forwards;
+  transform-origin: 75px 40px;
+  animation: loading-unlock 1s ease-out forwards;
 }
 
 @keyframes loading-unlock {
   0% {
     transform: translateY(0) rotate(0deg);
   }
-  50% {
-    transform: translateY(-10px) rotate(0deg);
+  40% {
+    transform: translateY(-15px) rotate(0deg);
   }
   100% {
-    transform: translateY(-10px) rotate(-30deg);
+    transform: translateY(-15px) rotate(-35deg);
   }
 }
 
@@ -404,32 +404,50 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Lock unlock animation */
 .lock-group {
-  animation: lock-bounce 3s ease-in-out infinite;
-}
-
-@keyframes lock-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  position: relative;
 }
 
 .lock-shackle {
-  transform-origin: 120px 75px;
+  transform-origin: 125px 70px;
   animation: shackle-unlock 4s ease-in-out infinite;
 }
 
 @keyframes shackle-unlock {
-  0%, 30%, 100% { transform: rotate(0deg); }
-  40%, 70% { transform: rotate(-25deg) translateX(5px); }
+  0%, 25% { 
+    transform: translateY(0) rotate(0deg); 
+  }
+  40% { 
+    transform: translateY(-15px) rotate(0deg); 
+  }
+  55%, 85% { 
+    transform: translateY(-15px) rotate(-35deg); 
+  }
+  100% { 
+    transform: translateY(0) rotate(0deg); 
+  }
 }
 
-/* Key animation */
+/* Key animation - inserts into keyhole */
 .key-group {
-  animation: key-move 4s ease-in-out infinite;
+  animation: key-insert 4s ease-in-out infinite;
 }
 
-@keyframes key-move {
-  0%, 30%, 100% { transform: translate(0, 0) rotate(0deg); }
-  40%, 70% { transform: translate(-15px, -15px) rotate(-15deg); }
+@keyframes key-insert {
+  0% { 
+    transform: translate(0, 0) rotate(0deg); 
+  }
+  15% { 
+    transform: translate(-50px, -50px) rotate(-45deg); 
+  }
+  25%, 50% { 
+    transform: translate(-55px, -55px) rotate(-45deg); 
+  }
+  65% {
+    transform: translate(-50px, -50px) rotate(-45deg);
+  }
+  100% { 
+    transform: translate(0, 0) rotate(0deg); 
+  }
 }
 
 /* Sparkles */
