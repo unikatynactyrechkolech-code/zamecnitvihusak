@@ -100,8 +100,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .loading-lock-wrapper {
-  width: 100px;
-  height: 140px;
+  width: 120px;
+  height: 160px;
 }
 
 .loading-lock-svg {
@@ -110,21 +110,36 @@ h1, h2, h3, h4, h5, h6 {
   overflow: visible;
 }
 
-.loading-shackle {
-  transform-origin: 25px 35px;
-  animation: loading-unlock 1s ease-out forwards;
+/* Key slides in from the right */
+.loading-key {
+  animation: loading-key-insert 0.5s 0.1s ease-out both;
 }
 
-@keyframes loading-unlock {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-20px) rotate(-45deg);
-  }
+@keyframes loading-key-insert {
+  0% { transform: translateX(60px); opacity: 0; }
+  50% { transform: translateX(10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Right leg of shackle pops up */
+.loading-shackle-right {
+  animation: loading-shackle-up 0.4s 0.55s ease-out both;
+}
+
+@keyframes loading-shackle-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-22px); }
+}
+
+/* Arc swings open to the right */
+.loading-shackle-arc {
+  transform-origin: 33px 35px;
+  animation: loading-arc-swing 0.35s 0.55s ease-out both;
+}
+
+@keyframes loading-arc-swing {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-22px) rotate(0deg); }
 }
 
 /* ==========================================================================
@@ -2078,7 +2093,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Praha Subpages Content
+   Praha Subpages & Locality Pages
    ========================================================================== */
 .content-wrapper {
   max-width: 900px;
@@ -2100,6 +2115,425 @@ h1, h2, h3, h4, h5, h6 {
 .content-wrapper p {
   line-height: 1.8;
   margin-bottom: 1rem;
+}
+
+/* --- Stats Bar --- */
+.locality-stats-bar {
+  background: var(--color-dark);
+  padding: 1.25rem 0;
+}
+
+.locality-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.locality-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.locality-stat i {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.locality-stat div {
+  display: flex;
+  flex-direction: column;
+}
+
+.locality-stat strong {
+  color: #fff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.locality-stat span {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+
+/* --- Intro section --- */
+.locality-intro {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.locality-intro h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+.locality-intro h3 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-dark);
+}
+
+.locality-intro h3 i {
+  color: var(--color-primary);
+}
+
+.locality-intro > p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.locality-description-box {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe8ea 100%);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.locality-description-box-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.locality-description-box-icon i {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.locality-description-box p {
+  margin: 0.25rem 0 0;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.locality-description-box strong {
+  color: var(--color-dark);
+  font-size: 1.1rem;
+}
+
+/* --- Areas grid --- */
+.locality-areas {
+  margin: 1.5rem 0;
+}
+
+.locality-areas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.locality-area-tag {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 0.5rem 1rem;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  transition: all 0.2s;
+}
+
+.locality-area-tag:hover {
+  background: #fff5f5;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* --- Services grid --- */
+.locality-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.locality-service-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+  transition: all 0.2s;
+}
+
+.locality-service-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-color: var(--color-primary);
+}
+
+.locality-service-item i {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.locality-service-item span {
+  font-size: 0.95rem;
+  color: var(--color-dark);
+}
+
+/* --- Process grid --- */
+.locality-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.locality-process-card {
+  text-align: center;
+  padding: 2rem 1.25rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+  position: relative;
+}
+
+.locality-process-number {
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0 auto 1rem;
+}
+
+.locality-process-card h3 {
+  font-size: 1.05rem;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.locality-process-card p {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Problems grid (dark bg) --- */
+.locality-problems-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.locality-problem-card {
+  text-align: center;
+  padding: 2rem 1.25rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  transition: all 0.2s;
+}
+
+.locality-problem-card:hover {
+  background: rgba(230, 57, 70, 0.1);
+  border-color: rgba(230, 57, 70, 0.3);
+}
+
+.locality-problem-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(230, 57, 70, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.locality-problem-icon i {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.locality-problem-card h3 {
+  color: #fff;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.locality-problem-card p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Pricing cards --- */
+.locality-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.locality-pricing-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background: #fff;
+  border: 1px solid #f0f0f0;
+}
+
+.locality-pricing-card-header {
+  background: var(--color-dark);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.locality-pricing-card-header i {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.locality-pricing-card-header h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.locality-pricing-card-body {
+  padding: 0;
+}
+
+.locality-pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 0.75rem;
+}
+
+.locality-pricing-row:last-child {
+  border-bottom: none;
+}
+
+.locality-pricing-service {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.locality-pricing-price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.locality-pricing-note {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.locality-pricing-note i {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.locality-pricing-note a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* --- Google Rating Badge --- */
+.google-rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 1rem 2rem;
+  margin: 1rem auto 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.google-rating-logo svg {
+  display: block;
+}
+
+.google-rating-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.google-rating-score {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  line-height: 1;
+}
+
+.google-rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.google-rating-stars i {
+  color: #fbbf24;
+  font-size: 1rem;
+}
+
+.google-rating-count {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  white-space: nowrap;
 }
 
 .highlight-box {
@@ -2335,6 +2769,23 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .locality-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .locality-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .locality-problems-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .locality-pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .coverage-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2392,6 +2843,45 @@ h1, h2, h3, h4, h5, h6 {
   .reviews-grid,
   .problems-grid {
     grid-template-columns: 1fr;
+  }
+
+  .locality-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .locality-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .locality-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .locality-problems-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .locality-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .locality-pricing-note {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .google-rating-badge {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .google-rating-score {
+    font-size: 1.75rem;
+  }
+
+  .google-rating-info {
+    flex-wrap: wrap;
   }
 
   .coverage-grid {
@@ -2455,6 +2945,96 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .section-title {
+    font-size: 1.5rem;
+  }
+
+  .locality-stats-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .locality-stat {
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+  }
+
+  .locality-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .locality-problems-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .locality-process-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    padding: 1.25rem;
+  }
+
+  .locality-process-number {
+    margin: 0;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .locality-process-card h3 {
+    margin-bottom: 0.25rem;
+  }
+
+  .locality-problem-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    padding: 1.25rem;
+  }
+
+  .locality-problem-icon {
+    margin: 0;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+  }
+
+  .locality-description-box {
+    padding: 1.25rem;
+  }
+
+  .locality-area-tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .locality-pricing-row {
+    padding: 0.75rem 1rem;
+  }
+
+  .locality-pricing-service {
+    font-size: 0.85rem;
+  }
+
+  .locality-pricing-price {
+    font-size: 0.85rem;
+  }
+
+  .google-rating-badge {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .google-rating-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .google-rating-score {
     font-size: 1.5rem;
   }
 

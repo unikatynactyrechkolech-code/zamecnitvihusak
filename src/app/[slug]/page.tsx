@@ -12,30 +12,15 @@ interface PageProps {
   params: Promise<{ slug: string }>
 }
 
-// Helper to convert URL slug back to full slug
-function resolveFullSlug(urlSlug: string): string {
-  // Try all possible formats and return the one that exists
-  const possibleSlugs = [
-    `zamecnik-${urlSlug}`,        // e.g. zamecnik-praha-11 or zamecnik-praha-zizkov
-    `zamecnik-praha-${urlSlug}`,  // e.g. zamecnik-praha-hostivice (if urlSlug is just "hostivice")
-  ]
-  return possibleSlugs[0] // We'll check existence in the function
-}
-
 export async function generateStaticParams() {
   const slugs = getAllLocalitySlugs()
   return slugs.map((slug) => ({
-    // Remove 'zamecnik-' prefix for URL
-    // zamecnik-praha-11 -> praha-11
-    // zamecnik-praha-zizkov -> praha-zizkov  
-    // zamecnik-hostivice -> hostivice
     slug: slug.replace('zamecnik-', ''),
   }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
-  // Add 'zamecnik-' prefix back
   const fullSlug = `zamecnik-${slug}`
   const data = getLocalityBySlug(fullSlug)
   
@@ -48,16 +33,51 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: { canonical: `https://zamecnitvihusak.vercel.app/${slug}` },
-    openGraph: {
-      title,
-      description,
-    },
+    openGraph: { title, description },
   }
 }
 
+const pricingCards = [
+  {
+    icon: 'fa-lock-open',
+    title: 'Otevírání zámků',
+    items: [
+      { service: 'Otevření zabouchnutých dveří', price: 'od 1 200 Kč' },
+      { service: 'Otevření bezpečnostních dveří', price: 'od 1 800 Kč' },
+      { service: 'Otevření zámku po vloupání', price: 'od 2 000 Kč' },
+    ],
+  },
+  {
+    icon: 'fa-key',
+    title: 'Výměna zámků a vložek',
+    items: [
+      { service: 'Výměna cylindrické vložky', price: 'od 1 800 Kč' },
+      { service: 'Bezpečnostní vložka FAB', price: 'od 2 500 Kč' },
+      { service: 'Montáž bezp. kování', price: 'od 1 500 Kč' },
+    ],
+  },
+  {
+    icon: 'fa-door-closed',
+    title: 'Bezpečnostní dveře',
+    items: [
+      { service: 'Dveře třída 2', price: 'od 15 000 Kč' },
+      { service: 'Dveře třída 3', price: 'od 25 000 Kč' },
+      { service: 'Montáž dveří', price: 'od 3 000 Kč' },
+    ],
+  },
+  {
+    icon: 'fa-vault',
+    title: 'Trezory a autoklíče',
+    items: [
+      { service: 'Otevření trezoru', price: 'od 3 000 Kč' },
+      { service: 'Otevření zamknutého auta', price: 'od 1 500 Kč' },
+      { service: 'Autoklíč s čipem', price: 'od 3 000 Kč' },
+    ],
+  },
+]
+
 export default async function LocalityPage({ params }: PageProps) {
   const { slug } = await params
-  // Add 'zamecnik-' prefix back
   const fullSlug = `zamecnik-${slug}`
   const data = getLocalityBySlug(fullSlug)
 
@@ -70,6 +90,7 @@ export default async function LocalityPage({ params }: PageProps) {
 
   return (
     <>
+      {/* Hero */}
       <section className="page-hero">
         <div className="container">
           <div className="breadcrumb">
@@ -90,121 +111,181 @@ export default async function LocalityPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Stats bar */}
+      <section className="locality-stats-bar">
+        <div className="container">
+          <div className="locality-stats-row">
+            <div className="locality-stat">
+              <i className="fas fa-clock"></i>
+              <div>
+                <strong>Příjezd</strong>
+                <span>{data.arrivalTime}</span>
+              </div>
+            </div>
+            <div className="locality-stat">
+              <i className="fas fa-phone"></i>
+              <div>
+                <strong>Nonstop linka</strong>
+                <span>606 588 222</span>
+              </div>
+            </div>
+            <div className="locality-stat">
+              <i className="fas fa-shield-alt"></i>
+              <div>
+                <strong>Garance</strong>
+                <span>Cena předem</span>
+              </div>
+            </div>
+            <div className="locality-stat">
+              <i className="fas fa-truck"></i>
+              <div>
+                <strong>Výjezd</strong>
+                <span>Zdarma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro */}
       <section className="section">
         <div className="container">
-          <div className="content-wrapper">
+          <div className="locality-intro">
             <h2>🔑 Zámečník {data.name} – Rychlá pomoc 24/7</h2>
-            <p className="animate-fade-in">
+            <p>
               Potřebujete zámečníka v lokalitě {data.name}? Zámečnictví Husak poskytuje 
               profesionální zámečnické služby nonstop – 24 hodin denně, 7 dní v týdnu.
               {data.parentDistrict && ` Působíme v celé oblasti ${data.parentDistrict} a okolí.`}
             </p>
 
-            <div className="highlight-box animate-fade-in">
-              <h3><i className="fas fa-clock"></i> Příjezd do {data.arrivalTime}</h3>
+            <div className="locality-description-box">
               <p>{data.description}</p>
             </div>
 
             {data.highlights.length > 0 && (
-              <>
-                <h3>Oblasti které pokrýváme:</h3>
-                <ul className="location-list">
+              <div className="locality-areas">
+                <h3><i className="fas fa-map-marker-alt"></i> Oblasti které pokrýváme</h3>
+                <div className="locality-areas-grid">
                   {data.highlights.map((area) => (
-                    <li key={area}>{area}</li>
+                    <div key={area} className="locality-area-tag">{area}</div>
                   ))}
-                </ul>
-              </>
+                </div>
+              </div>
             )}
+          </div>
+        </div>
+      </section>
 
-            <h2>🔧 Naše služby v lokalitě {data.name}</h2>
-            <ul className="check-list">
-              {services.map((svc) => (
-                <li key={svc}><i className="fas fa-check"></i> {svc}</li>
-              ))}
-            </ul>
+      {/* Services */}
+      <section className="section bg-light">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="section-title">🔧 Naše služby v lokalitě {data.name}</h2>
+          </div>
+          <div className="locality-services-grid">
+            {services.map((svc) => (
+              <div key={svc} className="locality-service-item">
+                <i className="fas fa-check-circle"></i>
+                <span>{svc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <h2>📋 Jak to funguje</h2>
-            <ol className="process-list">
-              {process.map((step) => (
-                <li key={step.title}><strong>{step.title}:</strong> {step.desc}</li>
-              ))}
-            </ol>
+      {/* How it works */}
+      <section className="section">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="section-title">📋 Jak to funguje</h2>
+          </div>
+          <div className="locality-process-grid">
+            {process.map((step, i) => (
+              <div key={step.title} className="locality-process-card">
+                <div className="locality-process-number">{i + 1}</div>
+                <h3>{step.title}</h3>
+                <p>{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="problems-grid">
-              <div className="problem-card animate-fade-in">
-                <div className="problem-icon">
-                  <i className="fas fa-door-closed"></i>
-                </div>
-                <h3>Zabouchnuté dveře</h3>
-                <p>Otevřeme jakékoli zabouchnuté dveře bez poškození. Rychlý příjezd a profesionální přístup.</p>
-              </div>
-              <div className="problem-card animate-fade-in delay-1">
-                <div className="problem-icon">
-                  <i className="fas fa-key"></i>
-                </div>
-                <h3>Ztracené klíče</h3>
-                <p>Po ztrátě klíčů doporučujeme výměnu vložky. Máme skladem bezpečnostní vložky všech typů.</p>
-              </div>
-              <div className="problem-card animate-fade-in delay-2">
-                <div className="problem-icon">
-                  <i className="fas fa-lock"></i>
-                </div>
-                <h3>Zlomený klíč</h3>
-                <p>Vyjmeme zlomený klíč ze zámku a v případě potřeby vyměníme vložku za novou.</p>
-              </div>
-              <div className="problem-card animate-fade-in delay-3">
-                <div className="problem-icon">
-                  <i className="fas fa-shield-alt"></i>
-                </div>
-                <h3>Po vloupání</h3>
-                <p>Zajistíme poškozené dveře a vyměníme zámky. Poradíme s lepším zabezpečením.</p>
-              </div>
+      {/* Common problems */}
+      <section className="section bg-dark">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="section-title" style={{ color: '#fff' }}>Nejčastější situace</h2>
+          </div>
+          <div className="locality-problems-grid">
+            <div className="locality-problem-card">
+              <div className="locality-problem-icon"><i className="fas fa-door-closed"></i></div>
+              <h3>Zabouchnuté dveře</h3>
+              <p>Otevřeme jakékoli zabouchnuté dveře bez poškození.</p>
             </div>
-
-            <h2>💰 Orientační ceník</h2>
-            <div className="price-table-wrapper">
-              <table className="price-table">
-                <thead>
-                  <tr>
-                    <th>Služba</th>
-                    <th>Cena od</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Otevření zabouchnutých dveří</td>
-                    <td><strong>1 200 Kč</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Otevření bezpečnostních dveří</td>
-                    <td><strong>1 800 Kč</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Výměna cylindrické vložky</td>
-                    <td><strong>800 Kč</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Montáž bezpečnostního kování</td>
-                    <td><strong>1 500 Kč</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Otevření trezoru</td>
-                    <td><strong>2 500 Kč</strong></td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="locality-problem-card">
+              <div className="locality-problem-icon"><i className="fas fa-key"></i></div>
+              <h3>Ztracené klíče</h3>
+              <p>Po ztrátě klíčů doporučujeme výměnu vložky.</p>
             </div>
-            <p className="text-muted text-center">
-              <small>* Ceny jsou orientační. Přesnou cenu vám sdělíme po telefonu. Noční příplatek (22:00-6:00): +500 Kč</small>
-            </p>
+            <div className="locality-problem-card">
+              <div className="locality-problem-icon"><i className="fas fa-lock"></i></div>
+              <h3>Zlomený klíč</h3>
+              <p>Vyjmeme zlomený klíč a vyměníme vložku za novou.</p>
+            </div>
+            <div className="locality-problem-card">
+              <div className="locality-problem-icon"><i className="fas fa-shield-alt"></i></div>
+              <h3>Po vloupání</h3>
+              <p>Zajistíme dveře a vyměníme zámky. Poradíme s lepším zabezpečením.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="cta-box">
-              <h3>Potřebujete zámečníka v lokalitě {data.name}?</h3>
+      {/* Pricing cards */}
+      <section className="section bg-light">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="section-title">💰 Orientační ceník</h2>
+            <p className="section-description">Přesnou cenu vám sdělíme předem po telefonu. Výjezd po Praze zdarma.</p>
+          </div>
+          <div className="locality-pricing-grid">
+            {pricingCards.map((card) => (
+              <div key={card.title} className="locality-pricing-card">
+                <div className="locality-pricing-card-header">
+                  <i className={`fas ${card.icon}`}></i>
+                  <h3>{card.title}</h3>
+                </div>
+                <div className="locality-pricing-card-body">
+                  {card.items.map((item) => (
+                    <div key={item.service} className="locality-pricing-row">
+                      <span className="locality-pricing-service">{item.service}</span>
+                      <span className="locality-pricing-price">{item.price}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="locality-pricing-note">
+            <i className="fas fa-info-circle"></i>
+            <span>Ceny jsou orientační včetně DPH. Noční příplatek (22:00–6:00): +500 Kč. <Link href="/cenik">Kompletní ceník →</Link></span>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-content">
+            <div className="cta-text">
+              <h2>Potřebujete zámečníka v lokalitě {data.name}?</h2>
               <p>Zavolejte nám a budeme u vás co nejdříve!</p>
-              <a href="tel:+420606588222" className="btn btn-primary btn-lg">
-                <i className="fas fa-phone"></i> 606 588 222
-              </a>
             </div>
+            <a href="tel:+420606588222" className="phone-link">
+              <i className="fas fa-phone"></i>
+              606 588 222
+            </a>
           </div>
         </div>
       </section>

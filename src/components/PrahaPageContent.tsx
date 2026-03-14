@@ -17,12 +17,52 @@ export function generatePrahaMetadata(num: string): Metadata {
   }
 }
 
+const pricingCards = [
+  {
+    icon: 'fa-lock-open',
+    title: 'Otevírání zámků',
+    items: [
+      { service: 'Otevření zabouchnutých dveří', price: 'od 1 200 Kč' },
+      { service: 'Otevření bezpečnostních dveří', price: 'od 1 800 Kč' },
+      { service: 'Otevření zámku po vloupání', price: 'od 2 000 Kč' },
+    ],
+  },
+  {
+    icon: 'fa-key',
+    title: 'Výměna zámků a vložek',
+    items: [
+      { service: 'Výměna cylindrické vložky', price: 'od 1 800 Kč' },
+      { service: 'Bezpečnostní vložka FAB', price: 'od 2 500 Kč' },
+      { service: 'Montáž bezp. kování', price: 'od 1 500 Kč' },
+    ],
+  },
+  {
+    icon: 'fa-door-closed',
+    title: 'Bezpečnostní dveře',
+    items: [
+      { service: 'Dveře třída 2', price: 'od 15 000 Kč' },
+      { service: 'Dveře třída 3', price: 'od 25 000 Kč' },
+      { service: 'Montáž dveří', price: 'od 3 000 Kč' },
+    ],
+  },
+  {
+    icon: 'fa-vault',
+    title: 'Trezory a autoklíče',
+    items: [
+      { service: 'Otevření trezoru', price: 'od 3 000 Kč' },
+      { service: 'Otevření zamknutého auta', price: 'od 1 500 Kč' },
+      { service: 'Autoklíč s čipem', price: 'od 3 000 Kč' },
+    ],
+  },
+]
+
 export default function PrahaPageContent({ num }: { num: string }) {
   const data = prahaData[num]
   if (!data) return null
 
   return (
     <>
+      {/* Hero */}
       <section className="page-hero">
         <div className="container">
           <div className="breadcrumb">
@@ -35,55 +75,158 @@ export default function PrahaPageContent({ num }: { num: string }) {
         </div>
       </section>
 
+      {/* Stats bar */}
+      <section className="locality-stats-bar">
+        <div className="container">
+          <div className="locality-stats-row">
+            <div className="locality-stat">
+              <i className="fas fa-clock"></i>
+              <div>
+                <strong>Příjezd</strong>
+                <span>{data.time}</span>
+              </div>
+            </div>
+            <div className="locality-stat">
+              <i className="fas fa-phone"></i>
+              <div>
+                <strong>Nonstop linka</strong>
+                <span>606 588 222</span>
+              </div>
+            </div>
+            <div className="locality-stat">
+              <i className="fas fa-shield-alt"></i>
+              <div>
+                <strong>Garance</strong>
+                <span>Cena předem</span>
+              </div>
+            </div>
+            <div className="locality-stat">
+              <i className="fas fa-truck"></i>
+              <div>
+                <strong>Výjezd</strong>
+                <span>Zdarma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro */}
       <section className="section">
         <div className="container">
-          <div className="content-wrapper">
+          <div className="locality-intro">
             <h2>🔑 {data.title} – Rychlá pomoc 24/7</h2>
             <p>{data.intro}</p>
 
-            <div className="location-image animate-fade-in">
+            <div className="location-image">
               <img src={data.imageUrl} alt={data.imageAlt} loading="lazy" />
               <p className="image-caption">
                 <i className="fas fa-map-marker-alt"></i> {data.imageCaption}
               </p>
             </div>
 
-            <h2>📍 {data.district} – Kde přesně působíme</h2>
+            <h3><i className="fas fa-map-marker-alt"></i> {data.district} – Kde přesně působíme</h3>
             <p>{data.description}</p>
 
-            <h3>Městské části a lokality:</h3>
-            <ul className="location-list">
-              {data.areas.map((area) => (
-                <li key={area}>{area}</li>
-              ))}
-            </ul>
-
-            <div className="highlight-box">
-              <h3><i className="fas fa-clock"></i> Příjezd do {data.time}</h3>
-              <p>{data.coverage}</p>
+            <div className="locality-areas">
+              <h3><i className="fas fa-map-marker-alt"></i> Městské části a lokality</h3>
+              <div className="locality-areas-grid">
+                {data.areas.map((area) => (
+                  <div key={area} className="locality-area-tag">{area}</div>
+                ))}
+              </div>
             </div>
 
-            <h2>🔧 Naše služby v Praze {data.num}</h2>
-            <ul className="check-list">
-              {data.services.map((svc) => (
-                <li key={svc}><i className="fas fa-check"></i> {svc}</li>
-              ))}
-            </ul>
+            <div className="locality-description-box">
+              <div className="locality-description-box-icon"><i className="fas fa-clock"></i></div>
+              <div>
+                <strong>Příjezd do {data.time}</strong>
+                <p>{data.coverage}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <h2>📋 Jak to funguje</h2>
-            <ol className="process-list">
-              {data.process.map((step) => (
-                <li key={step.title}><strong>{step.title}:</strong> {step.desc}</li>
-              ))}
-            </ol>
+      {/* Services */}
+      <section className="section bg-light">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="section-title">🔧 Naše služby v Praze {data.num}</h2>
+          </div>
+          <div className="locality-services-grid">
+            {data.services.map((svc) => (
+              <div key={svc} className="locality-service-item">
+                <i className="fas fa-check-circle"></i>
+                <span>{svc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="cta-box">
-              <h3>Potřebujete zámečníka v Praze {data.num}?</h3>
+      {/* How it works */}
+      <section className="section">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="section-title">📋 Jak to funguje</h2>
+          </div>
+          <div className="locality-process-grid">
+            {data.process.map((step, i) => (
+              <div key={step.title} className="locality-process-card">
+                <div className="locality-process-number">{i + 1}</div>
+                <h3>{step.title}</h3>
+                <p>{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing cards */}
+      <section className="section bg-light">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="section-title">💰 Orientační ceník</h2>
+            <p className="section-description">Přesnou cenu vám sdělíme předem po telefonu. Výjezd po Praze zdarma.</p>
+          </div>
+          <div className="locality-pricing-grid">
+            {pricingCards.map((card) => (
+              <div key={card.title} className="locality-pricing-card">
+                <div className="locality-pricing-card-header">
+                  <i className={`fas ${card.icon}`}></i>
+                  <h3>{card.title}</h3>
+                </div>
+                <div className="locality-pricing-card-body">
+                  {card.items.map((item) => (
+                    <div key={item.service} className="locality-pricing-row">
+                      <span className="locality-pricing-service">{item.service}</span>
+                      <span className="locality-pricing-price">{item.price}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="locality-pricing-note">
+            <i className="fas fa-info-circle"></i>
+            <span>Ceny jsou orientační včetně DPH. Noční příplatek (22:00–6:00): +500 Kč. <Link href="/cenik">Kompletní ceník →</Link></span>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-content">
+            <div className="cta-text">
+              <h2>Potřebujete zámečníka v Praze {data.num}?</h2>
               <p>Zavolejte nám a budeme u vás co nejdříve!</p>
-              <a href="tel:+420606588222" className="btn btn-primary btn-lg">
-                <i className="fas fa-phone"></i> 606 588 222
-              </a>
             </div>
+            <a href="tel:+420606588222" className="phone-link">
+              <i className="fas fa-phone"></i>
+              606 588 222
+            </a>
           </div>
         </div>
       </section>
