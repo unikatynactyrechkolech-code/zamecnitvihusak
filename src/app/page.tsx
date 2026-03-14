@@ -371,7 +371,7 @@ export default function HomePage() {
                       {neighborhoods.map(n => (
                         <Link 
                           key={n.slug} 
-                          href={`/${n.slug.replace('zamecnik-praha-', '')}`}
+                          href={`/${n.slug.replace('zamecnik-', '')}`}
                           className="coverage-neighborhood-link"
                         >
                           {n.name}
