@@ -67,7 +67,7 @@ export default function HomePage() {
               Profesionální zámečník u vás do 20 minut.
             </p>
             <div className="hero-cta">
-              <a href="tel:+420606588222" className="btn btn-primary btn-lg">
+              <a href="tel:+420734565987" className="btn btn-primary btn-lg">
                 <i className="fas fa-phone"></i> Zavolat nyní
               </a>
               <Link href="/cenik" className="btn btn-outline btn-lg">
@@ -282,7 +282,7 @@ export default function HomePage() {
 
           <div className="process-timeline">
             {[
-              { num: '1', title: 'Zavolejte nám', desc: 'Kontaktujte nás na čísle 606 588 222. Jsme dostupní 24/7.' },
+              { num: '1', title: 'Zavolejte nám', desc: 'Kontaktujte nás na čísle 734 565 987. Jsme dostupní 24/7.' },
               { num: '2', title: 'Sdělíme cenu', desc: 'Po telefonu vám řekneme přesnou cenu a odhadovaný čas příjezdu.' },
               { num: '3', title: 'Příjezd technika', desc: 'Náš zámečník dorazí k vám do 20 minut kdekoliv v Praze.' },
               { num: '4', title: 'Vyřešení problému', desc: 'Profesionálně a rychle vyřešíme váš problém se zámkem.' },
@@ -333,9 +333,9 @@ export default function HomePage() {
               <h2>Potřebujete zámečníka?</h2>
               <p>Zavolejte nám a budeme u vás do 20 minut!</p>
             </div>
-            <a href="tel:+420606588222" className="phone-link">
+            <a href="tel:+420734565987" className="phone-link">
               <i className="fas fa-phone"></i>
-              606 588 222
+              734 565 987
             </a>
           </div>
         </div>
@@ -491,7 +491,7 @@ export default function HomePage() {
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
               </div>
-              <div className="google-rating-count">Na základě 47 recenzí</div>
+              <div className="google-rating-count">Na základě 710 recenzí</div>
             </div>
           </div>
 
@@ -503,14 +503,12 @@ export default function HomePage() {
 
           <div className="reviews-bottom animate-fade-in">
             <a
-              href="https://www.google.com/maps"
+              href="https://www.google.com/search?sca_esv=53f9ef8ad52bf813&sxsrf=ANbL-n7xEx3o5fzriNXOablgpInjzZDjgg:1773514603073&si=AL3DRZFIhG6pAqfNLal55wUTwygCG0fClF3UxiOmgw9Hq7nbWaoaQdUp8BD8bsZkIJ82Un35ZOHH2oqi_dEXWHkH2-AJD-sKw3Xxl32gmYiKPFQaE81hHGUw7_s2XMu40k9QV0CMpR7SCKOQ0Cl1VVguo99rZAulXtKD6xcefIglP3yGglz31hY%3D&q=Z%C3%A1me%C4%8Dnick%C3%A1+Pohotovost+Praha+NONSTOP+Recenze&sa=X&ved=2ahUKEwj29a3fiKCTAxWgnf0HHQX2ApoQ0bkNegQIRhAH&biw=600&bih=745&dpr=2"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-all-reviews"
+              className="btn btn-primary btn-lg"
             >
-              <i className="fab fa-google"></i>
-              Všechny recenze na Google
-              <i className="fas fa-external-link-alt"></i>
+              <i className="fab fa-google"></i> PŘIDAT RECENZI
             </a>
           </div>
         </div>

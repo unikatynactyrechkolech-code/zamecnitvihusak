@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: 'Zámečník Husak – Nonstop zámečník Praha | Otevírání zámků 24/7',
     template: '%s | Zámečník Husak',
   },
-  description: 'Zámečník Husak – Nonstop zámečnická pohotovost v Praze. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří. Příjezd do 20 minut. ☎ 606 588 222',
+  description: 'Zámečník Husak – Nonstop zámečnická pohotovost v Praze. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří. Příjezd do 20 minut. ☎ 734 565 987',
   keywords: 'zámečník Praha, zámečnická pohotovost, otevírání zámků, výměna zámků, nonstop zámečník, bezpečnostní dveře Praha',
   authors: [{ name: 'Zámečník Husak' }],
   openGraph: {
@@ -81,7 +81,7 @@ export default function RootLayout({
               '@type': 'Locksmith',
               name: 'Zámečník Husak',
               url: 'https://zamecnitvihusak.vercel.app',
-              telephone: ['+420606588222', '+420776447729'],
+              telephone: ['+420734565987', '+420776447729'],
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'Herbenova 727/38',

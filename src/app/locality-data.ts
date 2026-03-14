@@ -36,7 +36,7 @@ const serviceTemplates = [
 ]
 
 const processSteps = [
-  { title: 'Zavolejte nám', desc: 'Na lince 606 588 222 jsme k dispozici nonstop.' },
+  { title: 'Zavolejte nám', desc: 'Na lince 734 565 987 jsme k dispozici nonstop.' },
   { title: 'Sdělíme cenu', desc: 'Přesnou cenu a čas příjezdu se dozvíte ihned.' },
   { title: 'Technik vyráží', desc: 'Nejbližší zámečník se vydá na cestu k vám.' },
   { title: 'Problém vyřešen', desc: 'Profesionálně a rychle vyřešíme vaši situaci.' },
@@ -339,4 +339,34 @@ export function getLocalityBySlug(slug: string): LocalityData | undefined {
   if (neighborhood) return neighborhood
   
   return allOutskirtsData.find((o: LocalityData) => o.slug === slug)
+}
+
+// Získání příbuzných lokalit pro cross-linking
+export function getRelatedLocalities(slug: string, maxResults: number = 8): LocalityData[] {
+  const { allOutskirtsData } = require('./outskirts-data')
+  const current = getLocalityBySlug(slug)
+  if (!current) return []
+
+  let related: LocalityData[] = []
+
+  if (current.parentDistrict) {
+    // Find siblings with same parentDistrict
+    const allLocalities: LocalityData[] = [
+      ...Object.values(extendedPrahaData) as LocalityData[],
+      ...neighborhoodData,
+      ...allOutskirtsData as LocalityData[],
+    ]
+    related = allLocalities.filter(
+      (l) => l.parentDistrict === current.parentDistrict && l.slug !== slug
+    )
+  } else if (current.type === 'district') {
+    // For district pages (Praha 11-22), show neighborhoods belonging to it
+    related = neighborhoodData.filter(
+      (n) => n.parentDistrict === current.name
+    )
+  }
+
+  // Shuffle and limit
+  const shuffled = related.sort(() => 0.5 - Math.random())
+  return shuffled.slice(0, maxResults)
 }

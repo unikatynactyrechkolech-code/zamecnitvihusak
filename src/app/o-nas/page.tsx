@@ -250,9 +250,9 @@ export default function ONasPage() {
               <h2>Chcete se dozvědět více?</h2>
               <p>Kontaktujte nás a rádi zodpovíme vaše dotazy.</p>
             </div>
-            <a href="tel:+420606588222" className="phone-link">
+            <a href="tel:+420734565987" className="phone-link">
               <i className="fas fa-phone"></i>
-              606 588 222
+              734 565 987
             </a>
           </div>
         </div>

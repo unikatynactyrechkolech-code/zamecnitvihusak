@@ -6,7 +6,10 @@ import {
   getAllLocalitySlugs,
   getServicesForLocality,
   getProcessSteps,
+  getRelatedLocalities,
 } from '@/app/locality-data'
+import Reviews from '@/components/Reviews'
+import CrossLinks from '@/components/CrossLinks'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -27,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!data) return {}
 
   const title = `Zámečník ${data.name} – Nonstop pohotovost 24/7`
-  const description = `Zámečnická pohotovost ${data.name} – rychlý příjezd do ${data.arrivalTime}. Otevírání zámků, výměna vložek, bezpečnostní dveře. ☎ 606 588 222`
+  const description = `Zámečnická pohotovost ${data.name} – rychlý příjezd do ${data.arrivalTime}. Otevírání zámků, výměna vložek, bezpečnostní dveře. ☎ 734 565 987`
 
   return {
     title,
@@ -87,6 +90,7 @@ export default async function LocalityPage({ params }: PageProps) {
 
   const services = getServicesForLocality()
   const process = getProcessSteps()
+  const relatedLocalities = getRelatedLocalities(fullSlug)
 
   return (
     <>
@@ -126,7 +130,7 @@ export default async function LocalityPage({ params }: PageProps) {
               <i className="fas fa-phone"></i>
               <div>
                 <strong>Nonstop linka</strong>
-                <span>606 588 222</span>
+                <span>734 565 987</span>
               </div>
             </div>
             <div className="locality-stat">
@@ -274,6 +278,12 @@ export default async function LocalityPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Cross-links */}
+      <CrossLinks localities={relatedLocalities} currentName={data.name} />
+
+      {/* Reviews */}
+      <Reviews serviceName={`Zámečník ${data.name} – Nonstop pohotovost`} />
+
       {/* CTA */}
       <section className="cta-section">
         <div className="container">
@@ -282,9 +292,9 @@ export default async function LocalityPage({ params }: PageProps) {
               <h2>Potřebujete zámečníka v lokalitě {data.name}?</h2>
               <p>Zavolejte nám a budeme u vás co nejdříve!</p>
             </div>
-            <a href="tel:+420606588222" className="phone-link">
+            <a href="tel:+420734565987" className="phone-link">
               <i className="fas fa-phone"></i>
-              606 588 222
+              734 565 987
             </a>
           </div>
         </div>

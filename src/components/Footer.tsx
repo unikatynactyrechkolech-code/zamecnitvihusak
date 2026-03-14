@@ -62,7 +62,7 @@ export default function Footer() {
               <li>
                 <i className="fas fa-phone"></i>
                 <div>
-                  <a href="tel:+420606588222">606 588 222</a>
+                  <a href="tel:+420734565987">734 565 987</a>
                   <a href="tel:+420776447729">776 44 77 29</a>
                 </div>
               </li>

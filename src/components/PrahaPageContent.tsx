@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { prahaData } from '@/app/zamecnik-praha-data'
+import { neighborhoodData } from '@/app/locality-data'
+import Reviews from '@/components/Reviews'
+import CrossLinks from '@/components/CrossLinks'
 
 export function generatePrahaMetadata(num: string): Metadata {
   const data = prahaData[num]
@@ -8,7 +11,7 @@ export function generatePrahaMetadata(num: string): Metadata {
 
   return {
     title: data.title,
-    description: `Zámečník Praha ${num} – nonstop zámečnická pohotovost v oblasti ${data.areas.join(', ')}. Příjezd do ${data.time}. ☎ 606 588 222`,
+    description: `Zámečník Praha ${num} – nonstop zámečnická pohotovost v oblasti ${data.areas.join(', ')}. Příjezd do ${data.time}. ☎ 734 565 987`,
     alternates: { canonical: `https://zamecnitvihusak.vercel.app/zamecnik-praha-${num}` },
     openGraph: {
       title: `${data.title} – Nonstop zámečnická pohotovost`,
@@ -60,6 +63,10 @@ export default function PrahaPageContent({ num }: { num: string }) {
   const data = prahaData[num]
   if (!data) return null
 
+  const relatedLocalities = neighborhoodData
+    .filter((n) => n.parentDistrict === `Praha ${num}`)
+    .slice(0, 8)
+
   return (
     <>
       {/* Hero */}
@@ -90,7 +97,7 @@ export default function PrahaPageContent({ num }: { num: string }) {
               <i className="fas fa-phone"></i>
               <div>
                 <strong>Nonstop linka</strong>
-                <span>606 588 222</span>
+                <span>734 565 987</span>
               </div>
             </div>
             <div className="locality-stat">
@@ -215,6 +222,12 @@ export default function PrahaPageContent({ num }: { num: string }) {
         </div>
       </section>
 
+      {/* Cross-links */}
+      <CrossLinks localities={relatedLocalities} currentName={`Praha ${data.num}`} />
+
+      {/* Reviews */}
+      <Reviews serviceName={`Zámečník Praha ${data.num} – Nonstop pohotovost`} />
+
       {/* CTA */}
       <section className="cta-section">
         <div className="container">
@@ -223,9 +236,9 @@ export default function PrahaPageContent({ num }: { num: string }) {
               <h2>Potřebujete zámečníka v Praze {data.num}?</h2>
               <p>Zavolejte nám a budeme u vás co nejdříve!</p>
             </div>
-            <a href="tel:+420606588222" className="phone-link">
+            <a href="tel:+420734565987" className="phone-link">
               <i className="fas fa-phone"></i>
-              606 588 222
+              734 565 987
             </a>
           </div>
         </div>

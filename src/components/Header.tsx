@@ -57,9 +57,9 @@ export default function Header() {
           </ul>
 
           <div className="header-contact">
-            <a href="tel:+420606588222">
+            <a href="tel:+420734565987">
               <i className="fas fa-phone"></i>
-              606 588 222
+              734 565 987
             </a>
           </div>
 

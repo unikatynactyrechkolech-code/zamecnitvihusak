@@ -36,7 +36,7 @@ export const prahaData: Record<string, PrahaData> = {
       'Nouzové otevírání po vloupání',
     ],
     process: [
-      { title: 'Zavolejte nám', desc: 'Na čísle 606 588 222 jsme dostupní nonstop.' },
+      { title: 'Zavolejte nám', desc: 'Na čísle 734 565 987 jsme dostupní nonstop.' },
       { title: 'Sdělíme cenu', desc: 'Po telefonu vám řekneme přesnou cenu a čas příjezdu.' },
       { title: 'Příjezd technika', desc: 'Zámečník dorazí do Prahy 1 do 20–40 minut.' },
       { title: 'Vyřešení problému', desc: 'Profesionálně a rychle vyřešíme váš problém.' },
@@ -63,7 +63,7 @@ export const prahaData: Record<string, PrahaData> = {
       'Servis a oprava stávajících zámků',
     ],
     process: [
-      { title: 'Zavolejte nám', desc: 'Na čísle 606 588 222 jsme dostupní nonstop.' },
+      { title: 'Zavolejte nám', desc: 'Na čísle 734 565 987 jsme dostupní nonstop.' },
       { title: 'Sdělíme cenu', desc: 'Přesná cena a odhad času příjezdu po telefonu.' },
       { title: 'Příjezd technika', desc: 'Zámečník dorazí do Prahy 2 do 20–40 minut.' },
       { title: 'Vyřešení problému', desc: 'Rychlé a profesionální vyřešení situace.' },
@@ -90,7 +90,7 @@ export const prahaData: Record<string, PrahaData> = {
       'Zabezpečení sklepních prostor',
     ],
     process: [
-      { title: 'Zavolejte nám', desc: 'Linka 606 588 222 – nonstop.' },
+      { title: 'Zavolejte nám', desc: 'Linka 734 565 987 – nonstop.' },
       { title: 'Domluvíme detaily', desc: 'Cena a čas příjezdu ihned po telefonu.' },
       { title: 'Technik u vás', desc: 'Do 20–40 minut v celé Praze 3.' },
       { title: 'Problém vyřešen', desc: 'Profesionální servis bez kompromisů.' },
@@ -117,7 +117,7 @@ export const prahaData: Record<string, PrahaData> = {
       'Servis zámků a kování',
     ],
     process: [
-      { title: 'Kontaktujte nás', desc: 'Volejte 606 588 222 – jsme tu nonstop.' },
+      { title: 'Kontaktujte nás', desc: 'Volejte 734 565 987 – jsme tu nonstop.' },
       { title: 'Cena předem', desc: 'Transparentní cenová nabídka po telefonu.' },
       { title: 'Rychlý příjezd', desc: 'V Praze 4 jsme do 20–40 minut.' },
       { title: 'Hotovo', desc: 'Kvalitní práce s zárukou.' },
@@ -144,7 +144,7 @@ export const prahaData: Record<string, PrahaData> = {
       'Poradenství v oblasti zabezpečení',
     ],
     process: [
-      { title: 'Zavolejte', desc: '606 588 222 – nonstop linka.' },
+      { title: 'Zavolejte', desc: '734 565 987 – nonstop linka.' },
       { title: 'Dohodneme se', desc: 'Cena a čas příjezdu hned.' },
       { title: 'Přijedeme', desc: 'Do Prahy 5 za 20–40 minut.' },
       { title: 'Vyřešíme', desc: 'Profesionálně a bez poškození.' },
@@ -171,7 +171,7 @@ export const prahaData: Record<string, PrahaData> = {
       'Zabezpečení ambasád a kanceláří',
     ],
     process: [
-      { title: 'Kontakt', desc: 'Volejte 606 588 222 kdykoliv.' },
+      { title: 'Kontakt', desc: 'Volejte 734 565 987 kdykoliv.' },
       { title: 'Cenová nabídka', desc: 'Férová cena sdělená předem.' },
       { title: 'Příjezd', desc: 'V Praze 6 do 20–40 minut.' },
       { title: 'Řešení', desc: 'Profesionální práce se zárukou.' },
@@ -198,7 +198,7 @@ export const prahaData: Record<string, PrahaData> = {
       'Servis zámků v komerčních prostorách',
     ],
     process: [
-      { title: 'Zavolejte', desc: '606 588 222 – nonstop.' },
+      { title: 'Zavolejte', desc: '734 565 987 – nonstop.' },
       { title: 'Domluvíme se', desc: 'Cena a čas příjezdu ihned.' },
       { title: 'Jsme u vás', desc: 'V Praze 7 do 20–40 minut.' },
       { title: 'Vyřešeno', desc: 'Rychle, čistě, profesionálně.' },
@@ -225,7 +225,7 @@ export const prahaData: Record<string, PrahaData> = {
       'Bezpečnostní audit nemovitosti',
     ],
     process: [
-      { title: 'Volejte', desc: '606 588 222 – jsme tu pro vás.' },
+      { title: 'Volejte', desc: '734 565 987 – jsme tu pro vás.' },
       { title: 'Cena předem', desc: 'Žádná překvapení, férové ceny.' },
       { title: 'Rychlý příjezd', desc: 'V Praze 8 za 20–40 minut.' },
       { title: 'Profesionální servis', desc: 'Kvalita a záruka na práci.' },
@@ -252,7 +252,7 @@ export const prahaData: Record<string, PrahaData> = {
       'Komplexní bezpečnostní řešení',
     ],
     process: [
-      { title: 'Zavolejte nám', desc: '606 588 222 – nonstop dostupnost.' },
+      { title: 'Zavolejte nám', desc: '734 565 987 – nonstop dostupnost.' },
       { title: 'Dohodneme podmínky', desc: 'Transparentní cena po telefonu.' },
       { title: 'Technik na cestě', desc: 'V Praze 9 do 20–40 minut.' },
       { title: 'Vše vyřešeno', desc: 'Profesionální práce se zárukou.' },
@@ -279,7 +279,7 @@ export const prahaData: Record<string, PrahaData> = {
       'Pravidelný servis a údržba zámků',
     ],
     process: [
-      { title: 'Zavolejte', desc: '606 588 222 – jsme za rohem!' },
+      { title: 'Zavolejte', desc: '734 565 987 – jsme za rohem!' },
       { title: 'Okamžitá reakce', desc: 'Cena a čas příjezdu ihned.' },
       { title: 'Bleskový příjezd', desc: 'V Praze 10 za pouhých 15–30 minut!' },
       { title: 'Hotovo', desc: 'Kvalitní práce od místních profíků.' },

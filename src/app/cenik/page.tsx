@@ -173,9 +173,9 @@ export default function CenikPage() {
               <h2>Chcete znát přesnou cenu?</h2>
               <p>Zavolejte nám a sdělíme vám cenu ještě před příjezdem.</p>
             </div>
-            <a href="tel:+420606588222" className="phone-link">
+            <a href="tel:+420734565987" className="phone-link">
               <i className="fas fa-phone"></i>
-              606 588 222
+              734 565 987
             </a>
           </div>
         </div>

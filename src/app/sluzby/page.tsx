@@ -113,9 +113,9 @@ export default function SluzbyPage() {
               <h2>Potřebujete některou z našich služeb?</h2>
               <p>Zavolejte nám a poradíme vám s nejlepším řešením.</p>
             </div>
-            <a href="tel:+420606588222" className="phone-link">
+            <a href="tel:+420734565987" className="phone-link">
               <i className="fas fa-phone"></i>
-              606 588 222
+              734 565 987
             </a>
           </div>
         </div>

@@ -5,7 +5,7 @@ import FaqAccordion from '@/components/FaqAccordion'
 
 export const metadata: Metadata = {
   title: 'Kontakt',
-  description: 'Kontaktujte Zámečníka Husaka – nonstop zámečnická pohotovost Praha. ☎ 606 588 222. Herbenova 727/38, Praha 10.',
+  description: 'Kontaktujte Zámečníka Husaka – nonstop zámečnická pohotovost Praha. ☎ 734 565 987. Herbenova 727/38, Praha 10.',
   alternates: { canonical: 'https://zamecnitvihusak.vercel.app/kontakt' },
 }
 
@@ -52,7 +52,7 @@ export default function KontaktPage() {
                   </div>
                   <div className="contact-card-content">
                     <h3>Telefon – Nonstop linka</h3>
-                    <a href="tel:+420606588222" className="contact-link primary">606 588 222</a>
+                    <a href="tel:+420734565987" className="contact-link primary">734 565 987</a>
                     <a href="tel:+420776447729" className="contact-link">776 44 77 29</a>
                   </div>
                 </div>
@@ -102,15 +102,15 @@ export default function KontaktPage() {
               <div className="messengers-section">
                 <h3><i className="fas fa-comment-dots"></i> Napište nám přes messenger</h3>
                 <div className="messengers-grid">
-                  <a href="viber://chat?number=+420606588222" className="messenger-btn viber">
+                  <a href="viber://chat?number=+420734565987" className="messenger-btn viber">
                     <i className="fab fa-viber"></i>
                     <span>Viber</span>
                   </a>
-                  <a href="https://wa.me/420606588222" className="messenger-btn whatsapp" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/420734565987" className="messenger-btn whatsapp" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-whatsapp"></i>
                     <span>WhatsApp</span>
                   </a>
-                  <a href="https://t.me/+420606588222" className="messenger-btn telegram" target="_blank" rel="noopener noreferrer">
+                  <a href="https://t.me/+420734565987" className="messenger-btn telegram" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-telegram-plane"></i>
                     <span>Telegram</span>
                   </a>
@@ -136,9 +136,9 @@ export default function KontaktPage() {
               <h3>Nouzová situace?</h3>
               <p>Zamkli jste se a potřebujete okamžitou pomoc?</p>
             </div>
-            <a href="tel:+420606588222" className="btn btn-white btn-large">
+            <a href="tel:+420734565987" className="btn btn-white btn-large">
               <i className="fas fa-phone"></i>
-              Zavolat 606 588 222
+              Zavolat 734 565 987
             </a>
           </div>
         </div>

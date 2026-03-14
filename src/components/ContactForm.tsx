@@ -79,7 +79,7 @@ export default function ContactForm() {
 
         <div className="form-note">
           <i className="fas fa-bolt"></i>
-          <span>Pro urgentní případy volejte <a href="tel:+420606588222">606 588 222</a></span>
+          <span>Pro urgentní případy volejte <a href="tel:+420734565987">734 565 987</a></span>
         </div>
       </form>
     </div>
