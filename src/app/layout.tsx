@@ -110,6 +110,12 @@ export default function RootLayout({
               priceRange: 'od 1200 Kč',
               image: 'https://zamecnitvihusak.vercel.app/favicon.svg',
               description: 'Profesionální zámečnické služby v Praze 24/7. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří.',
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '4.9',
+                bestRating: '5',
+                ratingCount: '710',
+              },
             }),
           }}
         />

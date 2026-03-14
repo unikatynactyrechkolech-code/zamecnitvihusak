@@ -26,16 +26,10 @@ export default function LoadingScreen() {
     <div className={`loading-screen ${!isLoading ? 'fade-out' : ''}`}>
       <div className="loading-favicon-lock">
         <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="loadLockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#e63946" />
-              <stop offset="100%" stopColor="#ff6b6b" />
-            </linearGradient>
-          </defs>
-          {/* Shackle */}
-          <path d="M20 28 V18 C20 10, 44 10, 44 18 V28" stroke="url(#loadLockGrad)" strokeWidth="5" strokeLinecap="round" fill="none" />
+          {/* Shackle - straight U shape */}
+          <path d="M21 28 V14 A11 11 0 0 1 43 14 V28" stroke="#e63946" strokeWidth="5" strokeLinecap="round" fill="none" />
           {/* Lock body */}
-          <rect x="14" y="26" width="36" height="28" rx="5" fill="url(#loadLockGrad)" />
+          <rect x="14" y="26" width="36" height="28" rx="5" fill="#e63946" />
           {/* Keyhole */}
           <circle cx="32" cy="38" r="4" fill="white" />
           <rect x="30" y="38" width="4" height="8" rx="1" fill="white" />

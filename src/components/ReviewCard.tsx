@@ -1,7 +1,3 @@
-'use client'
-
-import { useState } from 'react'
-
 interface ReviewData {
   name: string
   avatar: string
@@ -11,8 +7,6 @@ interface ReviewData {
 }
 
 export default function ReviewCard({ review }: { review: ReviewData }) {
-  const [expanded, setExpanded] = useState(false)
-
   return (
     <div className="review-card animate-fade-in">
       <div className="review-top">
@@ -34,17 +28,12 @@ export default function ReviewCard({ review }: { review: ReviewData }) {
           </div>
         </div>
       </div>
-      <div className={`review-text${expanded ? ' show-full' : ''}`}>
+      <div className="review-text show-full">
         {review.text}
         {review.moreText && (
           <span className="review-text-more"> {review.moreText}</span>
         )}
       </div>
-      {review.moreText && (
-        <button className="review-toggle" onClick={() => setExpanded(!expanded)}>
-          {expanded ? 'Skrýt' : 'Číst více'}
-        </button>
-      )}
     </div>
   )
 }
