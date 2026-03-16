@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Služby',
-  description: 'Kompletní přehled zámečnických služeb – otevírání zámků, výměna vložek, montáž bezpečnostních dveří, trezory, autoklíče a bezpečnostní systémy.',
+  description: 'Kompletní přehled zámečnických služeb – otevírání zámků, výměna vložek, montáž bezpečnostních dveří, trezory a autoklíče.',
   alternates: { canonical: 'https://zamecnitvihusak.vercel.app/sluzby' },
 }
 
@@ -13,7 +13,7 @@ const services = [
     title: 'Otevírání zámků',
     desc: 'Zabouchli jste dveře? Zlomil se vám klíč v zámku? Naši zkušení zámečníci otevřou jakýkoli typ zámku rychle a bez poškození dveří. Používáme profesionální nástroje a nedestruktivní metody.',
     features: ['Cylindrické zámky', 'Bezpečnostní zámky', 'Visací zámky', 'Zámky na auta', 'Trezorové zámky', 'Elektromechanické zámky'],
-    img: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80&auto=format',
+    img: 'https://images.pexels.com/photos/792034/pexels-photo-792034.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Otevírání zámků',
     reverse: false,
   },
@@ -22,7 +22,7 @@ const services = [
     title: 'Výměna zámků a vložek',
     desc: 'Potřebujete vyměnit staré zámky za nové bezpečnější? Nabízíme výměnu cylindrických vložek všech bezpečnostních tříd. Pracujeme s prověřenými značkami jako FAB, EVVA, ASSA ABLOY a další.',
     features: ['Bezpečnostní vložky FAB', 'Vložky EVVA', 'ASSA ABLOY systémy', 'Masterkey systémy', 'Oboustranné vložky', 'Knoflíkové vložky'],
-    img: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80&auto=format',
+    img: 'https://d15-a.sdn.cz/d_15/c_img_E_G/viPcFk.jpeg?fl=cro,0,0,800,533%7Cres,1200,,1%7Cjpg,80,,1',
     alt: 'Výměna zámků',
     reverse: true,
   },
@@ -31,7 +31,7 @@ const services = [
     title: 'Bezpečnostní dveře',
     desc: 'Montáž a výměna bezpečnostních dveří všech tříd odolnosti. Nabízíme dveře od předních výrobců s certifikací proti vloupání. Kompletní servis včetně zaměření, dodání a profesionální montáže.',
     features: ['Třída odolnosti 2-4', 'Protipožární dveře', 'Protihlukové dveře', 'Dveře do bytů', 'Dveře do domů', 'Technické dveře'],
-    img: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&q=80&auto=format',
+    img: 'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Bezpečnostní dveře',
     reverse: false,
   },
@@ -40,7 +40,7 @@ const services = [
     title: 'Trezory',
     desc: 'Profesionální otevírání trezorů bez poškození mechanismu. Dodáváme a montujeme trezory pro domácnosti i firmy. Poradíme s výběrem správného trezoru podle vašich potřeb a pojistných požadavků.',
     features: ['Otevírání trezorů', 'Prodej trezorů', 'Montáž do zdi/podlahy', 'Změna kombinace', 'Oprava mechanismu', 'Výměna zámku trezoru'],
-    img: 'https://images.unsplash.com/photo-1622473590773-f588134b6ce7?w=600&q=80&auto=format',
+    img: 'https://images.pexels.com/photos/32334240/pexels-photo-32334240.jpeg?auto=compress&cs=tinysrgb&w=600',
     alt: 'Trezory',
     reverse: true,
   },
@@ -49,18 +49,9 @@ const services = [
     title: 'Autoklíče',
     desc: 'Výroba a programování autoklíčů všech značek. Otevírání zamknutých aut, kopírování transponderových klíčů, opravy dálkových ovladačů. Řešíme i situace, kdy jste ztratili všechny klíče od auta.',
     features: ['Výroba autoklíčů', 'Programování čipů', 'Kopírování klíčů', 'Otevírání aut', 'Opravy ovladačů', 'Nouzové otevření'],
-    img: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&q=80&auto=format',
+    img: 'https://www.zamecnictvipraha-nonstop.cz/assets/images/otevirani-aut-automobilu1.png',
     alt: 'Autoklíče',
     reverse: false,
-  },
-  {
-    icon: 'fa-shield-halved',
-    title: 'Bezpečnostní systémy',
-    desc: 'Komplexní zabezpečení vašeho domova nebo firmy. Instalace elektronických zámků, přístupových systémů, kamerových systémů a alarmů. Navrhneme řešení přesně na míru vašim potřebám.',
-    features: ['Elektronické zámky', 'Přístupové systémy', 'Kamerové systémy', 'Alarmy a čidla', 'Videovrátniky', 'Smart home integrace'],
-    img: 'https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format',
-    alt: 'Bezpečnostní systémy',
-    reverse: true,
   },
 ]
 

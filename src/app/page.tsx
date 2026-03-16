@@ -158,12 +158,11 @@ export default function HomePage() {
 
           <div className="services-image-grid">
             {[
-              { title: 'Otevírání zámků', img: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80&auto=format' },
-              { title: 'Výměna vložek', img: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80&auto=format' },
-              { title: 'Bezpečnostní dveře', img: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&q=80&auto=format' },
-              { title: 'Trezory', img: 'https://images.unsplash.com/photo-1622473590773-f588134b6ce7?w=600&q=80&auto=format' },
-              { title: 'Autoklíče', img: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&q=80&auto=format' },
-              { title: 'Bezpečnostní systémy', img: 'https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&q=80&auto=format' },
+              { title: 'Otevírání zámků', img: 'https://images.pexels.com/photos/792034/pexels-photo-792034.jpeg?auto=compress&cs=tinysrgb&w=600' },
+              { title: 'Výměna vložek', img: 'https://d15-a.sdn.cz/d_15/c_img_E_G/viPcFk.jpeg?fl=cro,0,0,800,533%7Cres,1200,,1%7Cjpg,80,,1' },
+              { title: 'Bezpečnostní dveře', img: 'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&w=600' },
+              { title: 'Trezory', img: 'https://images.pexels.com/photos/32334240/pexels-photo-32334240.jpeg?auto=compress&cs=tinysrgb&w=600' },
+              { title: 'Autoklíče', img: 'https://www.zamecnictvipraha-nonstop.cz/assets/images/otevirani-aut-automobilu1.png' },
             ].map((service, i) => (
               <Link href="/sluzby" className={`service-card-image animate-fade-in delay-${i + 1}`} key={service.title}>
                 <div className="service-image">

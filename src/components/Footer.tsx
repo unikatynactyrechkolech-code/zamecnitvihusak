@@ -83,6 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
+          <p className="footer-credit">web by <a href="https://www.webpojede.cz" target="_blank" rel="noopener noreferrer" className="footer-credit-link">webpojede.cz</a></p>
           <p>&copy; {new Date().getFullYear()} Zámečník Husak. Všechna práva vyhrazena.</p>
           <div className="footer-bottom-links">
             <Link href="/kontakt">Kontaktujte nás</Link>

@@ -42,6 +42,73 @@ const processSteps = [
   { title: 'Problém vyřešen', desc: 'Profesionálně a rychle vyřešíme vaši situaci.' },
 ]
 
+// Pool obrázků pro lokality
+const localityImages = [
+  'https://images.pexels.com/photos/792034/pexels-photo-792034.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/32334240/pexels-photo-32334240.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/4489749/pexels-photo-4489749.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/4489794/pexels-photo-4489794.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/5691542/pexels-photo-5691542.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/4792489/pexels-photo-4792489.jpeg?auto=compress&cs=tinysrgb&w=600',
+]
+
+// Deterministic hash for consistent image per slug
+function hashCode(s: string): number {
+  let hash = 0
+  for (let i = 0; i < s.length; i++) {
+    hash = ((hash << 5) - hash) + s.charCodeAt(i)
+    hash |= 0
+  }
+  return Math.abs(hash)
+}
+
+export function getLocalityImage(slug: string): string {
+  return localityImages[hashCode(slug) % localityImages.length]
+}
+
+// Unikátní intro šablony
+const introTemplates = [
+  (name: string, district: string | null) => `Hledáte spolehlivého a dostupného zámečníka v oblasti ${name}? Naši certifikovaní technici jsou připraveni vám pomoci kdykoliv – ve dne i v noci.${district ? ` Působíme v celé oblasti ${district} a zajistíme rychlý příjezd.` : ''}`,
+  (name: string, district: string | null) => `Zamkli jste se v ${name}? Nepanikařte! Zámečnictví Husak nabízí nonstop pohotovostní služby s příjezdem v řádu minut.${district ? ` Naši zámečníci znají ${district} jako své boty.` : ''}`,
+  (name: string, district: string | null) => `Profesionální zámečnické služby v lokalitě ${name} – od nouzového otevírání dveří po kompletní zabezpečení vašeho domova.${district ? ` Jsme váš spolehlivý partner v celé oblasti ${district}.` : ''}`,
+  (name: string, district: string | null) => `Potřebujete okamžitou pomoc zámečníka v ${name}? Volejte 734 565 987 – jsme dostupní 24 hodin denně, 7 dní v týdnu.${district ? ` Pokrýváme celou ${district} včetně okolí.` : ''}`,
+  (name: string, district: string | null) => `Zámečník ${name} – rychlý, spolehlivý a za férovou cenu. Otevíráme zabouchnuté dveře, měníme zámky a instalujeme bezpečnostní systémy.${district ? ` Známe specifika oblasti ${district}.` : ''}`,
+  (name: string, district: string | null) => `Ztratili jste klíče v ${name}? Zlomil se vám klíč v zámku? Naši zkušení zámečníci vyřeší vaši situaci rychle a bez zbytečného poškození.${district ? ` Oblast ${district} patří do naší hlavní zóny pokrytí.` : ''}`,
+  (name: string, district: string | null) => `V ${name} poskytujeme kompletní zámečnické služby pro domácnosti, firmy i bytová družstva. Garantujeme férové ceny bez skrytých příplatků.${district ? ` Jsme nejrychlejší zámečník v ${district}.` : ''}`,
+  (name: string, district: string | null) => `Zabezpečte svůj domov v ${name} s profesionály. Nabízíme výměnu vložek, montáž bezpečnostních dveří i poradenství v oblasti zabezpečení.${district ? ` V ${district} působíme již přes 15 let.` : ''}`,
+]
+
+const problemIntros = [
+  (name: string) => `V ${name} se nejčastěji setkáváme s těmito situacemi. Na všechny jsme připraveni a dokážeme je vyřešit rychle a profesionálně:`,
+  (name: string) => `Naši zákazníci v ${name} nás nejčastěji volají v těchto případech. Díky dlouholeté praxi víme přesně, jak pomoci:`,
+  (name: string) => `S čím vám nejčastěji pomáháme v ${name}? Zde jsou typické situace, které řešíme denně:`,
+  (name: string) => `Každý den pomáháme lidem v ${name} s různými zámečnickými problémy. Podívejte se na nejčastější situace:`,
+]
+
+const ctaTexts = [
+  (name: string) => ({ heading: `Potřebujete zámečníka v ${name}?`, sub: 'Zavolejte nám a budeme u vás co nejdříve!' }),
+  (name: string) => ({ heading: `Zámečnická pohotovost ${name}`, sub: 'Nonstop služby – volejte teď!' }),
+  (name: string) => ({ heading: `Zamkli jste se v ${name}?`, sub: 'Jsme tu pro vás 24 hodin denně.' }),
+  (name: string) => ({ heading: `Rychlá pomoc v ${name}`, sub: 'Profesionální zámečník je na cestě!' }),
+]
+
+export function getUniqueIntro(slug: string, name: string, district: string | null): string {
+  const idx = hashCode(slug) % introTemplates.length
+  return introTemplates[idx](name, district)
+}
+
+export function getUniqueProblemIntro(slug: string, name: string): string {
+  const idx = hashCode(slug + 'prob') % problemIntros.length
+  return problemIntros[idx](name)
+}
+
+export function getUniqueCta(slug: string, name: string): { heading: string; sub: string } {
+  const idx = hashCode(slug + 'cta') % ctaTexts.length
+  return ctaTexts[idx](name)
+}
+
 // Praha 1-10 jsou v zamecnik-praha-data.ts
 // Zde definujeme Praha 11-22 a všechny městské části + obce
 

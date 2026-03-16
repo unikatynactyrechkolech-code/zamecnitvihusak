@@ -7,6 +7,10 @@ import {
   getServicesForLocality,
   getProcessSteps,
   getRelatedLocalities,
+  getLocalityImage,
+  getUniqueIntro,
+  getUniqueProblemIntro,
+  getUniqueCta,
 } from '@/app/locality-data'
 import Reviews from '@/components/Reviews'
 import CrossLinks from '@/components/CrossLinks'
@@ -91,6 +95,10 @@ export default async function LocalityPage({ params }: PageProps) {
   const services = getServicesForLocality()
   const process = getProcessSteps()
   const relatedLocalities = getRelatedLocalities(fullSlug)
+  const localityImage = getLocalityImage(fullSlug)
+  const uniqueIntro = getUniqueIntro(fullSlug, data.name, data.parentDistrict)
+  const problemIntro = getUniqueProblemIntro(fullSlug, data.name)
+  const cta = getUniqueCta(fullSlug, data.name)
 
   return (
     <>
@@ -156,11 +164,14 @@ export default async function LocalityPage({ params }: PageProps) {
         <div className="container">
           <div className="locality-intro">
             <h2>🔑 Zámečník {data.name} – Rychlá pomoc 24/7</h2>
-            <p>
-              Potřebujete zámečníka v lokalitě {data.name}? Zámečnictví Husak poskytuje 
-              profesionální zámečnické služby nonstop – 24 hodin denně, 7 dní v týdnu.
-              {data.parentDistrict && ` Působíme v celé oblasti ${data.parentDistrict} a okolí.`}
-            </p>
+            <p>{uniqueIntro}</p>
+
+            <div className="location-image">
+              <img src={localityImage} alt={`Zámečník ${data.name}`} loading="lazy" />
+              <p className="image-caption">
+                <i className="fas fa-map-marker-alt"></i> Zámečnické služby – {data.name}
+              </p>
+            </div>
 
             <div className="locality-description-box">
               <p>{data.description}</p>
@@ -219,7 +230,8 @@ export default async function LocalityPage({ params }: PageProps) {
       <section className="section bg-dark">
         <div className="container">
           <div className="text-center">
-            <h2 className="section-title" style={{ color: '#fff' }}>Nejčastější situace</h2>
+            <h2 className="section-title" style={{ color: '#fff' }}>Nejčastější situace v {data.name}</h2>
+            <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '600px', margin: '0 auto 2rem' }}>{problemIntro}</p>
           </div>
           <div className="locality-problems-grid">
             <div className="locality-problem-card">
@@ -289,8 +301,8 @@ export default async function LocalityPage({ params }: PageProps) {
         <div className="container">
           <div className="cta-content">
             <div className="cta-text">
-              <h2>Potřebujete zámečníka v lokalitě {data.name}?</h2>
-              <p>Zavolejte nám a budeme u vás co nejdříve!</p>
+              <h2>{cta.heading}</h2>
+              <p>{cta.sub}</p>
             </div>
             <a href="tel:+420734565987" className="phone-link">
               <i className="fas fa-phone"></i>
