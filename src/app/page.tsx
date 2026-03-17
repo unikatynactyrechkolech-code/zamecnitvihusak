@@ -32,21 +32,21 @@ const prahaDistricts = [
 const reviews = [
   {
     name: 'Martin Novák',
-    avatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' rx='60' fill='%23e63946'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48' font-family='Arial'%3EMN%3C/text%3E%3C/svg%3E",
+    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLEmqmFCi8EZ_OjP9T_Vr-M1gDGeJpMxbc3MzIFMYfHhBg5IQ=s120-c-rp-mo-br100',
     date: 'před 2 týdny',
     text: 'Zamkl jsem se v noci a pan Husak přijel během 15 minut. Profesionální přístup, zámek otevřel bez poškození.',
     moreText: 'Navíc mi poradil s výměnou vložky za bezpečnější variantu. Férová cena, rozhodně doporučuji každému, kdo potřebuje rychlou a spolehlivou pomoc.',
   },
   {
     name: 'Jana Procházková',
-    avatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' rx='60' fill='%231d3557'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48' font-family='Arial'%3EJP%3C/text%3E%3C/svg%3E",
+    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLi0XYvJIE3GBjpOx-M5f_DQCQ3N0bVk2mYvDxJt_r0xJNi7g=s120-c-rp-mo-br100',
     date: 'před měsícem',
     text: 'Výborná zkušenost! Potřebovala jsem vyměnit zámky v celém bytě po stěhování.',
     moreText: 'Pan Husak vše zvládl za jedno odpoledne, poradil s výběrem bezpečnostních vložek a cena odpovídala předem dohodnuté nabídce. Žádné skryté příplatky.',
   },
   {
     name: 'Petr Dvořák',
-    avatar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' rx='60' fill='%23457b9d'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48' font-family='Arial'%3EPD%3C/text%3E%3C/svg%3E",
+    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLIVi6q2giOcTl3PFSFYoNDzoBkK3cNTOISBABF07dBhCVF3A=s120-c-rp-mo-br100',
     date: 'před 3 měsíci',
     text: 'Montáž bezpečnostních dveří proběhla přesně podle plánu. Pan Husak je opravdový profesionál — přesný, čistá práce a hlavně férové jednání. Doporučuji!',
   },

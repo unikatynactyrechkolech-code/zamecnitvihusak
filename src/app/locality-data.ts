@@ -70,28 +70,28 @@ export function getLocalityImage(slug: string): string {
 
 // Unikátní intro šablony
 const introTemplates = [
-  (name: string, district: string | null) => `Hledáte spolehlivého a dostupného zámečníka v oblasti ${name}? Naši certifikovaní technici jsou připraveni vám pomoci kdykoliv – ve dne i v noci.${district ? ` Působíme v celé oblasti ${district} a zajistíme rychlý příjezd.` : ''}`,
-  (name: string, district: string | null) => `Zamkli jste se v ${name}? Nepanikařte! Zámečnictví Husak nabízí nonstop pohotovostní služby s příjezdem v řádu minut.${district ? ` Naši zámečníci znají ${district} jako své boty.` : ''}`,
-  (name: string, district: string | null) => `Profesionální zámečnické služby v lokalitě ${name} – od nouzového otevírání dveří po kompletní zabezpečení vašeho domova.${district ? ` Jsme váš spolehlivý partner v celé oblasti ${district}.` : ''}`,
-  (name: string, district: string | null) => `Potřebujete okamžitou pomoc zámečníka v ${name}? Volejte 734 565 987 – jsme dostupní 24 hodin denně, 7 dní v týdnu.${district ? ` Pokrýváme celou ${district} včetně okolí.` : ''}`,
-  (name: string, district: string | null) => `Zámečník ${name} – rychlý, spolehlivý a za férovou cenu. Otevíráme zabouchnuté dveře, měníme zámky a instalujeme bezpečnostní systémy.${district ? ` Známe specifika oblasti ${district}.` : ''}`,
-  (name: string, district: string | null) => `Ztratili jste klíče v ${name}? Zlomil se vám klíč v zámku? Naši zkušení zámečníci vyřeší vaši situaci rychle a bez zbytečného poškození.${district ? ` Oblast ${district} patří do naší hlavní zóny pokrytí.` : ''}`,
-  (name: string, district: string | null) => `V ${name} poskytujeme kompletní zámečnické služby pro domácnosti, firmy i bytová družstva. Garantujeme férové ceny bez skrytých příplatků.${district ? ` Jsme nejrychlejší zámečník v ${district}.` : ''}`,
-  (name: string, district: string | null) => `Zabezpečte svůj domov v ${name} s profesionály. Nabízíme výměnu vložek, montáž bezpečnostních dveří i poradenství v oblasti zabezpečení.${district ? ` V ${district} působíme již přes 15 let.` : ''}`,
+  (name: string, district: string | null) => `Hledáte spolehlivého a dostupného zámečníka? Lokalita ${name} patří do oblasti naší nonstop služby. Naši certifikovaní technici jsou připraveni vám pomoci kdykoliv – ve dne i v noci.${district ? ` Působíme v celé oblasti ${district} a zajistíme rychlý příjezd.` : ''}`,
+  (name: string, district: string | null) => `Zamkli jste se? Lokalita ${name} je v dosahu našich zámečníků! Zámečnictví Husak nabízí nonstop pohotovostní služby s příjezdem v řádu minut.${district ? ` Naši zámečníci znají celou oblast ${district} jako své boty.` : ''}`,
+  (name: string, district: string | null) => `Profesionální zámečnické služby pro lokalitu ${name} – od nouzového otevírání dveří po kompletní zabezpečení vašeho domova.${district ? ` Jsme váš spolehlivý partner v celé oblasti ${district}.` : ''}`,
+  (name: string, district: string | null) => `Potřebujete okamžitou pomoc zámečníka? Oblast ${name} obsluhujeme nonstop. Volejte 734 565 987 – jsme dostupní 24 hodin denně, 7 dní v týdnu.${district ? ` Pokrýváme celou oblast ${district} včetně okolí.` : ''}`,
+  (name: string, district: string | null) => `Zámečník pro ${name} – rychlý, spolehlivý a za férovou cenu. Otevíráme zabouchnuté dveře, měníme zámky a instalujeme bezpečnostní systémy.${district ? ` Známe specifika oblasti ${district}.` : ''}`,
+  (name: string, district: string | null) => `Ztratili jste klíče? Zlomil se vám klíč v zámku? Lokalita ${name} je naše spádová oblast – naši zkušení zámečníci vyřeší vaši situaci rychle a bez zbytečného poškození.${district ? ` Oblast ${district} patří do naší hlavní zóny pokrytí.` : ''}`,
+  (name: string, district: string | null) => `Lokalita ${name} – kompletní zámečnické služby pro domácnosti, firmy i bytová družstva. Garantujeme férové ceny bez skrytých příplatků.${district ? ` Jsme nejrychlejší zámečník v oblasti ${district}.` : ''}`,
+  (name: string, district: string | null) => `Zabezpečte svůj domov – oblast ${name} obsluhujeme profesionálně a rychle. Nabízíme výměnu vložek, montáž bezpečnostních dveří i poradenství.${district ? ` Oblast ${district} pokrýváme již přes 15 let.` : ''}`,
 ]
 
 const problemIntros = [
-  (name: string) => `V ${name} se nejčastěji setkáváme s těmito situacemi. Na všechny jsme připraveni a dokážeme je vyřešit rychle a profesionálně:`,
-  (name: string) => `Naši zákazníci v ${name} nás nejčastěji volají v těchto případech. Díky dlouholeté praxi víme přesně, jak pomoci:`,
-  (name: string) => `S čím vám nejčastěji pomáháme v ${name}? Zde jsou typické situace, které řešíme denně:`,
-  (name: string) => `Každý den pomáháme lidem v ${name} s různými zámečnickými problémy. Podívejte se na nejčastější situace:`,
+  (name: string) => `Lokalita ${name} – nejčastěji se zde setkáváme s těmito situacemi. Na všechny jsme připraveni a dokážeme je vyřešit rychle a profesionálně:`,
+  (name: string) => `Naši zákazníci z oblasti ${name} nás nejčastěji volají v těchto případech. Díky dlouholeté praxi víme přesně, jak pomoci:`,
+  (name: string) => `S čím vám nejčastěji pomáháme v oblasti ${name}? Zde jsou typické situace, které řešíme denně:`,
+  (name: string) => `Každý den pomáháme lidem z lokality ${name} s různými zámečnickými problémy. Podívejte se na nejčastější situace:`,
 ]
 
 const ctaTexts = [
-  (name: string) => ({ heading: `Potřebujete zámečníka v ${name}?`, sub: 'Zavolejte nám a budeme u vás co nejdříve!' }),
-  (name: string) => ({ heading: `Zámečnická pohotovost ${name}`, sub: 'Nonstop služby – volejte teď!' }),
-  (name: string) => ({ heading: `Zamkli jste se v ${name}?`, sub: 'Jsme tu pro vás 24 hodin denně.' }),
-  (name: string) => ({ heading: `Rychlá pomoc v ${name}`, sub: 'Profesionální zámečník je na cestě!' }),
+  (name: string) => ({ heading: `Potřebujete zámečníka? Lokalita ${name}`, sub: 'Zavolejte nám a budeme u vás co nejdříve!' }),
+  (name: string) => ({ heading: `Zámečnická pohotovost – ${name}`, sub: 'Nonstop služby – volejte teď!' }),
+  (name: string) => ({ heading: `Zamkli jste se? Oblast ${name}`, sub: 'Jsme tu pro vás 24 hodin denně.' }),
+  (name: string) => ({ heading: `Rychlá pomoc – ${name}`, sub: 'Profesionální zámečník je na cestě!' }),
 ]
 
 export function getUniqueIntro(slug: string, name: string, district: string | null): string {

@@ -21,7 +21,7 @@ export const prahaData: Record<string, PrahaData> = {
     district: 'Praha 1',
     areas: ['Staré Město', 'Nové Město', 'Malá Strana', 'Hradčany', 'Josefov'],
     time: '20–40 minut',
-    imageUrl: 'https://pixabay.com/cs/images/download/wobbuffet13-street-7544046_1920.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/CharlesBridgeMalaStranaPragueCzechRepublic.jpg/1200px-CharlesBridgeMalaStranaPragueCzechRepublic.jpg',
     imageAlt: 'Zámečník Praha 1 - centrum Prahy',
     imageCaption: 'Praha 1 – historické centrum',
     intro: 'Hledáte spolehlivého zámečníka v Praze 1? Zámečník Husak poskytuje profesionální zámečnické služby v celé Praze 1 – od Starého Města přes Malou Stranu až po Hradčany.',
