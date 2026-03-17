@@ -7,7 +7,6 @@ import {
   getServicesForLocality,
   getProcessSteps,
   getRelatedLocalities,
-  getLocalityImage,
   getUniqueIntro,
   getUniqueProblemIntro,
   getUniqueCta,
@@ -95,7 +94,6 @@ export default async function LocalityPage({ params }: PageProps) {
   const services = getServicesForLocality()
   const process = getProcessSteps()
   const relatedLocalities = getRelatedLocalities(fullSlug)
-  const localityImage = getLocalityImage(fullSlug)
   const uniqueIntro = getUniqueIntro(fullSlug, data.name, data.parentDistrict)
   const problemIntro = getUniqueProblemIntro(fullSlug, data.name)
   const cta = getUniqueCta(fullSlug, data.name)
@@ -165,13 +163,6 @@ export default async function LocalityPage({ params }: PageProps) {
           <div className="locality-intro">
             <h2>🔑 Zámečník {data.name} – Rychlá pomoc 24/7</h2>
             <p>{uniqueIntro}</p>
-
-            <div className="location-image">
-              <img src={localityImage} alt={`Zámečník ${data.name}`} loading="lazy" />
-              <p className="image-caption">
-                <i className="fas fa-map-marker-alt"></i> Zámečnické služby – {data.name}
-              </p>
-            </div>
 
             <div className="locality-description-box">
               <p>{data.description}</p>

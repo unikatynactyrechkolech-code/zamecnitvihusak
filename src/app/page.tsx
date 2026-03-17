@@ -436,28 +436,28 @@ export default function HomePage() {
             <div className="team-card animate-slide-up delay-1">
               <div className="team-photo">
                 <img
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' rx='150' fill='%230d1117'/%3E%3Ccircle cx='150' cy='115' r='55' fill='%23e63946'/%3E%3Ccircle cx='150' cy='95' r='35' fill='%23f1faee'/%3E%3Cellipse cx='150' cy='250' rx='80' ry='60' fill='%23e63946'/%3E%3Ctext x='50%25' y='40%25' dominant-baseline='middle' text-anchor='middle' fill='%23f1faee' font-size='72' font-family='Arial,sans-serif' font-weight='bold'%3EJH%3C/text%3E%3C/svg%3E"
-                  alt="Jan Husak - hlavní zámečník"
+                  src="https://locksmith-prague.cz/wp-content/uploads/2026/02/andrej_husak.png"
+                  alt="Andrej Husák - profesionální zámečník"
                   loading="lazy"
                 />
               </div>
               <div className="team-info">
-                <h3>Jan Husak</h3>
-                <span className="team-role">Hlavní zámečník & Majitel</span>
+                <h3>Andrej Husák</h3>
+                <span className="team-role">Profesionální zámečník</span>
                 <p>Přes 15 let zkušeností v oboru. Certifikovaný specialista na bezpečnostní systémy a moderní zámkové technologie.</p>
               </div>
             </div>
             <div className="team-card animate-slide-up delay-2">
               <div className="team-photo">
                 <img
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' rx='150' fill='%230d1117'/%3E%3Ccircle cx='150' cy='115' r='55' fill='%231d3557'/%3E%3Ccircle cx='150' cy='95' r='35' fill='%23f1faee'/%3E%3Cellipse cx='150' cy='250' rx='80' ry='60' fill='%231d3557'/%3E%3Ctext x='50%25' y='40%25' dominant-baseline='middle' text-anchor='middle' fill='%23f1faee' font-size='72' font-family='Arial,sans-serif' font-weight='bold'%3EPN%3C/text%3E%3C/svg%3E"
-                  alt="Petr Novotný - zámečník technik"
+                  src="https://locksmith-prague.cz/wp-content/uploads/2026/02/artur_husak.png"
+                  alt="Artur Husák - profesionální zámečník"
                   loading="lazy"
                 />
               </div>
               <div className="team-info">
-                <h3>Petr Novotný</h3>
-                <span className="team-role">Zámečník - Technik</span>
+                <h3>Artur Husák</h3>
+                <span className="team-role">Profesionální zámečník</span>
                 <p>Specialista na autoklíče a elektronické zámkové systémy. 8 let v oboru s důrazem na moderní technologie.</p>
               </div>
             </div>
@@ -513,7 +513,7 @@ export default function HomePage() {
                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
               </svg>
-              Všechny recenze na Google
+              Přidat recenzi
               <i className="fas fa-external-link-alt" style={{fontSize: '0.75rem'}}></i>
             </a>
           </div>

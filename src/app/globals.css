@@ -705,6 +705,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
 .pricing-price .from {
   font-size: 0.9rem;
   color: var(--color-text);
@@ -714,11 +721,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
   font-weight: 800;
   color: var(--color-primary);
+  margin: 0 0.15rem;
 }
 
 .pricing-price .currency {
   font-size: 1rem;
   color: var(--color-text);
+}
+
+.pricing-features {
+  margin-bottom: 2rem;
 }
 
 .pricing-features li {
@@ -1181,6 +1193,11 @@ h1, h2, h3, h4, h5, h6 {
   gap: 3rem;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo .logo-text {
+  display: flex;
+  gap: 0.4rem;
 }
 
 .footer-about p {
@@ -2761,14 +2778,14 @@ h1, h2, h3, h4, h5, h6 {
 .btn-google-review {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
   background: var(--color-white);
   color: var(--color-dark);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-full);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   transition: all 0.2s;
   text-decoration: none;
 }

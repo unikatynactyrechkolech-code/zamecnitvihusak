@@ -14,7 +14,7 @@ export default function Footer() {
             <Link href="/" className="footer-logo">
               <span className="logo-text">
                 <span className="logo-title">HUSAK</span>
-                <span className="logo-subtitle">ZÁMEČNÍK</span>
+                <span className="logo-subtitle"> ZÁMEČNÍK</span>
               </span>
             </Link>
             <p>
