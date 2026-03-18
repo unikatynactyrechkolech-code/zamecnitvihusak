@@ -31,24 +31,25 @@ const prahaDistricts = [
 
 const reviews = [
   {
-    name: 'Martin Novák',
-    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLEmqmFCi8EZ_OjP9T_Vr-M1gDGeJpMxbc3MzIFMYfHhBg5IQ=s120-c-rp-mo-br100',
-    date: 'před 2 týdny',
-    text: 'Zamkl jsem se v noci a pan Husak přijel během 15 minut. Profesionální přístup, zámek otevřel bez poškození.',
-    moreText: 'Navíc mi poradil s výměnou vložky za bezpečnější variantu. Férová cena, rozhodně doporučuji každému, kdo potřebuje rychlou a spolehlivou pomoc.',
-  },
-  {
-    name: 'Jana Procházková',
-    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLi0XYvJIE3GBjpOx-M5f_DQCQ3N0bVk2mYvDxJt_r0xJNi7g=s120-c-rp-mo-br100',
+    name: 'Robert Dykovský',
+    avatar: 'https://lh3.googleusercontent.com/a-/ALV-UjW-xUnG6Y5VVe-Ofgks0NqqI2Nlq4D9wcksoh0hF8dE3sAty_s=w144-h144-p-rp-mo-br100',
     date: 'před měsícem',
-    text: 'Výborná zkušenost! Potřebovala jsem vyměnit zámky v celém bytě po stěhování.',
-    moreText: 'Pan Husak vše zvládl za jedno odpoledne, poradil s výběrem bezpečnostních vložek a cena odpovídala předem dohodnuté nabídce. Žádné skryté příplatky.',
+    text: 'Skvělý přístup a naprostá spokojenost. Řešila jsem atypický zámek a chybějící klíče, se kterými mě předtím několik zámečníků odmítlo, že to dělat nebudou.',
+    moreText: 'Tady žádný problém – pán přijel rychle, vše si vzal, poradil si i s atypem a do druhého dne bylo hotovo. Velmi šikovný, ochotný, sympatický, profesionální a lidský přístup. Je vidět, že ví, co dělá. Rozhodně doporučuji 👍',
   },
   {
-    name: 'Petr Dvořák',
-    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocLIVi6q2giOcTl3PFSFYoNDzoBkK3cNTOISBABF07dBhCVF3A=s120-c-rp-mo-br100',
+    name: 'Josef Sekava',
+    avatar: 'https://lh3.googleusercontent.com/a-/ALV-UjWhGofYeAQXJbxKseYzDoQK0gsdHa832nmilOyq2M6QK1kOEGTbvg=w144-h144-p-rp-mo-br100',
+    date: 'před 2 měsíci',
+    text: 'Zabouchl jsem dveře v noci a pan zámečník přijel do 20 minut. Otevřel bez poškození, navíc rovnou vyměnil starou vložku za bezpečnostní.',
+    moreText: 'Cena odpovídala tomu, co řekl předem po telefonu – žádné navyšování. Seriózní jednání, čistá práce. Určitě doporučuji.',
+  },
+  {
+    name: 'Alice Neugebauerová',
+    avatar: 'https://lh3.googleusercontent.com/a/ACg8ocKNZoUhNS8OtMt8I1_8N5CVjnuCt2zCzipVGIsLjQ3pIZU7Nw=w144-h144-p-rp-mo-br100',
     date: 'před 3 měsíci',
-    text: 'Montáž bezpečnostních dveří proběhla přesně podle plánu. Pan Husak je opravdový profesionál — přesný, čistá práce a hlavně férové jednání. Doporučuji!',
+    text: 'Po stěhování jsem potřebovala vyměnit všechny zámky v bytě. Pan Husák přijel přesně na čas, poradil s výběrem bezpečnostních vložek a vše zvládl za jedno odpoledne.',
+    moreText: 'Profesionální přístup, férová cena bez skrytých příplatků. Navíc montoval i bezpečnostní kování. Naprosto spokojená, děkuji!',
   },
 ]
 
@@ -482,7 +483,7 @@ export default function HomePage() {
               </svg>
             </div>
             <div className="google-rating-info">
-              <div className="google-rating-score">4.9</div>
+              <div className="google-rating-score">4.8</div>
               <div className="google-rating-stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -490,7 +491,7 @@ export default function HomePage() {
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
               </div>
-              <div className="google-rating-count">Na základě 710 recenzí</div>
+              <div className="google-rating-count">Na základě 20 recenzí</div>
             </div>
           </div>
 

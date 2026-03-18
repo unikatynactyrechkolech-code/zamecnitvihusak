@@ -12,7 +12,7 @@ export default function ReviewCard({ review }: { review: ReviewData }) {
       <div className="review-top">
         <img
           src={review.avatar}
-          alt={review.name}
+          alt={`Recenze zámečník Praha – ${review.name}`}
           className="review-avatar"
           referrerPolicy="no-referrer"
           width={50}

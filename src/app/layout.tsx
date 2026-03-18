@@ -16,25 +16,25 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Zámečník Husak – Nonstop zámečník Praha | Otevírání zámků 24/7',
-    template: '%s | Zámečník Husak',
+    default: 'Zámečník Praha – Nonstop zámečnická pohotovost 24/7 | Zámečník Husak',
+    template: '%s | Zámečník Husak Praha',
   },
-  description: 'Zámečník Husak – Nonstop zámečnická pohotovost v Praze. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří. Příjezd do 20 minut. ☎ 734 565 987',
-  keywords: 'zámečník Praha, zámečnická pohotovost, otevírání zámků, výměna zámků, nonstop zámečník, bezpečnostní dveře Praha',
+  description: 'Zámečník Husak – nonstop zámečnická pohotovost Praha a okolí. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří, otevírání aut, trezorů. Příjezd do 20 minut. ☎ 734 565 987',
+  keywords: 'zámečník Praha, zámečnická pohotovost, otevírání zámků, výměna zámků, nonstop zámečník, bezpečnostní dveře Praha, otevírání aut, otevírání bytů, výměna vložek, zámečník pohotovost Praha, zámečník nonstop, zamknuté dveře, zabouchnuté dveře, autoklíče, montáž kování, zámečník Husak',
   authors: [{ name: 'Zámečník Husak' }],
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
     url: 'https://zamecnitvihusak.vercel.app',
     siteName: 'Zámečník Husak',
-    title: 'Zámečník Husak – Nonstop zámečník Praha',
-    description: 'Profesionální zámečnické služby v Praze. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří. Nonstop pohotovost 24/7.',
+    title: 'Zámečník Praha – Nonstop zámečnická pohotovost 24/7',
+    description: 'Profesionální zámečnické služby v Praze a okolí. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří. Nonstop pohotovost 24/7. Příjezd do 20 minut.',
     images: [
       {
         url: 'https://zamecnitvihusak.vercel.app/favicon.svg',
         width: 100,
         height: 120,
-        alt: 'Zámečník Husak Praha',
+        alt: 'Zámečník Husak Praha – zámečnická pohotovost nonstop',
       },
     ],
   },
@@ -81,6 +81,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Locksmith',
               name: 'Zámečník Husak',
+              alternateName: 'Zámečnictví Husak',
               url: 'https://zamecnitvihusak.vercel.app',
               telephone: ['+420734565987', '+420776447729'],
               address: {
@@ -104,19 +105,50 @@ export default function RootLayout({
                 opens: '00:00',
                 closes: '23:59',
               },
-              areaServed: {
-                '@type': 'City',
-                name: 'Praha',
-              },
+              areaServed: [
+                { '@type': 'City', name: 'Praha' },
+                { '@type': 'AdministrativeArea', name: 'Praha-západ' },
+                { '@type': 'AdministrativeArea', name: 'Praha-východ' },
+              ],
+              serviceType: ['Otevírání zámků', 'Výměna vložek a zámků', 'Montáž bezpečnostních dveří', 'Otevírání aut', 'Otevírání trezorů', 'Výroba autoklíčů', 'Montáž kování'],
               priceRange: 'od 1200 Kč',
+              currenciesAccepted: 'CZK',
+              paymentAccepted: 'Hotovost, Platební karta, Převod',
               image: 'https://zamecnitvihusak.vercel.app/favicon.svg',
-              description: 'Profesionální zámečnické služby v Praze 24/7. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří.',
+              description: 'Profesionální zámečnické služby v Praze a okolí 24/7. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří, otevírání aut a trezorů.',
+              sameAs: [
+                'https://www.google.com/maps/place/%F0%9F%94%91%F0%9F%94%93z%C3%A1me%C4%8Dn%C3%ADk+pohotovost+24%2F7+Hus%C3%A1k',
+              ],
               aggregateRating: {
                 '@type': 'AggregateRating',
-                ratingValue: '4.9',
+                ratingValue: '4.8',
                 bestRating: '5',
-                ratingCount: '710',
+                ratingCount: '20',
+                reviewCount: '20',
               },
+              review: [
+                {
+                  '@type': 'Review',
+                  author: { '@type': 'Person', name: 'Robert Dykovský' },
+                  datePublished: '2026-02-15',
+                  reviewBody: 'Skvělý přístup a naprostá spokojenost. Řešila jsem atypický zámek a chybějící klíče, se kterými mě předtím několik zámečníků odmítlo, že to dělat nebudou. Tady žádný problém – pán přijel rychle, vše si vzal, poradil si i s atypem a do druhého dne bylo hotovo. Velmi šikovný, ochotný, sympatický, profesionální a lidský přístup.',
+                  reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+                },
+                {
+                  '@type': 'Review',
+                  author: { '@type': 'Person', name: 'Josef Sekava' },
+                  datePublished: '2026-01-15',
+                  reviewBody: 'Zabouchl jsem dveře v noci a pan zámečník přijel do 20 minut. Otevřel bez poškození, navíc rovnou vyměnil starou vložku za bezpečnostní. Cena odpovídala tomu, co řekl předem po telefonu – žádné navyšování. Seriózní jednání, čistá práce.',
+                  reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+                },
+                {
+                  '@type': 'Review',
+                  author: { '@type': 'Person', name: 'Alice Neugebauerová' },
+                  datePublished: '2025-12-15',
+                  reviewBody: 'Po stěhování jsem potřebovala vyměnit všechny zámky v bytě. Pan Husák přijel přesně na čas, poradil s výběrem bezpečnostních vložek a vše zvládl za jedno odpoledne. Profesionální přístup, férová cena bez skrytých příplatků.',
+                  reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+                },
+              ],
             }),
           }}
         />

@@ -9,13 +9,14 @@ export function generatePrahaMetadata(num: string): Metadata {
   const data = prahaData[num]
   if (!data) return {}
 
+  const areas = data.areas.slice(0, 5).join(', ')
   return {
-    title: data.title,
-    description: `Zámečník Praha ${num} – nonstop zámečnická pohotovost v oblasti ${data.areas.join(', ')}. Příjezd do ${data.time}. ☎ 734 565 987`,
+    title: `Zámečník Praha ${num} – Nonstop pohotovost 24/7 | Otevírání zámků`,
+    description: `Zámečník Praha ${num} – nonstop zámečnická pohotovost. Otevírání zámků, výměna vložek, bezpečnostní dveře. Oblast: ${areas}. Příjezd do ${data.time}. ✆ 734 565 987`,
     alternates: { canonical: `https://zamecnitvihusak.vercel.app/zamecnik-praha-${num}` },
     openGraph: {
-      title: `${data.title} – Nonstop zámečnická pohotovost`,
-      description: `Profesionální zámečnické služby v Praze ${num}. ${data.areas.join(', ')}. Příjezd do ${data.time}.`,
+      title: `Zámečník Praha ${num} – Nonstop zámečnická pohotovost`,
+      description: `Profesionální zámečnické služby v Praze ${num}. ${areas}. Příjezd do ${data.time}. Otevírání zámků, výměna vložek, bezpečnostní dveře.`,
     },
   }
 }
@@ -134,7 +135,17 @@ export default function PrahaPageContent({ num }: { num: string }) {
 
             <h3><i className="fas fa-map-marker-alt"></i> {data.district} – Kde přesně působíme</h3>
             <p>{data.description}</p>
+          </div>
+        </div>
+      </section>
 
+      {/* Cross-links - clickable localities */}
+      <CrossLinks localities={relatedLocalities} currentName={`Praha ${data.num}`} />
+
+      {/* Areas */}
+      <section className="section">
+        <div className="container">
+          <div className="locality-intro">
             <div className="locality-areas">
               <h3><i className="fas fa-map-marker-alt"></i> Městské části a lokality</h3>
               <div className="locality-areas-grid">
@@ -221,9 +232,6 @@ export default function PrahaPageContent({ num }: { num: string }) {
           </div>
         </div>
       </section>
-
-      {/* Cross-links */}
-      <CrossLinks localities={relatedLocalities} currentName={`Praha ${data.num}`} />
 
       {/* Reviews */}
       <Reviews serviceName={`Zámečník Praha ${data.num} – Nonstop pohotovost`} />

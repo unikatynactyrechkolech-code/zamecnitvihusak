@@ -32,14 +32,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   
   if (!data) return {}
 
-  const title = `Zámečník ${data.name} – Nonstop pohotovost 24/7`
-  const description = `Zámečnická pohotovost ${data.name} – rychlý příjezd do ${data.arrivalTime}. Otevírání zámků, výměna vložek, bezpečnostní dveře. ☎ 734 565 987`
+  const highlights = data.highlights.length > 0 ? ` Oblast: ${data.highlights.slice(0, 4).join(', ')}.` : ''
+  const title = `Zámečník ${data.name} – Nonstop pohotovost 24/7 | Otevírání zámků`
+  const description = `Zámečnická pohotovost ${data.name} – rychlý příjezd do ${data.arrivalTime}. Otevírání zámků, výměna vložek, bezpečnostní dveře.${highlights} ✆ 734 565 987`
 
   return {
     title,
     description,
     alternates: { canonical: `https://zamecnitvihusak.vercel.app/${slug}` },
-    openGraph: { title, description },
+    openGraph: {
+      title: `Zámečník ${data.name} – Nonstop zámečnická pohotovost`,
+      description: `Profesionální zámečnické služby v lokalitě ${data.name}. Příjezd do ${data.arrivalTime}. Otevírání zámků, výměna vložek.`,
+    },
   }
 }
 
@@ -167,7 +171,17 @@ export default async function LocalityPage({ params }: PageProps) {
             <div className="locality-description-box">
               <p>{data.description}</p>
             </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Cross-links - clickable localities */}
+      <CrossLinks localities={relatedLocalities} currentName={data.name} />
+
+      {/* Areas */}
+      <section className="section">
+        <div className="container">
+          <div className="locality-intro">
             {data.highlights.length > 0 && (
               <div className="locality-areas">
                 <h3><i className="fas fa-map-marker-alt"></i> Oblasti které pokrýváme</h3>
@@ -280,9 +294,6 @@ export default async function LocalityPage({ params }: PageProps) {
           </div>
         </div>
       </section>
-
-      {/* Cross-links */}
-      <CrossLinks localities={relatedLocalities} currentName={data.name} />
 
       {/* Reviews */}
       <Reviews serviceName={`Zámečník ${data.name} – Nonstop pohotovost`} />
