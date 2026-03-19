@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'O nás – Zámečník Husak Praha | 15+ let zkušeností',
   description: 'Poznejte tým Zámečník Husak – více než 15 let zkušeností se zámečnickými službami v Praze. Certifikovaní specialisté, pokrytí celé Prahy a okolí 24/7. Otevírání zámků, aut, bytů a trezorů.',
-  alternates: { canonical: 'https://zamecnitvihusak.vercel.app/o-nas' },
+  alternates: { canonical: 'https://www.zamecnikhusak.cz/o-nas' },
   openGraph: {
     title: 'O nás – Zámečník Husak Praha',
     description: 'Více než 15 let zkušeností. Certifikovaní zámečníci. Pokrytí celé Prahy a okolí 24/7.',

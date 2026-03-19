@@ -5,7 +5,7 @@ import FaqAccordion from '@/components/FaqAccordion'
 export const metadata: Metadata = {
   title: 'Kontakt – Zámečník Praha Nonstop | Zavolejte 734 565 987',
   description: 'Kontaktujte Zámečníka Husaka – nonstop zámečnická pohotovost Praha. Otevírání zámků, výměna vložek, bezpečnostní dveře. ✆ 734 565 987. Herbenova 727/38, Praha 10.',
-  alternates: { canonical: 'https://zamecnitvihusak.vercel.app/kontakt' },
+  alternates: { canonical: 'https://www.zamecnikhusak.cz/kontakt' },
   openGraph: {
     title: 'Kontakt na zámečníka Praha – Zámečník Husak',
     description: 'Nonstop zámečnická pohotovost Praha. ✆ 734 565 987. Příjezd do 20 minut.',

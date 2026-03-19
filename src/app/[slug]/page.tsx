@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
-    alternates: { canonical: `https://zamecnitvihusak.vercel.app/${slug}` },
+    alternates: { canonical: `https://www.zamecnikhusak.cz/${slug}` },
     openGraph: {
       title: `Zámečník ${data.name} – Nonstop zámečnická pohotovost`,
       description: `Profesionální zámečnické služby v lokalitě ${data.name}. Příjezd do ${data.arrivalTime}. Otevírání zámků, výměna vložek.`,

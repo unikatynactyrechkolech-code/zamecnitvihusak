@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Služby zámečníka – Otevírání zámků, výměna vložek, bezpečnostní dveře',
   description: 'Kompletní přehled zámečnických služeb v Praze – otevírání zámků a dveří, výměna vložek a zámků, montáž bezpečnostních dveří, trezory a autoklíče. Nonstop 24/7. ✆ 734 565 987',
-  alternates: { canonical: 'https://zamecnitvihusak.vercel.app/sluzby' },
+  alternates: { canonical: 'https://www.zamecnikhusak.cz/sluzby' },
   openGraph: {
     title: 'Služby zámečníka Praha – Zámečník Husak',
     description: 'Otevírání zámků, výměna vložek, montáž bezpečnostních dveří, trezory a autoklíče. Nonstop zámečnická pohotovost Praha.',

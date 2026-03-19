@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Ceník zámečnických služeb Praha – Férové ceny předem',
   description: 'Transparentní ceník zámečnických služeb Praha – otevírání zámků od 1 200 Kč, výměna vložek od 1 800 Kč, bezpečnostní dveře od 15 000 Kč. Výjezd zdarma. ✆ 734 565 987',
-  alternates: { canonical: 'https://zamecnitvihusak.vercel.app/cenik' },
+  alternates: { canonical: 'https://www.zamecnikhusak.cz/cenik' },
   openGraph: {
     title: 'Ceník zámečníka Praha – Zámečník Husak',
     description: 'Férové ceny zámečnických služeb. Otevírání zámků od 1 200 Kč, výměna vložek od 1 800 Kč. Výjezd po Praze zdarma.',

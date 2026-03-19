@@ -17,7 +17,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://zamecnitvihusak.vercel.app/sitemap.xml',
-    host: 'https://zamecnitvihusak.vercel.app',
+    sitemap: 'https://www.zamecnikhusak.cz/sitemap.xml',
+    host: 'https://www.zamecnikhusak.cz',
   }
 }

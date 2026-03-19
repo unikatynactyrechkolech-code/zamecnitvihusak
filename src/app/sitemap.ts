@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { neighborhoodData, extendedPrahaData, getAllLocalitySlugs } from './locality-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://zamecnitvihusak.vercel.app'
+  const baseUrl = 'https://www.zamecnikhusak.cz'
   const now = new Date()
 
   // Core static pages

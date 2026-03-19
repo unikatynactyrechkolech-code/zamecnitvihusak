@@ -13,7 +13,7 @@ export function generatePrahaMetadata(num: string): Metadata {
   return {
     title: `Zámečník Praha ${num} – Nonstop pohotovost 24/7 | Otevírání zámků`,
     description: `Zámečník Praha ${num} – nonstop zámečnická pohotovost. Otevírání zámků, výměna vložek, bezpečnostní dveře. Oblast: ${areas}. Příjezd do ${data.time}. ✆ 734 565 987`,
-    alternates: { canonical: `https://zamecnitvihusak.vercel.app/zamecnik-praha-${num}` },
+    alternates: { canonical: `https://www.zamecnikhusak.cz/zamecnik-praha-${num}` },
     openGraph: {
       title: `Zámečník Praha ${num} – Nonstop zámečnická pohotovost`,
       description: `Profesionální zámečnické služby v Praze ${num}. ${areas}. Příjezd do ${data.time}. Otevírání zámků, výměna vložek, bezpečnostní dveře.`,

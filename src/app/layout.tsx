@@ -25,13 +25,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
-    url: 'https://zamecnitvihusak.vercel.app',
+    url: 'https://www.zamecnikhusak.cz',
     siteName: 'Zámečník Husak',
     title: 'Zámečník Praha – Nonstop zámečnická pohotovost 24/7',
     description: 'Profesionální zámečnické služby v Praze a okolí. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří. Nonstop pohotovost 24/7. Příjezd do 20 minut.',
     images: [
       {
-        url: 'https://zamecnitvihusak.vercel.app/favicon.svg',
+        url: 'https://www.zamecnikhusak.cz/favicon.svg',
         width: 100,
         height: 120,
         alt: 'Zámečník Husak Praha – zámečnická pohotovost nonstop',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://zamecnitvihusak.vercel.app',
+    canonical: 'https://www.zamecnikhusak.cz',
   },
   icons: {
     icon: '/favicon.svg',
@@ -82,7 +82,7 @@ export default function RootLayout({
               '@type': 'Locksmith',
               name: 'Zámečník Husak',
               alternateName: 'Zámečnictví Husak',
-              url: 'https://zamecnitvihusak.vercel.app',
+              url: 'https://www.zamecnikhusak.cz',
               telephone: ['+420734565987', '+420776447729'],
               address: {
                 '@type': 'PostalAddress',
@@ -114,7 +114,7 @@ export default function RootLayout({
               priceRange: 'od 1200 Kč',
               currenciesAccepted: 'CZK',
               paymentAccepted: 'Hotovost, Platební karta, Převod',
-              image: 'https://zamecnitvihusak.vercel.app/favicon.svg',
+              image: 'https://www.zamecnikhusak.cz/favicon.svg',
               description: 'Profesionální zámečnické služby v Praze a okolí 24/7. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří, otevírání aut a trezorů.',
               sameAs: [
                 'https://www.google.com/maps/place/%F0%9F%94%91%F0%9F%94%93z%C3%A1me%C4%8Dn%C3%ADk+pohotovost+24%2F7+Hus%C3%A1k',
