@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import ContactForm from '@/components/ContactForm'
 import FaqAccordion from '@/components/FaqAccordion'
 
 export const metadata: Metadata = {
@@ -57,7 +56,6 @@ export default function KontaktPage() {
                   <div className="contact-card-content">
                     <h3>Telefon – Nonstop linka</h3>
                     <a href="tel:+420734565987" className="contact-link primary">734 565 987</a>
-                    <a href="tel:+420776447729" className="contact-link">776 44 77 29</a>
                   </div>
                 </div>
 
@@ -120,10 +118,6 @@ export default function KontaktPage() {
                   </a>
                 </div>
               </div>
-            </div>
-
-            <div className="animate-slide-right">
-              <ContactForm />
             </div>
           </div>
         </div>

@@ -445,7 +445,6 @@ export default function HomePage() {
               <div className="team-info">
                 <h3>Andrej Husák</h3>
                 <span className="team-role">Profesionální zámečník</span>
-                <p>Přes 15 let zkušeností v oboru. Certifikovaný specialista na bezpečnostní systémy a moderní zámkové technologie.</p>
               </div>
             </div>
             <div className="team-card animate-slide-up delay-2">
@@ -459,7 +458,6 @@ export default function HomePage() {
               <div className="team-info">
                 <h3>Artur Husák</h3>
                 <span className="team-role">Profesionální zámečník</span>
-                <p>Specialista na autoklíče a elektronické zámkové systémy. 8 let v oboru s důrazem na moderní technologie.</p>
               </div>
             </div>
           </div>
