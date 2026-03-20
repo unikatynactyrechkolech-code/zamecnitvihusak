@@ -274,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
    Hero Section
    ========================================================================== */
 .hero {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, var(--color-dark) 0%, #1a1a2e 100%);
