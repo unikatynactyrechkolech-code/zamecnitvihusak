@@ -1,21 +1,40 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 
 export default function LoadingScreen() {
-  const [isLoading, setIsLoading] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [isVisible, setIsVisible] = useState(true)
   const pathname = usePathname()
+  const isFirstRender = useRef(true)
 
+  // Initial load — hide after page is ready
   useEffect(() => {
-    setIsLoading(true)
-    setIsVisible(true)
-    
+    // Remove the SSR loading overlay immediately on hydration
+    const ssrEl = document.getElementById('ssr-loading')
+    if (ssrEl) ssrEl.remove()
+
     const timer = setTimeout(() => {
       setIsLoading(false)
       setTimeout(() => setIsVisible(false), 300)
-    }, 600)
+    }, 400)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Subsequent navigations
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+    setIsLoading(true)
+    setIsVisible(true)
+
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+      setTimeout(() => setIsVisible(false), 300)
+    }, 400)
 
     return () => clearTimeout(timer)
   }, [pathname])
