@@ -19,15 +19,15 @@ export default function LoadingScreen() {
 
   // 1) Initial page load — show briefly, then hide
   useEffect(() => {
-    const t = setTimeout(hide, 300)
+    const t = setTimeout(hide, 800)
     return () => clearTimeout(t)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // 2) When pathname changes (new page rendered) — hide the loader
   useEffect(() => {
-    if (!show) return            // wasn't showing, nothing to hide
-    const t = setTimeout(hide, 50) // tiny delay so content is painted
+    if (!show) return
+    const t = setTimeout(hide, 600) // visible long enough for smooth transition
     return () => clearTimeout(t)
   }, [pathname, show, hide])
 
