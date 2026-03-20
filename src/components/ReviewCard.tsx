@@ -18,7 +18,7 @@ export default function ReviewCard({ review }: { review: ReviewData }) {
           width={50}
           height={50}
         />
-        <div>
+        <div className="review-info">
           <div className="review-name">{review.name}</div>
           <div className="review-stars">
             {Array.from({ length: 5 }).map((_, i) => (

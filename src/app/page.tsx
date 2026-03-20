@@ -1,33 +1,6 @@
 import Link from 'next/link'
 import ReviewCard from '@/components/ReviewCard'
-import { neighborhoodData, extendedPrahaData } from './locality-data'
-import { prahaZapadData, prahaVychodData } from './outskirts-data'
-
-// Organize localities by parent district
-const prahaDistricts = [
-  { num: 1, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 1') },
-  { num: 2, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 2') },
-  { num: 3, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 3') },
-  { num: 4, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 4') },
-  { num: 5, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 5') },
-  { num: 6, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 6') },
-  { num: 7, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 7') },
-  { num: 8, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 8') },
-  { num: 9, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 9') },
-  { num: 10, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 10') },
-  { num: 11, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 11') },
-  { num: 12, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 12') },
-  { num: 13, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 13') },
-  { num: 14, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 14') },
-  { num: 15, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 15') },
-  { num: 16, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 16') },
-  { num: 17, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 17') },
-  { num: 18, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 18') },
-  { num: 19, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 19') },
-  { num: 20, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 20') },
-  { num: 21, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 21') },
-  { num: 22, neighborhoods: neighborhoodData.filter(n => n.parentDistrict === 'Praha 22') },
-]
+import CoverageSection from '@/components/CoverageSection'
 
 const reviews = [
   {
@@ -76,75 +49,6 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-
-          <div className="hero-image">
-            <div className="hero-animation-wrapper">
-              <div className="hero-circle-bg"></div>
-              <svg className="lock-key-animation" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Gradient definition */}
-                <defs>
-                  <linearGradient id="lockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#e63946" />
-                    <stop offset="100%" stopColor="#ff6b6b" />
-                  </linearGradient>
-                </defs>
-                
-                {/* Rotating rings */}
-                <circle className="ring-outer" cx="100" cy="100" r="95" stroke="rgba(230,57,70,0.15)" strokeWidth="1" fill="none" strokeDasharray="8 6" />
-                <circle className="ring-inner" cx="100" cy="100" r="80" stroke="rgba(230,57,70,0.1)" strokeWidth="1" fill="none" strokeDasharray="4 8" />
-                
-                {/* Lock group */}
-                <g className="lock-group">
-                  {/* Left leg of shackle - FIXED in lock body */}
-                  <line 
-                    x1="75" y1="100" x2="75" y2="72"
-                    stroke="url(#lockGradient)" 
-                    strokeWidth="8" 
-                    strokeLinecap="round" 
-                  />
-                  
-                  {/* Right part (arc + right leg) - pivots around connection point */}
-                  <path 
-                    className="lock-shackle" 
-                    d="M75 72 Q75 52 100 52 Q125 52 125 72 L125 100" 
-                    stroke="url(#lockGradient)" 
-                    strokeWidth="8" 
-                    strokeLinecap="round" 
-                    fill="none" 
-                  />
-                  {/* Lock body */}
-                  <rect x="65" y="95" width="70" height="55" rx="10" fill="url(#lockGradient)" />
-                  {/* Keyhole circle - center at 100, 120 */}
-                  <circle cx="100" cy="120" r="8" fill="#ffffff" />
-                  {/* Keyhole slot */}
-                  <rect x="96" y="120" width="8" height="14" rx="2" fill="#ffffff" />
-                </g>
-                
-                {/* Key - starts bottom right, moves to keyhole at (100, 120) */}
-                <g className="key-group">
-                  {/* Key handle (oval) */}
-                  <ellipse cx="155" cy="175" rx="12" ry="10" stroke="#fbbf24" strokeWidth="3" fill="none" />
-                  {/* Key shaft - goes toward keyhole */}
-                  <line x1="145" y1="168" x2="115" y2="138" stroke="#fbbf24" strokeWidth="4" strokeLinecap="round" />
-                  {/* Key teeth */}
-                  <line x1="125" y1="148" x2="130" y2="143" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
-                  <line x1="120" y1="143" x2="125" y2="138" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
-                </g>
-                
-                {/* Sparkles */}
-                <circle className="sparkle sparkle-1" cx="45" cy="45" r="3" fill="#fbbf24" />
-                <circle className="sparkle sparkle-2" cx="165" cy="40" r="3" fill="#e63946" />
-                <circle className="sparkle sparkle-3" cx="35" cy="160" r="3" fill="#fbbf24" />
-                <circle className="sparkle sparkle-4" cx="175" cy="170" r="3" fill="#e63946" />
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <div className="hero-wave">
-          <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-            <path d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z" fill="#ffffff" />
-          </svg>
         </div>
       </section>
 
@@ -342,90 +246,7 @@ export default function HomePage() {
       </section>
 
       {/* Coverage - All Localities */}
-      <section className="section bg-dark">
-        <div className="container">
-          <div className="text-center">
-            <span className="section-subtitle animate-fade-in">Pokrytí</span>
-            <h2 className="section-title animate-fade-in">Působíme v celé Praze a okolí</h2>
-            <p className="section-description animate-fade-in" style={{ color: '#adb5bd' }}>
-              Vyberte svou lokalitu – jsme připraveni přijet kamkoliv v Praze i okolních obcích.
-            </p>
-          </div>
-
-          {/* Praha 1-22 s městskými částmi */}
-          <div className="coverage-full-section">
-            <h3 className="coverage-region-title">
-              <i className="fas fa-city"></i> Praha
-            </h3>
-            <div className="coverage-districts-grid">
-              {prahaDistricts.map(({ num, neighborhoods }) => (
-                <div key={num} className="coverage-district-block">
-                  <Link 
-                    href={num <= 10 ? `/zamecnik-praha-${num}` : `/praha-${num}`} 
-                    className="coverage-district-main"
-                  >
-                    Praha {num}
-                  </Link>
-                  {neighborhoods.length > 0 && (
-                    <div className="coverage-neighborhoods">
-                      {neighborhoods.map(n => (
-                        <Link 
-                          key={n.slug} 
-                          href={`/${n.slug.replace('zamecnik-', '')}`}
-                          className="coverage-neighborhood-link"
-                        >
-                          {n.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Praha-západ */}
-          <div className="coverage-full-section">
-            <h3 className="coverage-region-title">
-              <i className="fas fa-map-marker-alt"></i> Praha-západ
-            </h3>
-            <div className="coverage-villages-grid">
-              {prahaZapadData.filter(v => v.type === 'village').map(village => (
-                <Link 
-                  key={village.slug} 
-                  href={`/${village.slug.replace('zamecnik-', '')}`}
-                  className="coverage-village-link"
-                >
-                  {village.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Praha-východ */}
-          <div className="coverage-full-section">
-            <h3 className="coverage-region-title">
-              <i className="fas fa-map-marker-alt"></i> Praha-východ
-            </h3>
-            <div className="coverage-villages-grid">
-              {prahaVychodData.filter(v => v.type === 'village').map(village => (
-                <Link 
-                  key={village.slug} 
-                  href={`/${village.slug.replace('zamecnik-', '')}`}
-                  className="coverage-village-link"
-                >
-                  {village.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <p className="coverage-note animate-fade-in" style={{ marginTop: '2rem' }}>
-            <i className="fas fa-info-circle"></i>
-            Nenašli jste svou obec? Zavolejte nám – pokrýváme i další lokality do 50 km od Prahy.
-          </p>
-        </div>
-      </section>
+      <CoverageSection id="pokryti" />
 
       {/* Team */}
       <section className="section bg-light">

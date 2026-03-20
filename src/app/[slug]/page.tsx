@@ -13,6 +13,7 @@ import {
 } from '@/app/locality-data'
 import Reviews from '@/components/Reviews'
 import CrossLinks from '@/components/CrossLinks'
+import CoverageSection from '@/components/CoverageSection'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -297,6 +298,9 @@ export default async function LocalityPage({ params }: PageProps) {
 
       {/* Reviews */}
       <Reviews serviceName={`Zámečník ${data.name} – Nonstop pohotovost`} />
+
+      {/* Coverage - All Localities */}
+      <CoverageSection />
 
       {/* CTA */}
       <section className="cta-section">

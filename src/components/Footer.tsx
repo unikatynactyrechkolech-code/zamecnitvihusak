@@ -53,6 +53,9 @@ export default function Footer() {
                   <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
+              <li>
+                <Link href="/#pokryti" className="footer-more-link">…a další lokality →</Link>
+              </li>
             </ul>
           </div>
 

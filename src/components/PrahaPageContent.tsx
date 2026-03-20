@@ -4,6 +4,7 @@ import { prahaData } from '@/app/zamecnik-praha-data'
 import { neighborhoodData } from '@/app/locality-data'
 import Reviews from '@/components/Reviews'
 import CrossLinks from '@/components/CrossLinks'
+import CoverageSection from '@/components/CoverageSection'
 
 export function generatePrahaMetadata(num: string): Metadata {
   const data = prahaData[num]
@@ -235,6 +236,9 @@ export default function PrahaPageContent({ num }: { num: string }) {
 
       {/* Reviews */}
       <Reviews serviceName={`Zámečník Praha ${data.num} – Nonstop pohotovost`} />
+
+      {/* Coverage - All Localities */}
+      <CoverageSection />
 
       {/* CTA */}
       <section className="cta-section">
