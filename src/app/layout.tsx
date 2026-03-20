@@ -154,27 +154,6 @@ export default function RootLayout({
         />
       </head>
       <body className={poppins.className}>
-        {/* Prevent any flash before React hydrates */}
-        <div
-          id="ssr-loading"
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: '#fff',
-            zIndex: 99999,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-          suppressHydrationWarning
-        >
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 28 V14 A11 11 0 0 1 43 14 V28" stroke="#e63946" strokeWidth="5" strokeLinecap="round" fill="none" />
-            <rect x="14" y="26" width="36" height="28" rx="5" fill="#e63946" />
-            <circle cx="32" cy="38" r="4" fill="white" />
-            <rect x="30" y="38" width="4" height="8" rx="1" fill="white" />
-          </svg>
-        </div>
         <LoadingScreen />
         <Header />
         <main>{children}</main>

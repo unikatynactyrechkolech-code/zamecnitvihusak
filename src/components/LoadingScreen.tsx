@@ -11,10 +11,6 @@ export default function LoadingScreen() {
 
   // Initial load — hide after page is ready
   useEffect(() => {
-    // Remove the SSR loading overlay immediately on hydration
-    const ssrEl = document.getElementById('ssr-loading')
-    if (ssrEl) ssrEl.remove()
-
     const timer = setTimeout(() => {
       setIsLoading(false)
       setTimeout(() => setIsVisible(false), 300)
