@@ -3,83 +3,96 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Ceník zámečnických služeb Praha – Férové ceny předem',
-  description: 'Transparentní ceník zámečnických služeb Praha – otevírání zámků od 1 200 Kč, výměna vložek od 1 800 Kč, bezpečnostní dveře od 15 000 Kč. Výjezd zdarma. ✆ 734 565 987',
+  description: 'Transparentní ceník zámečnických služeb Praha – otevírání zabouchnutých dveří od 800 Kč, výměna vložek od 500 Kč, otevírání aut od 900 Kč. ✆ 734 565 987',
   alternates: { canonical: 'https://www.zamecnikhusak.cz/cenik' },
   openGraph: {
     title: 'Ceník zámečníka Praha – Zámečník Husak',
-    description: 'Férové ceny zámečnických služeb. Otevírání zámků od 1 200 Kč, výměna vložek od 1 800 Kč. Výjezd po Praze zdarma.',
+    description: 'Férové ceny zámečnických služeb. Otevírání zabouchnutých dveří od 800 Kč, výměna vložek od 500 Kč. Otevírání aut od 900 Kč.',
   },
 }
 
 const tables = [
   {
     icon: 'fa-lock-open',
-    title: 'Otevírání zámků',
+    title: 'Otevírání zabouchnutých dveří',
     rows: [
-      { service: 'Otevření cylindrického zámku', price: 'od 1 200 Kč' },
-      { service: 'Otevření bezpečnostního zámku', price: 'od 1 800 Kč' },
-      { service: 'Otevření zámku s vložkou FAB', price: 'od 1 500 Kč' },
-      { service: 'Otevření visacího zámku', price: 'od 800 Kč' },
-      { service: 'Nouzové otevření zabouchnutých dveří', price: 'od 1 200 Kč' },
-      { service: 'Otevření zámku po vloupání', price: 'od 2 000 Kč', highlight: true },
-      { service: 'Příplatek za noční službu (22:00–6:00)', price: '+500 Kč', surcharge: true },
+      { service: 'Zabouchnuté dveře klasik (hliníkový, bakelitový štít)', price: '800 Kč' },
+      { service: 'Zabouchnuté dveře s bezpečnostním kováním (R1, 802, 807 a pod.)', price: '800 Kč' },
+      { service: 'Zabouchnuté bezpečnostní dveře – Next, Sherlock / plastové / euro dveře', price: '900 Kč' },
+      { service: 'Zabouchnuté dveře — klíč zevnitř, otevření náhradním klíčem', price: '900 Kč' },
+      { service: 'Zabouchnuté dveře s lištovými zámky, samozamykací zámky', price: '1 200 Kč' },
     ],
   },
   {
     icon: 'fa-key',
-    title: 'Výměna zámků a vložek',
+    title: 'Otevírání zamčených dveří',
     rows: [
-      { service: 'Výměna cylindrické vložky (základní)', price: 'od 1 800 Kč' },
-      { service: 'Výměna bezpečnostní vložky FAB', price: 'od 2 500 Kč' },
-      { service: 'Výměna vložky EVVA/ASSA ABLOY', price: 'od 3 500 Kč' },
-      { service: 'Montáž přídavného zámku', price: 'od 2 000 Kč' },
-      { service: 'Výroba klíče na místě', price: 'od 300 Kč' },
-      { service: 'Masterkey systém (za vložku)', price: 'od 3 000 Kč' },
+      { service: 'Zamčeno tvarový klíč, dozický klíč', price: '900 Kč' },
+      { service: 'Zamčeno bezp. kování 802, 807', price: '1 000 Kč' },
+      { service: 'Zamčeno bezp. kování R1, R3', price: '1 200 Kč' },
+      { service: 'Zamčeno přídavný zámek 1572 atd.', price: '1 200 Kč' },
+      { service: 'Zamčeno přídavný zámek OS2, EVVA', price: '1 500 Kč' },
+      { service: 'Zamčeno rozvory, závory pomocí klíče', price: '2 000 Kč' },
+      { service: 'Zamčeno rozvory, závory bez klíče', price: '2 800 Kč' },
+      { service: 'Zamčeno bezpečnostní dveře, vrchní zámek', price: '1 500 Kč' },
+      { service: 'Zamčeno bezpečnostní dveře, spodní zámek', price: '1 500 Kč' },
+      { service: 'Zamčeno vložky (Evva, Guard, Mul-T-Lock atd.)', price: '1 500 Kč' },
+      { service: 'Zamčeno schránkový, skříňkový', price: '600 Kč' },
+      { service: 'Prasklá střelka zámku', price: '1 200 Kč' },
     ],
   },
   {
-    icon: 'fa-door-closed',
-    title: 'Bezpečnostní dveře',
+    icon: 'fa-wrench',
+    title: 'Výměny, montáž a ostatní závady',
     rows: [
-      { service: 'Bezpečnostní dveře třída 2', price: 'od 15 000 Kč' },
-      { service: 'Bezpečnostní dveře třída 3', price: 'od 25 000 Kč' },
-      { service: 'Bezpečnostní dveře třída 4', price: 'od 40 000 Kč' },
-      { service: 'Protipožární dveře', price: 'od 20 000 Kč' },
-      { service: 'Montáž dveří (standardní)', price: 'od 3 000 Kč' },
-      { service: 'Demontáž starých dveří', price: 'od 1 500 Kč' },
-    ],
-  },
-  {
-    icon: 'fa-vault',
-    title: 'Trezory',
-    rows: [
-      { service: 'Otevření mechanického trezoru', price: 'od 3 000 Kč' },
-      { service: 'Otevření elektronického trezoru', price: 'od 4 000 Kč' },
-      { service: 'Změna kombinace trezoru', price: 'od 1 500 Kč' },
-      { service: 'Montáž trezoru do zdi', price: 'od 2 500 Kč' },
-      { service: 'Prodej + montáž trezoru', price: 'od 8 000 Kč' },
+      { service: 'Výměna vložky / zámku', price: '500 Kč' },
+      { service: 'Výměna zadlabacího zámku', price: '500 Kč' },
+      { service: 'Výměna vložky u bezpečnostních dveří', price: '600–800 Kč' },
+      { service: 'Výměna vložky přídavného zámku', price: '600 Kč' },
+      { service: 'Výměna modelu Atra, Cisa, Mottura', price: '900 Kč' },
+      { service: 'Výměna lištového zámku a oprava protikusů', price: '1 400 Kč' },
+      { service: 'Montáž kování R1, R3', price: '900 Kč' },
+      { service: 'Montáž přídavného zámku 1572 atd.', price: '1 200 Kč' },
+      { service: 'Montáž bezpečnostní závory', price: '2 800 Kč' },
+      { service: 'Montáž bezpečnostní rozvory', price: '3 800 Kč' },
+      { service: 'Montáž bezpečnostní rozvory (dvoukřídlé dveře)', price: '5 400 Kč' },
+      { service: 'Montáž samozamykacích zámků', price: '1 800 Kč' },
+      { service: 'Rozlomení vložky zámku bez klíče', price: '800 Kč' },
+      { service: 'Vyjmutí zalomeného klíče z vložky', price: '800 Kč' },
     ],
   },
   {
     icon: 'fa-car',
-    title: 'Autoklíče',
+    title: 'Otevírání aut / automobilů',
     rows: [
-      { service: 'Otevření zamknutého auta', price: 'od 1 500 Kč' },
-      { service: 'Výroba autoklíče bez čipu', price: 'od 1 000 Kč' },
-      { service: 'Výroba autoklíče s čipem', price: 'od 3 000 Kč' },
-      { service: 'Programování dálkového ovladače', price: 'od 2 000 Kč' },
-      { service: 'Oprava klíče / ovladače', price: 'od 800 Kč' },
+      { service: 'Otevírání aut bez poškození do roku 2000', price: '900 Kč' },
+      { service: 'Otevření aut bez poškození do roku 2005 (bez spec/safe)', price: '1 200 Kč' },
+      { service: 'Otevření aut bez poškození do roku 2005 (s spec/safe)', price: '1 400 Kč' },
+      { service: 'Otevírání aut od roku 2006 do roku 2015 (bez spec/safe)', price: '1 500 Kč' },
+      { service: 'Otevírání aut od roku 2006 do roku 2021 (s spec/safe)', price: '1 500–2 500 Kč' },
     ],
   },
   {
-    icon: 'fa-shield-halved',
-    title: 'Bezpečnostní systémy',
+    icon: 'fa-vault',
+    title: 'Ostatní',
     rows: [
-      { service: 'Elektronický zámek – dodání + montáž', price: 'od 8 000 Kč' },
-      { service: 'Přístupový systém (na klíčenku/kartu)', price: 'od 12 000 Kč' },
-      { service: 'Kamerový systém (2 kamery)', price: 'od 15 000 Kč' },
-      { service: 'Alarm – dodání + instalace', price: 'od 10 000 Kč' },
-      { service: 'Videovrátník', price: 'od 8 000 Kč' },
+      { service: 'Otevírání trezoru / sejfu', price: 'dle dohody' },
+      { service: 'Svařecké práce', price: 'dle dohody' },
+      { service: 'Hodinová sazba', price: '600 Kč' },
+    ],
+  },
+  {
+    icon: 'fa-route',
+    title: 'Cestovné, paušál, příplatky',
+    rows: [
+      { service: 'Výjezd technika – provozní režie Praha', price: '700 Kč' },
+      { service: 'Výjezd technika – provozní režie mimo Prahu', price: '200–900 Kč dle km' },
+      { service: 'Každá další přeprava', price: '200 Kč' },
+      { service: 'Čekací doba na zákazníka, každých započatých 30 minut', price: '200 Kč' },
+      { service: 'Mimopracovní příplatek od 17:00 do 22:00', price: '+50 %', surcharge: true },
+      { service: 'Noční pohotovost od 22:00 do 07:00', price: '+100 %', surcharge: true },
+      { service: 'Práce o víkendu (sobota a neděle)', price: '+50 %', surcharge: true },
+      { service: 'Práce ve státní svátek (Vánoce, Silvestr atd.)', price: '+100 %', surcharge: true },
     ],
   },
 ]
@@ -97,8 +110,8 @@ export default function CenikPage() {
           <h1 className="page-title">CENÍK SLUŽEB</h1>
           <p className="page-subtitle">Transparentní ceny bez skrytých poplatků</p>
           <p className="page-description">
-            Přesnou cenu vám vždy sdělíme předem po telefonu. Ceny jsou orientační
-            a mohou se lišit podle náročnosti práce.
+            Otevření zabouchnutých dveří ve všední dny od 7:00–17:00 se pohybuje od 1 500 Kč
+            do 1 900 Kč podle typu dveří – v ceně je výjezd technika, práce a DPH.
           </p>
         </div>
       </section>
@@ -141,8 +154,8 @@ export default function CenikPage() {
           <div className="price-info-content">
             <i className="fas fa-info-circle"></i>
             <p>
-              <strong>Důležitá informace:</strong> Všechny ceny jsou uvedeny včetně DPH.
-              Výjezd po Praze je zdarma. Přesnou cenu vám sdělíme vždy předem po telefonu.
+              <strong>Důležitá informace:</strong> Ceny jsou orientační a uvedeny v Kč bez materiálů, výjezdu a DPH.
+              Pro bytový sektor 12 % DPH, pro nebytový sektor 21 % DPH. Při součtu položek se výjezd započítává pouze jednou.
             </p>
           </div>
         </div>
@@ -155,7 +168,7 @@ export default function CenikPage() {
 
           <div className="price-notes-grid" style={{ marginTop: '3rem' }}>
             {[
-              { icon: 'fa-truck', title: 'Výjezd zdarma', desc: 'V rámci Prahy neúčtujeme žádný poplatek za výjezd.' },
+              { icon: 'fa-truck', title: 'Výjezd technika', desc: 'Provozní režie Praha 700 Kč, mimo Prahu 200–900 Kč dle km.' },
               { icon: 'fa-file-invoice', title: 'Cena předem', desc: 'Přesnou cenu znáte vždy před zahájením práce.' },
               { icon: 'fa-credit-card', title: 'Platba hotově i kartou', desc: 'Akceptujeme hotovost i platební karty.' },
               { icon: 'fa-receipt', title: 'Doklad o zaplacení', desc: 'Ke každé zakázce vystavíme řádný doklad.' },

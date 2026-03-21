@@ -33,26 +33,26 @@ interface ReviewsProps {
 export default function Reviews({ serviceName }: ReviewsProps) {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: serviceName,
-    provider: {
-      '@type': 'LocalBusiness',
-      name: 'Zámečnictví Husak',
-      telephone: '+420734565987',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Herbenova 727/38',
-        addressLocality: 'Praha 10',
-        postalCode: '100 00',
-        addressCountry: 'CZ',
-      },
+    '@type': 'LocalBusiness',
+    name: 'Zámečnická Pohotovost Praha NONSTOP',
+    alternateName: serviceName,
+    telephone: '+420734565987',
+    email: 'zamecnictvihusak@seznam.cz',
+    url: 'https://www.zamecnikhusak.cz',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Herbenova 727/38',
+      addressLocality: 'Praha 10',
+      postalCode: '102 00',
+      addressCountry: 'CZ',
     },
+    sameAs: ['https://share.google/ZOFhedq7xhfWUDZWP'],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
+      ratingValue: '4.9',
       bestRating: '5',
-      ratingCount: '20',
-      reviewCount: '20',
+      ratingCount: '711',
+      reviewCount: '711',
     },
     review: reviews.map((r) => ({
       '@type': 'Review',
@@ -87,7 +87,7 @@ export default function Reviews({ serviceName }: ReviewsProps) {
             </svg>
           </div>
           <div className="google-rating-info">
-              <div className="google-rating-score">4.8</div>
+              <div className="google-rating-score">4.9</div>
               <div className="google-rating-stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -95,7 +95,7 @@ export default function Reviews({ serviceName }: ReviewsProps) {
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
               </div>
-              <div className="google-rating-count">Na základě 20 recenzí</div>
+              <div className="google-rating-count">Na základě 711 recenzí</div>
           </div>
         </div>
 

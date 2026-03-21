@@ -79,11 +79,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Locksmith',
-              name: 'Zámečník Husak',
+              '@type': 'LocalBusiness',
+              name: 'Zámečnická Pohotovost Praha NONSTOP',
               alternateName: 'Zámečnictví Husak',
               url: 'https://www.zamecnikhusak.cz',
               telephone: ['+420734565987', '+420776447729'],
+              email: 'zamecnictvihusak@seznam.cz',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'Herbenova 727/38',
@@ -111,20 +112,20 @@ export default function RootLayout({
                 { '@type': 'AdministrativeArea', name: 'Praha-východ' },
               ],
               serviceType: ['Otevírání zámků', 'Výměna vložek a zámků', 'Montáž bezpečnostních dveří', 'Otevírání aut', 'Otevírání trezorů', 'Výroba autoklíčů', 'Montáž kování'],
-              priceRange: 'od 1200 Kč',
+              priceRange: 'od 800 Kč',
               currenciesAccepted: 'CZK',
               paymentAccepted: 'Hotovost, Platební karta, Převod',
               image: 'https://www.zamecnikhusak.cz/favicon.svg',
               description: 'Profesionální zámečnické služby v Praze a okolí 24/7. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří, otevírání aut a trezorů.',
               sameAs: [
-                'https://www.google.com/maps/place/%F0%9F%94%91%F0%9F%94%93z%C3%A1me%C4%8Dn%C3%ADk+pohotovost+24%2F7+Hus%C3%A1k',
+                'https://share.google/ZOFhedq7xhfWUDZWP',
               ],
               aggregateRating: {
                 '@type': 'AggregateRating',
-                ratingValue: '4.8',
+                ratingValue: '4.9',
                 bestRating: '5',
-                ratingCount: '20',
-                reviewCount: '20',
+                ratingCount: '711',
+                reviewCount: '711',
               },
               review: [
                 {

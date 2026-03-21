@@ -65,7 +65,7 @@ export default function KontaktPage() {
                   </div>
                   <div className="contact-card-content">
                     <h3>E-mail</h3>
-                    <a href="mailto:info@zamecnictvi-husak.cz" className="contact-link">info@zamecnictvi-husak.cz</a>
+                    <a href="mailto:zamecnictvihusak@seznam.cz" className="contact-link">zamecnictvihusak@seznam.cz</a>
                     <p>Odpovídáme do 2 hodin</p>
                   </div>
                 </div>

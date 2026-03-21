@@ -68,7 +68,7 @@ export default function Footer() {
               </li>
               <li>
                 <i className="fas fa-envelope"></i>
-                <a href="mailto:info@zamecnictvi-husak.cz">info@zamecnictvi-husak.cz</a>
+                <a href="mailto:zamecnictvihusak@seznam.cz">zamecnictvihusak@seznam.cz</a>
               </li>
               <li>
                 <i className="fas fa-map-marker-alt"></i>
