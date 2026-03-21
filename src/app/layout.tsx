@@ -83,8 +83,15 @@ export default function RootLayout({
               name: 'Zámečnická Pohotovost Praha NONSTOP',
               alternateName: 'Zámečnictví Husak',
               url: 'https://www.zamecnikhusak.cz',
-              telephone: ['+420734565987', '+420776447729'],
+              telephone: '+420734565987',
               email: 'zamecnictvihusak@seznam.cz',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+420776447729',
+                contactType: 'customer service',
+                areaServed: 'CZ',
+                availableLanguage: 'Czech',
+              },
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'Herbenova 727/38',
@@ -118,6 +125,7 @@ export default function RootLayout({
               image: 'https://www.zamecnikhusak.cz/favicon.svg',
               description: 'Profesionální zámečnické služby v Praze a okolí 24/7. Otevírání zámků, výměna vložek, montáž bezpečnostních dveří, otevírání aut a trezorů.',
               sameAs: [
+                'https://www.google.com/maps/place/%F0%9F%94%91%F0%9F%94%93z%C3%A1me%C4%8Dn%C3%ADk+pohotovost+24%2F7+Hus%C3%A1k',
                 'https://share.google/ZOFhedq7xhfWUDZWP',
               ],
               aggregateRating: {

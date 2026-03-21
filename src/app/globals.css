@@ -1501,6 +1501,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   border-collapse: collapse;
   background: var(--color-white);
+  table-layout: fixed;
 }
 
 .pricing-table th {
@@ -1513,14 +1514,21 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
 }
 
+.pricing-table th:last-child {
+  text-align: right;
+  width: 160px;
+}
+
 .pricing-table td {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--color-border);
+  word-wrap: break-word;
 }
 
 .pricing-table td:last-child {
   text-align: right;
-  width: 150px;
+  width: 160px;
+  white-space: nowrap;
 }
 
 .price {
@@ -3059,6 +3067,16 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .pricing-table th,
+  .pricing-table td {
+    padding: 0.75rem 1rem;
+  }
+
+  .pricing-table th:last-child,
+  .pricing-table td:last-child {
+    width: 140px;
+  }
+
   .qualifications-grid {
     grid-template-columns: 1fr;
   }
@@ -3211,6 +3229,23 @@ h1, h2, h3, h4, h5, h6 {
 
   .price-notes-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .pricing-table th:last-child,
+  .pricing-table td:last-child {
+    width: 120px;
+    font-size: 0.85rem;
+  }
+
+  .price.surcharge {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
   }
 
   .contact-form-card {

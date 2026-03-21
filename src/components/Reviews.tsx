@@ -31,48 +31,8 @@ interface ReviewsProps {
 }
 
 export default function Reviews({ serviceName }: ReviewsProps) {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Zámečnická Pohotovost Praha NONSTOP',
-    alternateName: serviceName,
-    telephone: '+420734565987',
-    email: 'zamecnictvihusak@seznam.cz',
-    url: 'https://www.zamecnikhusak.cz',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Herbenova 727/38',
-      addressLocality: 'Praha 10',
-      postalCode: '102 00',
-      addressCountry: 'CZ',
-    },
-    sameAs: ['https://share.google/ZOFhedq7xhfWUDZWP'],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      ratingCount: '711',
-      reviewCount: '711',
-    },
-    review: reviews.map((r) => ({
-      '@type': 'Review',
-      author: { '@type': 'Person', name: r.name },
-      datePublished: '2026-01-15',
-      reviewBody: r.text + (r.moreText ? ' ' + r.moreText : ''),
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-      },
-    })),
-  }
-
   return (
     <section className="section reviews-section">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <div className="container text-center">
         <h2 className="section-title">⭐ Recenze našich zákazníků</h2>
 
