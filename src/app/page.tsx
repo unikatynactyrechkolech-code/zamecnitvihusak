@@ -302,7 +302,7 @@ export default function HomePage() {
               </svg>
             </div>
             <div className="google-rating-info">
-              <div className="google-rating-score">4.8</div>
+              <div className="google-rating-score">4.9</div>
               <div className="google-rating-stars">
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
@@ -310,7 +310,7 @@ export default function HomePage() {
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
               </div>
-              <div className="google-rating-count">Na základě 20 recenzí</div>
+              <div className="google-rating-count">Na základě 711 recenzí</div>
             </div>
           </div>
 

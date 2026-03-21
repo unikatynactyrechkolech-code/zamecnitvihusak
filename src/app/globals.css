@@ -1501,7 +1501,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   border-collapse: collapse;
   background: var(--color-white);
-  table-layout: fixed;
 }
 
 .pricing-table th {
@@ -1516,19 +1515,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .pricing-table th:last-child {
   text-align: right;
-  width: 160px;
+  white-space: nowrap;
+  width: 1%;
 }
 
 .pricing-table td {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--color-border);
-  word-wrap: break-word;
 }
 
 .pricing-table td:last-child {
   text-align: right;
-  width: 160px;
   white-space: nowrap;
+  width: 1%;
+  padding-left: 2rem;
 }
 
 .price {
@@ -3072,9 +3072,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.75rem 1rem;
   }
 
-  .pricing-table th:last-child,
   .pricing-table td:last-child {
-    width: 140px;
+    padding-left: 1.5rem;
   }
 
   .qualifications-grid {
@@ -3237,10 +3236,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.85rem;
   }
 
-  .pricing-table th:last-child,
   .pricing-table td:last-child {
-    width: 120px;
-    font-size: 0.85rem;
+    padding-left: 1rem;
   }
 
   .price.surcharge {
